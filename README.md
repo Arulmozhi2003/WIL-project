@@ -1,4 +1,4 @@
-# SkillGap
+# SkillGap: A Test-Driven RAG Career Navigator for International Data and IT Students
 ## WIL Project 84
 
 ### Project Aim
@@ -6,7 +6,7 @@ To develop and evaluate a Test-Driven RAG assistant that helps international dat
 
 ### Team Members
 - s4138509 – Arulmozhi Ezhilarasi Arunachalam
-- sXXXXXXX – Dharani Suresh
-- sXXXXXXX – Lingkesh Natanasabapathy
-- sXXXXXXX – Prakash Sudarsanraj
-- sXXXXXXX – Sakthisree Gaddam
+- s4118043 – Dharani Suresh
+- s4184049 – Lingkesh Natanasabapathy
+- s4135999 – Prakash Sudarsanraj
+- s4136157 – Sakthisree Gaddam
