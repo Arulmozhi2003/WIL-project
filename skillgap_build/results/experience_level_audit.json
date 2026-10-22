@@ -1,0 +1,74 @@
+{
+  "document_count": 159,
+  "level_counts": {
+    "Experience not stated": 104,
+    "2+ years": 49,
+    "0\u20131 year": 2,
+    "Graduate/entry wording": 4
+  },
+  "role_by_level": {
+    "Graduate Business/Data Analyst": {
+      "Experience not stated": 32,
+      "2+ years": 24,
+      "0\u20131 year": 1,
+      "Graduate/entry wording": 1
+    },
+    "Graduate Data Analyst": {
+      "2+ years": 19,
+      "Experience not stated": 60,
+      "Graduate/entry wording": 1
+    },
+    "Graduate Data Scientist": {
+      "Graduate/entry wording": 2,
+      "2+ years": 6,
+      "Experience not stated": 12,
+      "0\u20131 year": 1
+    }
+  },
+  "early_career_candidate_count": 6,
+  "early_career_candidates": [
+    {
+      "doc_id": "BA_35985706",
+      "role": "Graduate Business/Data Analyst",
+      "title": "Business Analyst I Sydney CBD",
+      "experience_level": "0\u20131 year",
+      "source_url": "https://www.seek.com.au/job/35985706"
+    },
+    {
+      "doc_id": "BA_35997872",
+      "role": "Graduate Business/Data Analyst",
+      "title": "Junior Business Analyst",
+      "experience_level": "Graduate/entry wording",
+      "source_url": "https://www.seek.com.au/job/35997872"
+    },
+    {
+      "doc_id": "DA_36001002",
+      "role": "Graduate Data Analyst",
+      "title": "Junior Reporting Analyst",
+      "experience_level": "Graduate/entry wording",
+      "source_url": "https://www.seek.com.au/job/36001002"
+    },
+    {
+      "doc_id": "DS_35956039",
+      "role": "Graduate Data Scientist",
+      "title": "Graduate Data Scientist",
+      "experience_level": "Graduate/entry wording",
+      "source_url": "https://www.seek.com.au/job/35956039"
+    },
+    {
+      "doc_id": "DS_35988778",
+      "role": "Graduate Data Scientist",
+      "title": "Junior Data Scientist",
+      "experience_level": "0\u20131 year",
+      "source_url": "https://www.seek.com.au/job/35988778"
+    },
+    {
+      "doc_id": "DS_35990048",
+      "role": "Graduate Data Scientist",
+      "title": "Junior Quantitative Analyst - PhD",
+      "experience_level": "Graduate/entry wording",
+      "source_url": "https://www.seek.com.au/job/35990048"
+    }
+  ],
+  "interpretation": "Graduate/entry wording is a title signal, not proof of zero experience. Experience not stated is unknown and excluded from the strict early-career subset. Numerical ranges are classified using their upper bound."
+}

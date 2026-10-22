@@ -1,0 +1,3 @@
+timestamp,dataset_fingerprint,documents,dev_q,test_q,chosen,params,dev_selection,test_selection,test_ndcg,test_decision_acc
+2026-09-29T13:19:05+00:00,1e2b07563c84,159,33,21,BT,"{""k1"": 2.0, ""b"": 0.75, ""stopwords"": true, ""stemming"": true, ""normalise"": true, ""min_score"": 0.12763649999999999}",0.9446040993844684,0.861904761904762,0.8666666666666667,0.8571428571428571
+2026-09-29T13:27:23+00:00,1e2b07563c84,159,33,21,BT,"{""k1"": 2.0, ""b"": 0.75, ""stopwords"": true, ""stemming"": true, ""normalise"": true, ""min_score"": 0.12763649999999999}",0.9446040993844684,0.861904761904762,0.8666666666666667,0.8571428571428571

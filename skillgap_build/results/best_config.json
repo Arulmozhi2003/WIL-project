@@ -1,0 +1,14 @@
+{
+  "mode": "bm25",
+  "params": {
+    "k1": 2.0,
+    "b": 0.75,
+    "stopwords": true,
+    "stemming": true,
+    "normalise": true,
+    "min_score": 0.12763649999999999
+  },
+  "k": 3,
+  "chosen_config": "BT",
+  "dataset_fingerprint": "1e2b07563c84"
+}
