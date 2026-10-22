@@ -1,0 +1,1365 @@
+{
+  "summary": {
+    "mode": "bm25",
+    "k": 3,
+    "params": {
+      "k1": 2.0,
+      "b": 0.75,
+      "stopwords": true,
+      "stemming": true,
+      "normalise": true,
+      "min_score": 0.12763649999999999
+    },
+    "document_count": 159,
+    "question_count": 54,
+    "answerable_count": 42,
+    "unanswerable_count": 12,
+    "hit_rate_at_k": 0.9761904761904762,
+    "mrr": 0.9523809523809523,
+    "mean_ndcg_at_k": 0.900638171070074,
+    "recall_at_k": 0.5473186729433965,
+    "decision_accuracy": 0.9259259259259259,
+    "abstain_rate_unanswerable": 0.6666666666666666,
+    "false_abstain_rate_answerable": 0.0,
+    "selection_score": 0.913282048498,
+    "note": "Retrieval metrics only. LLM correctness, faithfulness and citation accuracy are measured by run_generation_eval.py plus human annotation."
+  },
+  "per_question": [
+    {
+      "id": "Q01",
+      "question": "Do business analyst roles require advanced Excel?",
+      "role": "Graduate Business/Data Analyst",
+      "split": "dev",
+      "expected": [
+        "BA_35957423",
+        "BA_35967128",
+        "BA_35967910",
+        "BA_35968844",
+        "BA_35969007",
+        "BA_35969751",
+        "BA_35969842",
+        "BA_35970257",
+        "BA_35971457",
+        "BA_35972828",
+        "BA_35973140",
+        "BA_35974670",
+        "BA_35974837",
+        "BA_35975297",
+        "BA_35975828",
+        "BA_35978626",
+        "BA_35979880",
+        "BA_35980382",
+        "BA_35981631",
+        "BA_35982216",
+        "BA_35982863",
+        "BA_35983821",
+        "BA_35984148",
+        "BA_35985635",
+        "BA_35985706",
+        "BA_35989279",
+        "BA_35989786",
+        "BA_35990076",
+        "BA_35991279",
+        "BA_35991552",
+        "BA_35991794",
+        "BA_35993535",
+        "BA_35993960",
+        "BA_35994299",
+        "BA_35995703",
+        "BA_35997766",
+        "BA_36001438"
+      ],
+      "retrieved": [
+        "BA_35982863",
+        "BA_35991794",
+        "BA_35971457"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 0.08108108108108109
+    },
+    {
+      "id": "Q02",
+      "question": "Is SQL knowledge expected for business analysts?",
+      "role": "Graduate Business/Data Analyst",
+      "split": "dev",
+      "expected": [
+        "BA_35956021",
+        "BA_35972530",
+        "BA_35974670",
+        "BA_35974925",
+        "BA_35975681",
+        "BA_35984029",
+        "BA_35985635",
+        "BA_35989786",
+        "BA_35991618",
+        "BA_35991757",
+        "BA_35993535",
+        "BA_35994299",
+        "BA_35995703",
+        "BA_35997872"
+      ],
+      "retrieved": [
+        "BA_35970257",
+        "BA_35985635",
+        "BA_35997872"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 0.5,
+      "ndcg_at_k": 0.5307212739772434,
+      "recall_at_k": 0.14285714285714285
+    },
+    {
+      "id": "Q03",
+      "question": "Do these roles expect experience working in Agile or Scrum teams?",
+      "role": "Graduate Business/Data Analyst",
+      "split": "test",
+      "expected": [
+        "BA_35957423",
+        "BA_35970907",
+        "BA_35971204",
+        "BA_35972530",
+        "BA_35974925",
+        "BA_35989279",
+        "BA_35990076",
+        "BA_35991279",
+        "BA_35991618",
+        "BA_35993535",
+        "BA_35995703",
+        "BA_36000606"
+      ],
+      "retrieved": [
+        "BA_35991279",
+        "BA_35957423",
+        "BA_35971204"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 0.25
+    },
+    {
+      "id": "Q04",
+      "question": "Is business process mapping part of the job?",
+      "role": "Graduate Business/Data Analyst",
+      "split": "dev",
+      "expected": [
+        "BA_35957423",
+        "BA_35972116",
+        "BA_35973636",
+        "BA_35976281",
+        "BA_35982863",
+        "BA_35989279",
+        "BA_35991618",
+        "BA_35997872",
+        "BA_36000606"
+      ],
+      "retrieved": [
+        "BA_35997872",
+        "BA_35982863",
+        "BA_35993535"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 0.7653606369886217,
+      "recall_at_k": 0.2222222222222222
+    },
+    {
+      "id": "Q05",
+      "question": "Do business analyst ads mention Power BI reporting?",
+      "role": "Graduate Business/Data Analyst",
+      "split": "test",
+      "expected": [
+        "BA_35970907",
+        "BA_35972116",
+        "BA_35976281",
+        "BA_35978626",
+        "BA_35983821",
+        "BA_35985297",
+        "BA_35994299",
+        "BA_35995703"
+      ],
+      "retrieved": [
+        "BA_35970907",
+        "BA_35985297"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 0.7653606369886217,
+      "recall_at_k": 0.25
+    },
+    {
+      "id": "Q06",
+      "question": "Do they ask for data modelling skills?",
+      "role": "Graduate Business/Data Analyst",
+      "split": "test",
+      "expected": [
+        "BA_35968844",
+        "BA_35971204",
+        "BA_35973636",
+        "BA_35975828",
+        "BA_35980382",
+        "BA_35991794"
+      ],
+      "retrieved": [
+        "BA_35967910"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": false,
+      "rr": 0.0,
+      "ndcg_at_k": 0.0,
+      "recall_at_k": 0.0
+    },
+    {
+      "id": "Q07",
+      "question": "How much stakeholder engagement is involved in these roles?",
+      "role": "Graduate Business/Data Analyst",
+      "split": "dev",
+      "expected": [
+        "BA_35957423",
+        "BA_35967128",
+        "BA_35969751",
+        "BA_35971204",
+        "BA_35971457",
+        "BA_35972116",
+        "BA_35972530",
+        "BA_35975297",
+        "BA_35975681",
+        "BA_35976281",
+        "BA_35979880",
+        "BA_35980382",
+        "BA_35983821",
+        "BA_35984029",
+        "BA_35991618"
+      ],
+      "retrieved": [
+        "BA_35975297",
+        "BA_35967128",
+        "BA_35991794"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 0.7653606369886217,
+      "recall_at_k": 0.13333333333333333
+    },
+    {
+      "id": "Q08",
+      "question": "Will I be creating reports and dashboards?",
+      "role": "Graduate Business/Data Analyst",
+      "split": "dev",
+      "expected": [
+        "BA_35969751",
+        "BA_35972325",
+        "BA_35974670",
+        "BA_35974925",
+        "BA_35980382",
+        "BA_35983821",
+        "BA_35991552",
+        "BA_35993891",
+        "BA_35993906",
+        "BA_35995703",
+        "BA_35997089",
+        "BA_35997331",
+        "BA_36000606"
+      ],
+      "retrieved": [
+        "BA_35969751",
+        "BA_35972325",
+        "BA_35995703"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 0.23076923076923078
+    },
+    {
+      "id": "Q09",
+      "question": "What does the ERP Implementation Finance Business Analyst role at Q Consulting Group involve?",
+      "role": "Graduate Business/Data Analyst",
+      "split": "test",
+      "expected": [
+        "BA_35990076"
+      ],
+      "retrieved": [
+        "BA_35990076",
+        "BA_35977983",
+        "BA_35997872"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 1.0
+    },
+    {
+      "id": "Q10",
+      "question": "What does the Business Analyst role at RAC involve?",
+      "role": "Graduate Business/Data Analyst",
+      "split": "dev",
+      "expected": [
+        "BA_35969842"
+      ],
+      "retrieved": [
+        "BA_35969842",
+        "BA_35991794",
+        "BA_35997872"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 1.0
+    },
+    {
+      "id": "Q11",
+      "question": "What does the Business Analyst - Exciting Greenfield Project role at Private Advertiser involve?",
+      "role": "Graduate Business/Data Analyst",
+      "split": "dev",
+      "expected": [
+        "BA_35957423"
+      ],
+      "retrieved": [
+        "BA_35957423",
+        "BA_36000606",
+        "BA_35972325"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 1.0
+    },
+    {
+      "id": "Q12",
+      "question": "What does the Information Systems - JDE Business Analyst role at Gladstone Ports Corporation involve?",
+      "role": "Graduate Business/Data Analyst",
+      "split": "test",
+      "expected": [
+        "BA_35993891"
+      ],
+      "retrieved": [
+        "BA_35993891",
+        "BA_35993906"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 1.0
+    },
+    {
+      "id": "Q13",
+      "question": "What does the Business Analyst / Identity Access Management role at Davidson Technology involve?",
+      "role": "Graduate Business/Data Analyst",
+      "split": "dev",
+      "expected": [
+        "BA_35973636"
+      ],
+      "retrieved": [
+        "BA_35973636"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 1.0
+    },
+    {
+      "id": "Q14",
+      "question": "What does the Business Analyst role at Hays Accountancy & Finance involve?",
+      "role": "Graduate Business/Data Analyst",
+      "split": "dev",
+      "expected": [
+        "BA_35972828"
+      ],
+      "retrieved": [
+        "BA_35972828",
+        "BA_35981631"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 1.0
+    },
+    {
+      "id": "Q15",
+      "question": "Is a forklift licence required for this job?",
+      "role": "Graduate Business/Data Analyst",
+      "split": "dev",
+      "expected": [],
+      "retrieved": [],
+      "expected_unanswerable": true,
+      "retrieval_unanswered": true,
+      "decision_correct": true
+    },
+    {
+      "id": "Q16",
+      "question": "Do I need Kubernetes certification?",
+      "role": "Graduate Business/Data Analyst",
+      "split": "test",
+      "expected": [],
+      "retrieved": [
+        "BA_36000606",
+        "BA_35993906"
+      ],
+      "expected_unanswerable": true,
+      "retrieval_unanswered": false,
+      "decision_correct": false
+    },
+    {
+      "id": "Q17",
+      "question": "What will the average salary for this role be in 2030?",
+      "role": "Graduate Business/Data Analyst",
+      "split": "test",
+      "expected": [],
+      "retrieved": [],
+      "expected_unanswerable": true,
+      "retrieval_unanswered": true,
+      "decision_correct": true
+    },
+    {
+      "id": "Q18",
+      "question": "Will the company pay my university tuition fees?",
+      "role": "Graduate Business/Data Analyst",
+      "split": "dev",
+      "expected": [],
+      "retrieved": [],
+      "expected_unanswerable": true,
+      "retrieval_unanswered": true,
+      "decision_correct": true
+    },
+    {
+      "id": "Q19",
+      "question": "Do employers expect me to write database queries in SQL?",
+      "role": "Graduate Data Analyst",
+      "split": "test",
+      "expected": [
+        "DA_35855299",
+        "DA_35956285",
+        "DA_35957246",
+        "DA_35957548",
+        "DA_35967236",
+        "DA_35967309",
+        "DA_35968969",
+        "DA_35969287",
+        "DA_35969432",
+        "DA_35969822",
+        "DA_35969827",
+        "DA_35970144",
+        "DA_35971439",
+        "DA_35971824",
+        "DA_35972250",
+        "DA_35972454",
+        "DA_35972494",
+        "DA_35973086",
+        "DA_35974625",
+        "DA_35978574",
+        "DA_35979429",
+        "DA_35980354",
+        "DA_35981134",
+        "DA_35981150",
+        "DA_35981160",
+        "DA_35982055",
+        "DA_35986458",
+        "DA_35990835",
+        "DA_35991436",
+        "DA_35993319",
+        "DA_35994628",
+        "DA_35994633",
+        "DA_35994661",
+        "DA_35997489",
+        "DA_35998325",
+        "DA_36000476",
+        "DA_36000810",
+        "DA_36001488"
+      ],
+      "retrieved": [
+        "DA_35957548",
+        "DA_35855299",
+        "DA_35968969"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 0.07894736842105263
+    },
+    {
+      "id": "Q20",
+      "question": "How important are spreadsheet skills such as Microsoft Excel?",
+      "role": "Graduate Data Analyst",
+      "split": "test",
+      "expected": [
+        "DA_35855299",
+        "DA_35956285",
+        "DA_35957246",
+        "DA_35969822",
+        "DA_35969827",
+        "DA_35971046",
+        "DA_35971117",
+        "DA_35971439",
+        "DA_35972250",
+        "DA_35972454",
+        "DA_35972494",
+        "DA_35973086",
+        "DA_35975021",
+        "DA_35975070",
+        "DA_35976810",
+        "DA_35977279",
+        "DA_35978076",
+        "DA_35978574",
+        "DA_35980354",
+        "DA_35983270",
+        "DA_35990835",
+        "DA_35993319",
+        "DA_35997489",
+        "DA_35998325",
+        "DA_36000810",
+        "DA_36001775"
+      ],
+      "retrieved": [
+        "DA_36000810",
+        "DA_35975070",
+        "DA_36001002"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 0.7653606369886217,
+      "recall_at_k": 0.07692307692307693
+    },
+    {
+      "id": "Q21",
+      "question": "Is experience building dashboards in Tableau requested?",
+      "role": "Graduate Data Analyst",
+      "split": "dev",
+      "expected": [
+        "DA_35959226",
+        "DA_35967493",
+        "DA_35968969",
+        "DA_35969432",
+        "DA_35969827",
+        "DA_35971439",
+        "DA_35972250",
+        "DA_35972454",
+        "DA_35978574",
+        "DA_35979429",
+        "DA_35981150",
+        "DA_35982055",
+        "DA_35986458",
+        "DA_35990093",
+        "DA_35991436",
+        "DA_35992211",
+        "DA_35992806",
+        "DA_35993319",
+        "DA_35994633",
+        "DA_35996984",
+        "DA_35997489"
+      ],
+      "retrieved": [
+        "DA_35991436",
+        "DA_35994633",
+        "DA_35968969"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 0.14285714285714285
+    },
+    {
+      "id": "Q22",
+      "question": "Do the ads mention Microsoft Power BI?",
+      "role": "Graduate Data Analyst",
+      "split": "dev",
+      "expected": [
+        "DA_35855299",
+        "DA_35957246",
+        "DA_35968969",
+        "DA_35971439",
+        "DA_35972250",
+        "DA_35973606",
+        "DA_35974823",
+        "DA_35991436",
+        "DA_35992806",
+        "DA_35996984",
+        "DA_35997489",
+        "DA_36001145"
+      ],
+      "retrieved": [
+        "DA_35974823",
+        "DA_35973606",
+        "DA_35996984"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 0.25
+    },
+    {
+      "id": "Q23",
+      "question": "Is Python programming experience required for analyst roles?",
+      "role": "Graduate Data Analyst",
+      "split": "dev",
+      "expected": [
+        "DA_35957246",
+        "DA_35967236",
+        "DA_35967309",
+        "DA_35967493",
+        "DA_35971824",
+        "DA_35972250",
+        "DA_35973086",
+        "DA_35981160",
+        "DA_35993319",
+        "DA_35997489",
+        "DA_35997944",
+        "DA_35998945"
+      ],
+      "retrieved": [
+        "DA_35971824",
+        "DA_35973086",
+        "DA_35972250"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 0.25
+    },
+    {
+      "id": "Q24",
+      "question": "Do these roles need a background in statistical analysis?",
+      "role": "Graduate Data Analyst",
+      "split": "test",
+      "expected": [
+        "DA_35956285",
+        "DA_35957246",
+        "DA_35967309",
+        "DA_35970144",
+        "DA_35971824",
+        "DA_35973086",
+        "DA_35975021",
+        "DA_35979429",
+        "DA_35990835",
+        "DA_35993319",
+        "DA_35997489",
+        "DA_35997754"
+      ],
+      "retrieved": [
+        "DA_35997754",
+        "DA_35978574",
+        "DA_35987682"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 0.46927872602275644,
+      "recall_at_k": 0.08333333333333333
+    },
+    {
+      "id": "Q25",
+      "question": "Will I need to build ETL processes to load data?",
+      "role": "Graduate Data Analyst",
+      "split": "dev",
+      "expected": [
+        "DA_35967236",
+        "DA_35969432",
+        "DA_35969822",
+        "DA_35971439",
+        "DA_35972454",
+        "DA_35973252",
+        "DA_35981134",
+        "DA_35981160",
+        "DA_35981456",
+        "DA_35982055",
+        "DA_35983270",
+        "DA_35992211",
+        "DA_35994628"
+      ],
+      "retrieved": [
+        "DA_35983270",
+        "DA_35973252",
+        "DA_35981456"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 0.23076923076923078
+    },
+    {
+      "id": "Q26",
+      "question": "Is the R language asked for?",
+      "role": "Graduate Data Analyst",
+      "split": "dev",
+      "expected": [
+        "DA_35967236",
+        "DA_35967309",
+        "DA_35971117",
+        "DA_35971824",
+        "DA_35972250",
+        "DA_35973086",
+        "DA_35976810",
+        "DA_35978574",
+        "DA_35981160",
+        "DA_35987682",
+        "DA_35997489",
+        "DA_35997754"
+      ],
+      "retrieved": [
+        "DA_35984893",
+        "DA_35971824",
+        "DA_35967236"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 0.5,
+      "ndcg_at_k": 0.5307212739772434,
+      "recall_at_k": 0.16666666666666666
+    },
+    {
+      "id": "Q27",
+      "question": "What does the Student Experience and Data Analyst role at The University of Sydney involve?",
+      "role": "Graduate Data Analyst",
+      "split": "dev",
+      "expected": [
+        "DA_35956778"
+      ],
+      "retrieved": [
+        "DA_35956778",
+        "DA_35959226",
+        "DA_35978331"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 1.0
+    },
+    {
+      "id": "Q28",
+      "question": "What does the Data and Reporting Analyst role at ActewAGL Distribution involve?",
+      "role": "Graduate Data Analyst",
+      "split": "dev",
+      "expected": [
+        "DA_35969287"
+      ],
+      "retrieved": [
+        "DA_35969287",
+        "DA_35970735",
+        "DA_35980354"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 1.0
+    },
+    {
+      "id": "Q29",
+      "question": "What does the Data Migration Analyst - CANBERRA based role at Full Circle Partners involve?",
+      "role": "Graduate Data Analyst",
+      "split": "test",
+      "expected": [
+        "DA_35973252"
+      ],
+      "retrieved": [
+        "DA_35973252",
+        "DA_35981456",
+        "DA_35994661"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 1.0
+    },
+    {
+      "id": "Q30",
+      "question": "What does the Customer Insights Analyst role at Foxtel Management Pty Limited involve?",
+      "role": "Graduate Data Analyst",
+      "split": "test",
+      "expected": [
+        "DA_35974625"
+      ],
+      "retrieved": [
+        "DA_35974625",
+        "DA_35990835",
+        "DA_35975021"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 1.0
+    },
+    {
+      "id": "Q31",
+      "question": "What does the Data Migration Analyst role at Peoplebank Australia WA involve?",
+      "role": "Graduate Data Analyst",
+      "split": "dev",
+      "expected": [
+        "DA_35994661"
+      ],
+      "retrieved": [
+        "DA_35994661",
+        "DA_35973252",
+        "DA_35981456"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 1.0
+    },
+    {
+      "id": "Q32",
+      "question": "What does the Master Data Analyst role at Hays Accountancy & Finance involve?",
+      "role": "Graduate Data Analyst",
+      "split": "dev",
+      "expected": [
+        "DA_36001775"
+      ],
+      "retrieved": [
+        "DA_36001775",
+        "DA_36001488"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 1.0
+    },
+    {
+      "id": "Q33",
+      "question": "Is a forklift licence required for this job?",
+      "role": "Graduate Data Analyst",
+      "split": "dev",
+      "expected": [],
+      "retrieved": [
+        "DA_35992110"
+      ],
+      "expected_unanswerable": true,
+      "retrieval_unanswered": false,
+      "decision_correct": false
+    },
+    {
+      "id": "Q34",
+      "question": "Do I need Kubernetes certification?",
+      "role": "Graduate Data Analyst",
+      "split": "test",
+      "expected": [],
+      "retrieved": [
+        "DA_35994628",
+        "DA_35994633"
+      ],
+      "expected_unanswerable": true,
+      "retrieval_unanswered": false,
+      "decision_correct": false
+    },
+    {
+      "id": "Q35",
+      "question": "What percentage of applicants pass the interview?",
+      "role": "Graduate Data Analyst",
+      "split": "dev",
+      "expected": [],
+      "retrieved": [],
+      "expected_unanswerable": true,
+      "retrieval_unanswered": true,
+      "decision_correct": true
+    },
+    {
+      "id": "Q36",
+      "question": "Will the company pay my university tuition fees?",
+      "role": "Graduate Data Analyst",
+      "split": "test",
+      "expected": [],
+      "retrieved": [
+        "DA_35959226",
+        "DA_35956778"
+      ],
+      "expected_unanswerable": true,
+      "retrieval_unanswered": false,
+      "decision_correct": false
+    },
+    {
+      "id": "Q37",
+      "question": "Which data scientist roles ask for Python?",
+      "role": "Graduate Data Scientist",
+      "split": "dev",
+      "expected": [
+        "DS_35968826",
+        "DS_35970032",
+        "DS_35972040",
+        "DS_35980266",
+        "DS_35982327",
+        "DS_35983106",
+        "DS_35983604",
+        "DS_35984642",
+        "DS_35988778",
+        "DS_35990008",
+        "DS_35990048",
+        "DS_35990359",
+        "DS_35991535",
+        "DS_35996335",
+        "DS_35997822",
+        "DS_35998738",
+        "DS_35999086"
+      ],
+      "retrieved": [
+        "DS_35991535",
+        "DS_35980266",
+        "DS_35997822"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 0.17647058823529413
+    },
+    {
+      "id": "Q38",
+      "question": "Do data scientist ads want experience with R?",
+      "role": "Graduate Data Scientist",
+      "split": "dev",
+      "expected": [
+        "DS_35968826",
+        "DS_35969591",
+        "DS_35970032",
+        "DS_35980266",
+        "DS_35983106",
+        "DS_35983604",
+        "DS_35984642",
+        "DS_35988778",
+        "DS_35990359",
+        "DS_35991535",
+        "DS_35996335",
+        "DS_35997822",
+        "DS_35998738"
+      ],
+      "retrieved": [
+        "DS_35991535",
+        "DS_35997822",
+        "DS_35980266"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 0.23076923076923078
+    },
+    {
+      "id": "Q39",
+      "question": "What machine learning experience do employers look for?",
+      "role": "Graduate Data Scientist",
+      "split": "test",
+      "expected": [
+        "DS_35968826",
+        "DS_35970032",
+        "DS_35976919",
+        "DS_35983106",
+        "DS_35983604",
+        "DS_35984642",
+        "DS_35988778",
+        "DS_35990008",
+        "DS_35990359",
+        "DS_35995678",
+        "DS_35996335",
+        "DS_35997822",
+        "DS_35998738"
+      ],
+      "retrieved": [
+        "DS_35983106",
+        "DS_35997822",
+        "DS_35983604"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 0.23076923076923078
+    },
+    {
+      "id": "Q40",
+      "question": "Is a strong statistics background expected?",
+      "role": "Graduate Data Scientist",
+      "split": "test",
+      "expected": [
+        "DS_35968826",
+        "DS_35969591",
+        "DS_35970032",
+        "DS_35976919",
+        "DS_35983106",
+        "DS_35983604",
+        "DS_35988778",
+        "DS_35990008",
+        "DS_35990359",
+        "DS_35996335",
+        "DS_35997822",
+        "DS_35998738",
+        "DS_35999086"
+      ],
+      "retrieved": [
+        "DS_35996335",
+        "DS_35988778",
+        "DS_35999086"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 0.23076923076923078
+    },
+    {
+      "id": "Q41",
+      "question": "Do data scientists also need SQL for querying databases?",
+      "role": "Graduate Data Scientist",
+      "split": "dev",
+      "expected": [
+        "DS_35968826",
+        "DS_35970032",
+        "DS_35972040",
+        "DS_35976919",
+        "DS_35982327",
+        "DS_35983106",
+        "DS_35983604",
+        "DS_35984642",
+        "DS_35988778",
+        "DS_35990359",
+        "DS_35996335",
+        "DS_35997822",
+        "DS_35999086"
+      ],
+      "retrieved": [
+        "DS_35984642",
+        "DS_35999086",
+        "DS_35990008"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 0.7653606369886217,
+      "recall_at_k": 0.15384615384615385
+    },
+    {
+      "id": "Q42",
+      "question": "Do any roles want deep learning or neural network experience?",
+      "role": "Graduate Data Scientist",
+      "split": "test",
+      "expected": [
+        "DS_35983106",
+        "DS_35988778",
+        "DS_35990008",
+        "DS_35990359"
+      ],
+      "retrieved": [
+        "DS_35983106",
+        "DS_35988778",
+        "DS_35990359"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 0.75
+    },
+    {
+      "id": "Q43",
+      "question": "Is SAS software mentioned as a requirement?",
+      "role": "Graduate Data Scientist",
+      "split": "dev",
+      "expected": [
+        "DS_35969591",
+        "DS_35970032",
+        "DS_35988778",
+        "DS_35996335"
+      ],
+      "retrieved": [
+        "DS_35969591"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 0.46927872602275644,
+      "recall_at_k": 0.25
+    },
+    {
+      "id": "Q44",
+      "question": "Do the jobs involve forecasting or time series modelling?",
+      "role": "Graduate Data Scientist",
+      "split": "dev",
+      "expected": [
+        "DS_35970032",
+        "DS_35972040",
+        "DS_35976919",
+        "DS_35983106",
+        "DS_35988778",
+        "DS_35990008",
+        "DS_35990048",
+        "DS_35995678"
+      ],
+      "retrieved": [
+        "DS_35988778",
+        "DS_35983106",
+        "DS_35990048"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 0.375
+    },
+    {
+      "id": "Q45",
+      "question": "What does the Graduate Data Scientist role at WesTrac Pty Ltd involve?",
+      "role": "Graduate Data Scientist",
+      "split": "dev",
+      "expected": [
+        "DS_35956039"
+      ],
+      "retrieved": [
+        "DS_35956039",
+        "DS_35998738",
+        "DS_35983604"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 1.0
+    },
+    {
+      "id": "Q46",
+      "question": "What does the Data Scientist role at Oakton Contracting & Recruitment Pty Ltd involve?",
+      "role": "Graduate Data Scientist",
+      "split": "test",
+      "expected": [
+        "DS_35976919"
+      ],
+      "retrieved": [
+        "DS_35976919",
+        "DS_35983106",
+        "DS_35983604"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 1.0
+    },
+    {
+      "id": "Q47",
+      "question": "What does the Junior Quantitative Analyst - PhD role at Bluefin Resources Pty Limited involve?",
+      "role": "Graduate Data Scientist",
+      "split": "dev",
+      "expected": [
+        "DS_35990048"
+      ],
+      "retrieved": [
+        "DS_35990048",
+        "DS_35990359",
+        "DS_35988778"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 1.0
+    },
+    {
+      "id": "Q48",
+      "question": "What does the Data Scientist role at AusNet Services involve?",
+      "role": "Graduate Data Scientist",
+      "split": "test",
+      "expected": [
+        "DS_35984642"
+      ],
+      "retrieved": [
+        "DS_35984642",
+        "DS_35988778",
+        "DS_35998738"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 1.0
+    },
+    {
+      "id": "Q49",
+      "question": "What does the Data Scientist (Machine Learning) role at BT People P/L involve?",
+      "role": "Graduate Data Scientist",
+      "split": "dev",
+      "expected": [
+        "DS_35983106"
+      ],
+      "retrieved": [
+        "DS_35983106",
+        "DS_35983604",
+        "DS_35997822"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 1.0
+    },
+    {
+      "id": "Q50",
+      "question": "What does the Data Scientist role at 7-Eleven Australia involve?",
+      "role": "Graduate Data Scientist",
+      "split": "dev",
+      "expected": [
+        "DS_35972040"
+      ],
+      "retrieved": [
+        "DS_35972040",
+        "DS_35995678",
+        "DS_35988778"
+      ],
+      "expected_unanswerable": false,
+      "retrieval_unanswered": false,
+      "decision_correct": true,
+      "hit_at_k": true,
+      "rr": 1.0,
+      "ndcg_at_k": 1.0,
+      "recall_at_k": 1.0
+    },
+    {
+      "id": "Q51",
+      "question": "Is a forklift licence required for this job?",
+      "role": "Graduate Data Scientist",
+      "split": "test",
+      "expected": [],
+      "retrieved": [],
+      "expected_unanswerable": true,
+      "retrieval_unanswered": true,
+      "decision_correct": true
+    },
+    {
+      "id": "Q52",
+      "question": "What percentage of applicants pass the interview?",
+      "role": "Graduate Data Scientist",
+      "split": "dev",
+      "expected": [],
+      "retrieved": [],
+      "expected_unanswerable": true,
+      "retrieval_unanswered": true,
+      "decision_correct": true
+    },
+    {
+      "id": "Q53",
+      "question": "Do these roles require knowledge of COBOL?",
+      "role": "Graduate Data Scientist",
+      "split": "test",
+      "expected": [],
+      "retrieved": [],
+      "expected_unanswerable": true,
+      "retrieval_unanswered": true,
+      "decision_correct": true
+    },
+    {
+      "id": "Q54",
+      "question": "What will the average salary for this role be in 2030?",
+      "role": "Graduate Data Scientist",
+      "split": "dev",
+      "expected": [],
+      "retrieved": [],
+      "expected_unanswerable": true,
+      "retrieval_unanswered": true,
+      "decision_correct": true
+    }
+  ]
+}
