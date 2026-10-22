@@ -1,0 +1,23 @@
+{
+  "doc_id": "DA_35957246",
+  "role": "Graduate Data Analyst",
+  "title": "Business Intelligence Analyst",
+  "text": "Business Intelligence Analyst at Private Advertiser (Melbourne, CBD & Inner Suburbs; Full Time; salary: not stated). We are a unique wealth management company that delivers a comprehensive suite of investment and shared services to clients of varying levels of sophistication and needs. In this role you will report to the Head of Operations and have numerous stakeholders throughout the business. You will work closely with the management team to design and build business wide dashboards and key metrics across product profitability, client accounts and transactions, financial data and operations. Your primary objective will be to improve operational performance reporting and data outputs to provide useful, accurate and timely decision making support across the business. Responsibilities will include but are not limited to: Develop and implement data collection systems and other strategies that optimise statistical efficiency and data quality - experience extracting large scale data via API's from multiple sources Ability to extract, clean and load data programmatically (we use Python with pandas/numpy) and to acquire data from primary or secondary data sources and maintain data governance processe Identify, analyse, and interpret trends or patterns relating to key performance indicators in complex data sets Identify anomalies in various data sources, filter and \"clean\" data as necessary Incorporate data analysis into designated ongoing reports, set up scripting to automate data flows and other daily tasks Use analysed data to create reports identifying process improvement opportunities with a strong emphasis on dashboard software (PowerBI) and be confident ingesting many different data sources Identify opportunities and provide insights for the business to make timely and fact-based decisions, as well as feeding into more advanced analytics and business models. Perform statistical analysis and develop compelling data visualisations that will support projects and make recommendations for process improvements. Undertake ad hoc data extraction, manipulation & analysis for the purpose of insights and recommendations. Implement predictive metrics for client driven environment. Support the drive for continuous improvement by ensuring integrity & accuracy and to meet advances in business requirements Our key selection criteria: Deep Wealth Management Platform and/or Financial Services experience specialising in data analytics and performance reporting Experience in SQL, PowerBI, Python or similar programming languages A hunger and desire to develop your professional skills and career in Data Analytics within applications, Customer Marketing Analytics, Campaign Analytics, Business Strategy, Sales Channel Optimisation, Operational Performance, etc. Expertise in delivery technologies and data access, including familiarity with metadata, data organization, data quality assessment and data profiling Ability to independently, resourcefully, and creatively research and implement new solutions Highly developed organisational, communication and written skills, with extensive knowledge of Microsoft Word, Outlook, Excel and PowerPoint packages. Your ability to multitask and prioritise activities while producing quality work will be highly regarded as will your ability to hit the ground running and assimilate into the existing team and workflows. We are looking for a talented, innovative and driven individual who believes they can contribute to our growth agenda, our clients, and our culture. We are committed to creating a diverse environment and are proud to be an equal opportunity employer. We value the innovation and creativity that diversity of thought brings to our high performance culture. If you're capable, motivated and can deliver, we want you on our team. You must have the right to live and work in Australia to apply for this position.",
+  "skills": [
+    "Communication",
+    "Data Visualisation",
+    "Excel",
+    "NumPy",
+    "Pandas",
+    "Power BI",
+    "Python",
+    "SQL",
+    "Statistics"
+  ],
+  "skills_source": "auto_taxonomy",
+  "source_url": "https://www.seek.com.au/job/35957246",
+  "source_type": "PUBLIC_JOB_AD_SEEK_2018_CC_BY_4.0",
+  "collected_date": "2018-04-11",
+  "raw_file": "seek_selected.csv",
+  "raw_row": 173
+}

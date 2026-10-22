@@ -1,0 +1,22 @@
+{
+  "doc_id": "DA_35981134",
+  "role": "Graduate Data Analyst",
+  "title": "Data Readiness Analyst",
+  "text": "Data Readiness Analyst at RACV (Melbourne, CBD & Inner Suburbs; Contract/Temp; salary: not stated). Headquartered in Melbourne CBD, RACV's Growth, Strategy & Analytics team is growing fast. We have significantly invested in analytical innovations, we are migrating to Microsoft Azure and we're really starting to play in the \"digital space\". A critical part of our success is the continued efforts towards ensuring data quality and data governance whilst we shift platforms, and this is where you come in. Reporting into the Data Integration Manager the Data Readiness Analyst plays a critical role to ensure accurate business data is readily available at any time. You will flex between the two environments storing data in an efficient and structured manner from both internal and external parties, aligning this to RACV's data needs. Developing robust integrated data structures is where you excel, bringing with you proven ETL technologies and methodologies that organise, label and clean data at the source, ensuring adherence to best practice. As the ideal candidate, you will bring extensive technical skills to the table, including advanced programming skills in SQL Server, SAS, MDM coupled with knowledge in data modelling software (Toad, Erwin) and data modelling techniques (Snowflake, Data vault, 3NF). Formulating techniques for quality data collection that ensures accuracy and legitimacy of data is where you excel, quickly adding value with your advanced extraction and process skills using SQL, TSQL, PL/SQL, unix shell scripts and SAS. You will be comfortable swinging between hands on and strategy work and be known for your strong execution, follow up and collaboration. It's a close-knit team, so you will need to be a strong team player and understand the importance of stakeholder engagement whilst managing multiple priorities and meeting deadlines. Is this you? Apply now! Applications Close 27/4/2018 Two Interviews & Case Study in Recruitment Process",
+  "skills": [
+    "Azure",
+    "Data Modelling",
+    "ETL",
+    "SAS",
+    "SQL",
+    "Snowflake",
+    "Stakeholder Management",
+    "Teamwork"
+  ],
+  "skills_source": "auto_taxonomy",
+  "source_url": "https://www.seek.com.au/job/35981134",
+  "source_type": "PUBLIC_JOB_AD_SEEK_2018_CC_BY_4.0",
+  "collected_date": "2018-04-13",
+  "raw_file": "seek_selected.csv",
+  "raw_row": 89
+}

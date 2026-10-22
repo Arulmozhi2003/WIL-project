@@ -1,0 +1,22 @@
+{
+  "doc_id": "DS_35996335",
+  "role": "Graduate Data Scientist",
+  "title": "Data Scientist",
+  "text": "Data Scientist at Bankwest Group Services (Perth, CBD, Inner & Western Suburbs; Full Time; salary: not stated). We are proud to be Money Magazines 2017 \"Bank of the Year\" and attribute our ongoing success to our customer-focused people and vibrant culture. We promote flexibility to balance your work and home life and ensure you achieve your career goals and personal needs. Making a difference in the community is important to Bankwest and colleagues have the opportunity to volunteer two days per year for a cause that matters to them. Bankwest is adopting new ways of working and embracing new technologies to meet rapidly changing customer needs in today's digital economy. The opportunity to play an influential role in this dynamic environment and contribute to the success of Bankwest has become available in our Analytics team who act as the voice of the customer and an Insights Hub for informing customer and market strategies within the business. Reporting to the Senior Manager of Customer Analytics you will play a vital role, working in an agile team scoping out business problems identifying root cause, potential solutions, data requirements and expected customer outcomes. In delivering solutions, you will source and clean data, design, develop and evaluate models using a variety of machine learning and statistical models for internal stakeholders from start to finish, in the field of customer behaviour. When you're not hacking together a script, or training a model, you love discussing new concepts with data and helping to lift Bankwest's data/analytics literacy. You welcome the opportunity to present your work to a wider audience, and are willing to put in the work required to explain it clearly and effectively. Is this you? Computer Science: In a nutshell, \"you can code\". You're likely to be fluent in several of the following languages/environments, and you're not fazed by the prospect of learning more: R, Python, SAS, SQL, You are confident you can get data into a form that you can work with, whatever format it starts and ends in (whether that's a relational database, hadoop cluster, text file, etc). Machine Learning & Statistics: You have a deep understanding of how a variety of statistical modeling & machine learning algorithms work, how to use them appropriately to build a robust model, and how to evaluate the model's performance. You have applied data analytics to a variety of data sets, and have a healthy and practical appreciation of what works and hinders model development. Degree in a quantitative discipline required, e.g. mathematics, economics, econometrics, statistics, computer science or engineering If this sounds like your ideal next challenge then apply today!",
+  "skills": [
+    "Agile",
+    "Hadoop",
+    "Machine Learning",
+    "Python",
+    "R",
+    "SAS",
+    "SQL",
+    "Statistics"
+  ],
+  "skills_source": "auto_taxonomy",
+  "source_url": "https://www.seek.com.au/job/35996335",
+  "source_type": "PUBLIC_JOB_AD_SEEK_2018_CC_BY_4.0",
+  "collected_date": "2018-04-16",
+  "raw_file": "seek_selected.csv",
+  "raw_row": 20
+}

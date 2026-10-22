@@ -1,0 +1,20 @@
+{
+  "doc_id": "DA_35967236",
+  "role": "Graduate Data Analyst",
+  "title": "Data Analyst",
+  "text": "Data Analyst at Charterhouse (Sydney, ; Contract/Temp; salary: not stated). Data Analyst needed for 6 month contract (possibility of renewal) with sought after NSW Government agency. Ideal candidates will have strong background in Data Analytics, with solid skills in SQL Server & Informatica. Should also have a keen interest in open source technologies such as Hadoop, Python, R, Spark etc... Convenient location close to public transport. Requirements: Relevant tertiary qualification in IT / Computer Science / Mathematics or similar... Should have 5+ years' experience in data analysis focused roles Technical Skills Informatica / ETL SQL Server / T-SQL SSIS / SSAS / SSRS Hadoop Spark R / Python",
+  "skills": [
+    "ETL",
+    "Hadoop",
+    "Python",
+    "R",
+    "SQL",
+    "Spark"
+  ],
+  "skills_source": "auto_taxonomy",
+  "source_url": "https://www.seek.com.au/job/35967236",
+  "source_type": "PUBLIC_JOB_AD_SEEK_2018_CC_BY_4.0",
+  "collected_date": "2018-04-12",
+  "raw_file": "seek_selected.csv",
+  "raw_row": 125
+}

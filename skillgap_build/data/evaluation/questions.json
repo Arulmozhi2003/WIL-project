@@ -1,0 +1,893 @@
+[
+ {
+  "id": "Q01",
+  "split": "dev",
+  "type": "skill",
+  "role": "Graduate Business/Data Analyst",
+  "question": "Do business analyst roles require advanced Excel?",
+  "relevant_doc_ids": [
+   "BA_35957423",
+   "BA_35967128",
+   "BA_35967910",
+   "BA_35968844",
+   "BA_35969007",
+   "BA_35969751",
+   "BA_35969842",
+   "BA_35970257",
+   "BA_35971457",
+   "BA_35972828",
+   "BA_35973140",
+   "BA_35974670",
+   "BA_35974837",
+   "BA_35975297",
+   "BA_35975828",
+   "BA_35978626",
+   "BA_35979880",
+   "BA_35980382",
+   "BA_35981631",
+   "BA_35982216",
+   "BA_35982863",
+   "BA_35983821",
+   "BA_35984148",
+   "BA_35985635",
+   "BA_35985706",
+   "BA_35989279",
+   "BA_35989786",
+   "BA_35990076",
+   "BA_35991279",
+   "BA_35991552",
+   "BA_35991794",
+   "BA_35993535",
+   "BA_35993960",
+   "BA_35994299",
+   "BA_35995703",
+   "BA_35997766",
+   "BA_36001438"
+  ],
+  "label_rule": "documents of role whose skills include Excel"
+ },
+ {
+  "id": "Q02",
+  "split": "dev",
+  "type": "skill",
+  "role": "Graduate Business/Data Analyst",
+  "question": "Is SQL knowledge expected for business analysts?",
+  "relevant_doc_ids": [
+   "BA_35956021",
+   "BA_35972530",
+   "BA_35974670",
+   "BA_35974925",
+   "BA_35975681",
+   "BA_35984029",
+   "BA_35985635",
+   "BA_35989786",
+   "BA_35991618",
+   "BA_35991757",
+   "BA_35993535",
+   "BA_35994299",
+   "BA_35995703",
+   "BA_35997872"
+  ],
+  "label_rule": "documents of role whose skills include SQL"
+ },
+ {
+  "id": "Q03",
+  "split": "test",
+  "type": "skill",
+  "role": "Graduate Business/Data Analyst",
+  "question": "Do these roles expect experience working in Agile or Scrum teams?",
+  "relevant_doc_ids": [
+   "BA_35957423",
+   "BA_35970907",
+   "BA_35971204",
+   "BA_35972530",
+   "BA_35974925",
+   "BA_35989279",
+   "BA_35990076",
+   "BA_35991279",
+   "BA_35991618",
+   "BA_35993535",
+   "BA_35995703",
+   "BA_36000606"
+  ],
+  "label_rule": "documents of role whose skills include Agile"
+ },
+ {
+  "id": "Q04",
+  "split": "dev",
+  "type": "skill",
+  "role": "Graduate Business/Data Analyst",
+  "question": "Is business process mapping part of the job?",
+  "relevant_doc_ids": [
+   "BA_35957423",
+   "BA_35972116",
+   "BA_35973636",
+   "BA_35976281",
+   "BA_35982863",
+   "BA_35989279",
+   "BA_35991618",
+   "BA_35997872",
+   "BA_36000606"
+  ],
+  "label_rule": "documents of role whose skills include Process Mapping"
+ },
+ {
+  "id": "Q05",
+  "split": "test",
+  "type": "skill",
+  "role": "Graduate Business/Data Analyst",
+  "question": "Do business analyst ads mention Power BI reporting?",
+  "relevant_doc_ids": [
+   "BA_35970907",
+   "BA_35972116",
+   "BA_35976281",
+   "BA_35978626",
+   "BA_35983821",
+   "BA_35985297",
+   "BA_35994299",
+   "BA_35995703"
+  ],
+  "label_rule": "documents of role whose skills include Power BI"
+ },
+ {
+  "id": "Q06",
+  "split": "test",
+  "type": "skill",
+  "role": "Graduate Business/Data Analyst",
+  "question": "Do they ask for data modelling skills?",
+  "relevant_doc_ids": [
+   "BA_35968844",
+   "BA_35971204",
+   "BA_35973636",
+   "BA_35975828",
+   "BA_35980382",
+   "BA_35991794"
+  ],
+  "label_rule": "documents of role whose skills include Data Modelling"
+ },
+ {
+  "id": "Q07",
+  "split": "dev",
+  "type": "skill",
+  "role": "Graduate Business/Data Analyst",
+  "question": "How much stakeholder engagement is involved in these roles?",
+  "relevant_doc_ids": [
+   "BA_35957423",
+   "BA_35967128",
+   "BA_35969751",
+   "BA_35971204",
+   "BA_35971457",
+   "BA_35972116",
+   "BA_35972530",
+   "BA_35975297",
+   "BA_35975681",
+   "BA_35976281",
+   "BA_35979880",
+   "BA_35980382",
+   "BA_35983821",
+   "BA_35984029",
+   "BA_35991618"
+  ],
+  "label_rule": "documents of role whose skills include Stakeholder Management"
+ },
+ {
+  "id": "Q08",
+  "split": "dev",
+  "type": "skill",
+  "role": "Graduate Business/Data Analyst",
+  "question": "Will I be creating reports and dashboards?",
+  "relevant_doc_ids": [
+   "BA_35969751",
+   "BA_35972325",
+   "BA_35974670",
+   "BA_35974925",
+   "BA_35980382",
+   "BA_35983821",
+   "BA_35991552",
+   "BA_35993891",
+   "BA_35993906",
+   "BA_35995703",
+   "BA_35997089",
+   "BA_35997331",
+   "BA_36000606"
+  ],
+  "label_rule": "documents of role whose skills include Data Visualisation"
+ },
+ {
+  "id": "Q09",
+  "split": "test",
+  "type": "ad",
+  "role": "Graduate Business/Data Analyst",
+  "question": "What does the ERP Implementation Finance Business Analyst role at Q Consulting Group involve?",
+  "relevant_doc_ids": [
+   "BA_35990076"
+  ],
+  "label_rule": "the named advertisement"
+ },
+ {
+  "id": "Q10",
+  "split": "dev",
+  "type": "ad",
+  "role": "Graduate Business/Data Analyst",
+  "question": "What does the Business Analyst role at RAC involve?",
+  "relevant_doc_ids": [
+   "BA_35969842"
+  ],
+  "label_rule": "the named advertisement"
+ },
+ {
+  "id": "Q11",
+  "split": "dev",
+  "type": "ad",
+  "role": "Graduate Business/Data Analyst",
+  "question": "What does the Business Analyst - Exciting Greenfield Project role at Private Advertiser involve?",
+  "relevant_doc_ids": [
+   "BA_35957423"
+  ],
+  "label_rule": "the named advertisement"
+ },
+ {
+  "id": "Q12",
+  "split": "test",
+  "type": "ad",
+  "role": "Graduate Business/Data Analyst",
+  "question": "What does the Information Systems - JDE Business Analyst role at Gladstone Ports Corporation involve?",
+  "relevant_doc_ids": [
+   "BA_35993891"
+  ],
+  "label_rule": "the named advertisement"
+ },
+ {
+  "id": "Q13",
+  "split": "dev",
+  "type": "ad",
+  "role": "Graduate Business/Data Analyst",
+  "question": "What does the Business Analyst / Identity Access Management role at Davidson Technology involve?",
+  "relevant_doc_ids": [
+   "BA_35973636"
+  ],
+  "label_rule": "the named advertisement"
+ },
+ {
+  "id": "Q14",
+  "split": "dev",
+  "type": "ad",
+  "role": "Graduate Business/Data Analyst",
+  "question": "What does the Business Analyst role at Hays Accountancy & Finance involve?",
+  "relevant_doc_ids": [
+   "BA_35972828"
+  ],
+  "label_rule": "the named advertisement"
+ },
+ {
+  "id": "Q15",
+  "split": "dev",
+  "type": "unanswerable",
+  "role": "Graduate Business/Data Analyst",
+  "question": "Is a forklift licence required for this job?",
+  "relevant_doc_ids": [],
+  "label_rule": "no document of role matches /forklift/i"
+ },
+ {
+  "id": "Q16",
+  "split": "test",
+  "type": "unanswerable",
+  "role": "Graduate Business/Data Analyst",
+  "question": "Do I need Kubernetes certification?",
+  "relevant_doc_ids": [],
+  "label_rule": "no document of role matches /kubernetes/i"
+ },
+ {
+  "id": "Q17",
+  "split": "test",
+  "type": "unanswerable",
+  "role": "Graduate Business/Data Analyst",
+  "question": "What will the average salary for this role be in 2030?",
+  "relevant_doc_ids": [],
+  "label_rule": "no document of role matches /2030/i"
+ },
+ {
+  "id": "Q18",
+  "split": "dev",
+  "type": "unanswerable",
+  "role": "Graduate Business/Data Analyst",
+  "question": "Will the company pay my university tuition fees?",
+  "relevant_doc_ids": [],
+  "label_rule": "no document of role matches /tuition/i"
+ },
+ {
+  "id": "Q19",
+  "split": "test",
+  "type": "skill",
+  "role": "Graduate Data Analyst",
+  "question": "Do employers expect me to write database queries in SQL?",
+  "relevant_doc_ids": [
+   "DA_35855299",
+   "DA_35956285",
+   "DA_35957246",
+   "DA_35957548",
+   "DA_35967236",
+   "DA_35967309",
+   "DA_35968969",
+   "DA_35969287",
+   "DA_35969432",
+   "DA_35969822",
+   "DA_35969827",
+   "DA_35970144",
+   "DA_35971439",
+   "DA_35971824",
+   "DA_35972250",
+   "DA_35972454",
+   "DA_35972494",
+   "DA_35973086",
+   "DA_35974625",
+   "DA_35978574",
+   "DA_35979429",
+   "DA_35980354",
+   "DA_35981134",
+   "DA_35981150",
+   "DA_35981160",
+   "DA_35982055",
+   "DA_35986458",
+   "DA_35990835",
+   "DA_35991436",
+   "DA_35993319",
+   "DA_35994628",
+   "DA_35994633",
+   "DA_35994661",
+   "DA_35997489",
+   "DA_35998325",
+   "DA_36000476",
+   "DA_36000810",
+   "DA_36001488"
+  ],
+  "label_rule": "documents of role whose skills include SQL"
+ },
+ {
+  "id": "Q20",
+  "split": "test",
+  "type": "skill",
+  "role": "Graduate Data Analyst",
+  "question": "How important are spreadsheet skills such as Microsoft Excel?",
+  "relevant_doc_ids": [
+   "DA_35855299",
+   "DA_35956285",
+   "DA_35957246",
+   "DA_35969822",
+   "DA_35969827",
+   "DA_35971046",
+   "DA_35971117",
+   "DA_35971439",
+   "DA_35972250",
+   "DA_35972454",
+   "DA_35972494",
+   "DA_35973086",
+   "DA_35975021",
+   "DA_35975070",
+   "DA_35976810",
+   "DA_35977279",
+   "DA_35978076",
+   "DA_35978574",
+   "DA_35980354",
+   "DA_35983270",
+   "DA_35990835",
+   "DA_35993319",
+   "DA_35997489",
+   "DA_35998325",
+   "DA_36000810",
+   "DA_36001775"
+  ],
+  "label_rule": "documents of role whose skills include Excel"
+ },
+ {
+  "id": "Q21",
+  "split": "dev",
+  "type": "skill",
+  "role": "Graduate Data Analyst",
+  "question": "Is experience building dashboards in Tableau requested?",
+  "relevant_doc_ids": [
+   "DA_35959226",
+   "DA_35967493",
+   "DA_35968969",
+   "DA_35969432",
+   "DA_35969827",
+   "DA_35971439",
+   "DA_35972250",
+   "DA_35972454",
+   "DA_35978574",
+   "DA_35979429",
+   "DA_35981150",
+   "DA_35982055",
+   "DA_35986458",
+   "DA_35990093",
+   "DA_35991436",
+   "DA_35992211",
+   "DA_35992806",
+   "DA_35993319",
+   "DA_35994633",
+   "DA_35996984",
+   "DA_35997489"
+  ],
+  "label_rule": "documents of role whose skills include Tableau"
+ },
+ {
+  "id": "Q22",
+  "split": "dev",
+  "type": "skill",
+  "role": "Graduate Data Analyst",
+  "question": "Do the ads mention Microsoft Power BI?",
+  "relevant_doc_ids": [
+   "DA_35855299",
+   "DA_35957246",
+   "DA_35968969",
+   "DA_35971439",
+   "DA_35972250",
+   "DA_35973606",
+   "DA_35974823",
+   "DA_35991436",
+   "DA_35992806",
+   "DA_35996984",
+   "DA_35997489",
+   "DA_36001145"
+  ],
+  "label_rule": "documents of role whose skills include Power BI"
+ },
+ {
+  "id": "Q23",
+  "split": "dev",
+  "type": "skill",
+  "role": "Graduate Data Analyst",
+  "question": "Is Python programming experience required for analyst roles?",
+  "relevant_doc_ids": [
+   "DA_35957246",
+   "DA_35967236",
+   "DA_35967309",
+   "DA_35967493",
+   "DA_35971824",
+   "DA_35972250",
+   "DA_35973086",
+   "DA_35981160",
+   "DA_35993319",
+   "DA_35997489",
+   "DA_35997944",
+   "DA_35998945"
+  ],
+  "label_rule": "documents of role whose skills include Python"
+ },
+ {
+  "id": "Q24",
+  "split": "test",
+  "type": "skill",
+  "role": "Graduate Data Analyst",
+  "question": "Do these roles need a background in statistical analysis?",
+  "relevant_doc_ids": [
+   "DA_35956285",
+   "DA_35957246",
+   "DA_35967309",
+   "DA_35970144",
+   "DA_35971824",
+   "DA_35973086",
+   "DA_35975021",
+   "DA_35979429",
+   "DA_35990835",
+   "DA_35993319",
+   "DA_35997489",
+   "DA_35997754"
+  ],
+  "label_rule": "documents of role whose skills include Statistics"
+ },
+ {
+  "id": "Q25",
+  "split": "dev",
+  "type": "skill",
+  "role": "Graduate Data Analyst",
+  "question": "Will I need to build ETL processes to load data?",
+  "relevant_doc_ids": [
+   "DA_35967236",
+   "DA_35969432",
+   "DA_35969822",
+   "DA_35971439",
+   "DA_35972454",
+   "DA_35973252",
+   "DA_35981134",
+   "DA_35981160",
+   "DA_35981456",
+   "DA_35982055",
+   "DA_35983270",
+   "DA_35992211",
+   "DA_35994628"
+  ],
+  "label_rule": "documents of role whose skills include ETL"
+ },
+ {
+  "id": "Q26",
+  "split": "dev",
+  "type": "skill",
+  "role": "Graduate Data Analyst",
+  "question": "Is the R language asked for?",
+  "relevant_doc_ids": [
+   "DA_35967236",
+   "DA_35967309",
+   "DA_35971117",
+   "DA_35971824",
+   "DA_35972250",
+   "DA_35973086",
+   "DA_35976810",
+   "DA_35978574",
+   "DA_35981160",
+   "DA_35987682",
+   "DA_35997489",
+   "DA_35997754"
+  ],
+  "label_rule": "documents of role whose skills include R"
+ },
+ {
+  "id": "Q27",
+  "split": "dev",
+  "type": "ad",
+  "role": "Graduate Data Analyst",
+  "question": "What does the Student Experience and Data Analyst role at The University of Sydney involve?",
+  "relevant_doc_ids": [
+   "DA_35956778"
+  ],
+  "label_rule": "the named advertisement"
+ },
+ {
+  "id": "Q28",
+  "split": "dev",
+  "type": "ad",
+  "role": "Graduate Data Analyst",
+  "question": "What does the Data and Reporting Analyst role at ActewAGL Distribution involve?",
+  "relevant_doc_ids": [
+   "DA_35969287"
+  ],
+  "label_rule": "the named advertisement"
+ },
+ {
+  "id": "Q29",
+  "split": "test",
+  "type": "ad",
+  "role": "Graduate Data Analyst",
+  "question": "What does the Data Migration Analyst - CANBERRA based role at Full Circle Partners involve?",
+  "relevant_doc_ids": [
+   "DA_35973252"
+  ],
+  "label_rule": "the named advertisement"
+ },
+ {
+  "id": "Q30",
+  "split": "test",
+  "type": "ad",
+  "role": "Graduate Data Analyst",
+  "question": "What does the Customer Insights Analyst role at Foxtel Management Pty Limited involve?",
+  "relevant_doc_ids": [
+   "DA_35974625"
+  ],
+  "label_rule": "the named advertisement"
+ },
+ {
+  "id": "Q31",
+  "split": "dev",
+  "type": "ad",
+  "role": "Graduate Data Analyst",
+  "question": "What does the Data Migration Analyst role at Peoplebank Australia WA involve?",
+  "relevant_doc_ids": [
+   "DA_35994661"
+  ],
+  "label_rule": "the named advertisement"
+ },
+ {
+  "id": "Q32",
+  "split": "dev",
+  "type": "ad",
+  "role": "Graduate Data Analyst",
+  "question": "What does the Master Data Analyst role at Hays Accountancy & Finance involve?",
+  "relevant_doc_ids": [
+   "DA_36001775"
+  ],
+  "label_rule": "the named advertisement"
+ },
+ {
+  "id": "Q33",
+  "split": "dev",
+  "type": "unanswerable",
+  "role": "Graduate Data Analyst",
+  "question": "Is a forklift licence required for this job?",
+  "relevant_doc_ids": [],
+  "label_rule": "no document of role matches /forklift/i"
+ },
+ {
+  "id": "Q34",
+  "split": "test",
+  "type": "unanswerable",
+  "role": "Graduate Data Analyst",
+  "question": "Do I need Kubernetes certification?",
+  "relevant_doc_ids": [],
+  "label_rule": "no document of role matches /kubernetes/i"
+ },
+ {
+  "id": "Q35",
+  "split": "dev",
+  "type": "unanswerable",
+  "role": "Graduate Data Analyst",
+  "question": "What percentage of applicants pass the interview?",
+  "relevant_doc_ids": [],
+  "label_rule": "no document of role matches /pass rate|percentage of applicants/i"
+ },
+ {
+  "id": "Q36",
+  "split": "test",
+  "type": "unanswerable",
+  "role": "Graduate Data Analyst",
+  "question": "Will the company pay my university tuition fees?",
+  "relevant_doc_ids": [],
+  "label_rule": "no document of role matches /tuition/i"
+ },
+ {
+  "id": "Q37",
+  "split": "dev",
+  "type": "skill",
+  "role": "Graduate Data Scientist",
+  "question": "Which data scientist roles ask for Python?",
+  "relevant_doc_ids": [
+   "DS_35968826",
+   "DS_35970032",
+   "DS_35972040",
+   "DS_35980266",
+   "DS_35982327",
+   "DS_35983106",
+   "DS_35983604",
+   "DS_35984642",
+   "DS_35988778",
+   "DS_35990008",
+   "DS_35990048",
+   "DS_35990359",
+   "DS_35991535",
+   "DS_35996335",
+   "DS_35997822",
+   "DS_35998738",
+   "DS_35999086"
+  ],
+  "label_rule": "documents of role whose skills include Python"
+ },
+ {
+  "id": "Q38",
+  "split": "dev",
+  "type": "skill",
+  "role": "Graduate Data Scientist",
+  "question": "Do data scientist ads want experience with R?",
+  "relevant_doc_ids": [
+   "DS_35968826",
+   "DS_35969591",
+   "DS_35970032",
+   "DS_35980266",
+   "DS_35983106",
+   "DS_35983604",
+   "DS_35984642",
+   "DS_35988778",
+   "DS_35990359",
+   "DS_35991535",
+   "DS_35996335",
+   "DS_35997822",
+   "DS_35998738"
+  ],
+  "label_rule": "documents of role whose skills include R"
+ },
+ {
+  "id": "Q39",
+  "split": "test",
+  "type": "skill",
+  "role": "Graduate Data Scientist",
+  "question": "What machine learning experience do employers look for?",
+  "relevant_doc_ids": [
+   "DS_35968826",
+   "DS_35970032",
+   "DS_35976919",
+   "DS_35983106",
+   "DS_35983604",
+   "DS_35984642",
+   "DS_35988778",
+   "DS_35990008",
+   "DS_35990359",
+   "DS_35995678",
+   "DS_35996335",
+   "DS_35997822",
+   "DS_35998738"
+  ],
+  "label_rule": "documents of role whose skills include Machine Learning"
+ },
+ {
+  "id": "Q40",
+  "split": "test",
+  "type": "skill",
+  "role": "Graduate Data Scientist",
+  "question": "Is a strong statistics background expected?",
+  "relevant_doc_ids": [
+   "DS_35968826",
+   "DS_35969591",
+   "DS_35970032",
+   "DS_35976919",
+   "DS_35983106",
+   "DS_35983604",
+   "DS_35988778",
+   "DS_35990008",
+   "DS_35990359",
+   "DS_35996335",
+   "DS_35997822",
+   "DS_35998738",
+   "DS_35999086"
+  ],
+  "label_rule": "documents of role whose skills include Statistics"
+ },
+ {
+  "id": "Q41",
+  "split": "dev",
+  "type": "skill",
+  "role": "Graduate Data Scientist",
+  "question": "Do data scientists also need SQL for querying databases?",
+  "relevant_doc_ids": [
+   "DS_35968826",
+   "DS_35970032",
+   "DS_35972040",
+   "DS_35976919",
+   "DS_35982327",
+   "DS_35983106",
+   "DS_35983604",
+   "DS_35984642",
+   "DS_35988778",
+   "DS_35990359",
+   "DS_35996335",
+   "DS_35997822",
+   "DS_35999086"
+  ],
+  "label_rule": "documents of role whose skills include SQL"
+ },
+ {
+  "id": "Q42",
+  "split": "test",
+  "type": "skill",
+  "role": "Graduate Data Scientist",
+  "question": "Do any roles want deep learning or neural network experience?",
+  "relevant_doc_ids": [
+   "DS_35983106",
+   "DS_35988778",
+   "DS_35990008",
+   "DS_35990359"
+  ],
+  "label_rule": "documents of role whose skills include Deep Learning"
+ },
+ {
+  "id": "Q43",
+  "split": "dev",
+  "type": "skill",
+  "role": "Graduate Data Scientist",
+  "question": "Is SAS software mentioned as a requirement?",
+  "relevant_doc_ids": [
+   "DS_35969591",
+   "DS_35970032",
+   "DS_35988778",
+   "DS_35996335"
+  ],
+  "label_rule": "documents of role whose skills include SAS"
+ },
+ {
+  "id": "Q44",
+  "split": "dev",
+  "type": "skill",
+  "role": "Graduate Data Scientist",
+  "question": "Do the jobs involve forecasting or time series modelling?",
+  "relevant_doc_ids": [
+   "DS_35970032",
+   "DS_35972040",
+   "DS_35976919",
+   "DS_35983106",
+   "DS_35988778",
+   "DS_35990008",
+   "DS_35990048",
+   "DS_35995678"
+  ],
+  "label_rule": "documents of role whose skills include Forecasting"
+ },
+ {
+  "id": "Q45",
+  "split": "dev",
+  "type": "ad",
+  "role": "Graduate Data Scientist",
+  "question": "What does the Graduate Data Scientist role at WesTrac Pty Ltd involve?",
+  "relevant_doc_ids": [
+   "DS_35956039"
+  ],
+  "label_rule": "the named advertisement"
+ },
+ {
+  "id": "Q46",
+  "split": "test",
+  "type": "ad",
+  "role": "Graduate Data Scientist",
+  "question": "What does the Data Scientist role at Oakton Contracting & Recruitment Pty Ltd involve?",
+  "relevant_doc_ids": [
+   "DS_35976919"
+  ],
+  "label_rule": "the named advertisement"
+ },
+ {
+  "id": "Q47",
+  "split": "dev",
+  "type": "ad",
+  "role": "Graduate Data Scientist",
+  "question": "What does the Junior Quantitative Analyst - PhD role at Bluefin Resources Pty Limited involve?",
+  "relevant_doc_ids": [
+   "DS_35990048"
+  ],
+  "label_rule": "the named advertisement"
+ },
+ {
+  "id": "Q48",
+  "split": "test",
+  "type": "ad",
+  "role": "Graduate Data Scientist",
+  "question": "What does the Data Scientist role at AusNet Services involve?",
+  "relevant_doc_ids": [
+   "DS_35984642"
+  ],
+  "label_rule": "the named advertisement"
+ },
+ {
+  "id": "Q49",
+  "split": "dev",
+  "type": "ad",
+  "role": "Graduate Data Scientist",
+  "question": "What does the Data Scientist (Machine Learning) role at BT People P/L involve?",
+  "relevant_doc_ids": [
+   "DS_35983106"
+  ],
+  "label_rule": "the named advertisement"
+ },
+ {
+  "id": "Q50",
+  "split": "dev",
+  "type": "ad",
+  "role": "Graduate Data Scientist",
+  "question": "What does the Data Scientist role at 7-Eleven Australia involve?",
+  "relevant_doc_ids": [
+   "DS_35972040"
+  ],
+  "label_rule": "the named advertisement"
+ },
+ {
+  "id": "Q51",
+  "split": "test",
+  "type": "unanswerable",
+  "role": "Graduate Data Scientist",
+  "question": "Is a forklift licence required for this job?",
+  "relevant_doc_ids": [],
+  "label_rule": "no document of role matches /forklift/i"
+ },
+ {
+  "id": "Q52",
+  "split": "dev",
+  "type": "unanswerable",
+  "role": "Graduate Data Scientist",
+  "question": "What percentage of applicants pass the interview?",
+  "relevant_doc_ids": [],
+  "label_rule": "no document of role matches /pass rate|percentage of applicants/i"
+ },
+ {
+  "id": "Q53",
+  "split": "test",
+  "type": "unanswerable",
+  "role": "Graduate Data Scientist",
+  "question": "Do these roles require knowledge of COBOL?",
+  "relevant_doc_ids": [],
+  "label_rule": "no document of role matches /cobol/i"
+ },
+ {
+  "id": "Q54",
+  "split": "dev",
+  "type": "unanswerable",
+  "role": "Graduate Data Scientist",
+  "question": "What will the average salary for this role be in 2030?",
+  "relevant_doc_ids": [],
+  "label_rule": "no document of role matches /2030/i"
+ }
+]

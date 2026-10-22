@@ -1,0 +1,20 @@
+{
+  "doc_id": "DA_35992211",
+  "role": "Graduate Data Analyst",
+  "title": "Data warehouse Test Analyst",
+  "text": "Data warehouse Test Analyst at FinXL IT Professional Services (Sydney, CBD, Inner West & Eastern Suburbs; Full Time; salary: not stated). Looking to hire an experienced Test Analyst with strong Data warehouse experience, Sydney- Long Term Opportunity Experience required: • Data Warehouse Automation Tester for at least 5 years • Has at least 4 years’ experience building automation using BDD framework (Preferably Cucumber) • Ability to simplify & prepare test cases, plan, conditions & documents independently • Has experience with agile workflow delivery using JIRA, Confluence Mandatory skills : SQLs (Preferable Netezza), Cucumber , Having X-Ray is a plus Optional Skills : Tableau, Unix, ETL tool (Preferable DataStage), Git (Jenkins) Tasks: • Ready to start building data warehouse automation scripts. • Define & prepare test scenarios, conditions, plan & document • Regular showcase of each portion of automation completed",
+  "skills": [
+    "Agile",
+    "Data Warehousing",
+    "ETL",
+    "Git",
+    "Jira",
+    "Tableau"
+  ],
+  "skills_source": "auto_taxonomy",
+  "source_url": "https://www.seek.com.au/job/35992211",
+  "source_type": "PUBLIC_JOB_AD_SEEK_2018_CC_BY_4.0",
+  "collected_date": "2018-04-16",
+  "raw_file": "seek_selected.csv",
+  "raw_row": 14
+}

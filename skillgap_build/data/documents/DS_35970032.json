@@ -1,0 +1,27 @@
+{
+  "doc_id": "DS_35970032",
+  "role": "Graduate Data Scientist",
+  "title": "Data Scientist",
+  "text": "Data Scientist at Firebrand Talent (Melbourne, CBD & Inner Suburbs; Full Time; salary: $120,000 - $169,999 + super). Australia's leading loyalty fintech company are looking for passionate and experienced Data Scientists to come and join them on an exiting new project. The company are responsible for creating bespoke customer experience and rewards platforms for some of the Australia's largest organisations across the banking, insurance, utilities, sports & entertainment industries. This is an amazing opportunity to join a dynamic and highly innovative team with great social culture and become an active part of revolutionising the loyalty and payments space in Australia. With great work perks and employment incentives, the company provides opportunities for career progression and development locally and internationally. Please note that fleixibilty to travel between Melbourne and Sydney is required for this role. About the Role You will be working on a new project with one of Australia's most recognisable brands to help increase customer engagement and loyalty You will employ quantitative techniques such as forecasting, linear regression, machine learning, random forests, generalised boosting and others to develop models and methods to maximise performance that underpins loyalty strategy and tactical execution You will develop, manage, manipulate and extract within large data sets and build statistical models, in turn driving innovation and new revenue streams In partnership with the Loyalty & Marketing teams, you will provide both the insight to drive customer and segment strategies and the execution capability to deploy customer interactions across direct and intermediate channels Experienced required for the role... Ideally PhD level qualifications in a relevant discipline, Statistics, Data Science, Mathematics, Computer Science. 5 + years commercial experience, developing analytical models in a big data environment Must be able to deliver on commercial outcomes to drive brand loyalty Proven experience in advanced methodology such as machine learning Expert knowledge of R, Python, SQL, SAS Strong written and verbal communication; strong problem solving and presentation skills Experience using big data platforms such as Hadoop and Spark will be advantageous A blend of both technical skills and stakeholder management experience This is a great opportunity to join an Australian owned company that offer a competitive salary, flexible working arrangements, a diverse range of benefits, health and well-being programs and so much more.",
+  "skills": [
+    "Communication",
+    "Forecasting",
+    "Hadoop",
+    "Machine Learning",
+    "Presentation",
+    "Problem Solving",
+    "Python",
+    "R",
+    "SAS",
+    "SQL",
+    "Spark",
+    "Stakeholder Management",
+    "Statistics"
+  ],
+  "skills_source": "auto_taxonomy",
+  "source_url": "https://www.seek.com.au/job/35970032",
+  "source_type": "PUBLIC_JOB_AD_SEEK_2018_CC_BY_4.0",
+  "collected_date": "2018-04-12",
+  "raw_file": "seek_selected.csv",
+  "raw_row": 132
+}

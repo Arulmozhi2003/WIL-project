@@ -1,0 +1,22 @@
+{
+  "doc_id": "DS_35983604",
+  "role": "Graduate Data Scientist",
+  "title": "Data Scientist - 3 month contract - Melbourne CBD",
+  "text": "Data Scientist - 3 month contract - Melbourne CBD at Sirius Technology Melbourne part of Sirius People Pty Ltd (Melbourne, CBD & Inner Suburbs; Contract/Temp; salary: not stated). Your primary focus will be in applying data mining techniques, doing statistical analysis, and building high quality prediction systems integrated with their products primarily using R or python. Highlights 3 month contract Immediate start Melbourne CBD Responsibilities Selecting features, building and optimizing classifiers using machine learning techniques Data mining using state-of-the-art methods Extending company’s data with third party sources of information when needed Enhancing data collection procedures to include information that is relevant for building analytic systems Processing, cleansing, and verifying the integrity of data used for analysis Doing ad-hoc analysis and presenting results in a clear manner Creating automated anomaly detection systems and constant tracking of its performance Machine learning requirements Skills and Qualifications Demonstrated experience programming in R or Python Excellent understanding of machine learning techniques and algorithms, Great communication skills Experience with data visualisation tools, Proficiency in using query languages such as SQL Good applied statistics skills, such as distributions, statistical testing, regression, etc. Good scripting and programming skills Data-oriented personality Relevant tertiary qualification If you have any experience in splunk that is ideal but not essential. The preference is for candidates with immediate work availability. If you meet the above requirements please APPLY NOW and then call Donna on 03 9020 1994.",
+  "skills": [
+    "Communication",
+    "Data Visualisation",
+    "Machine Learning",
+    "Presentation",
+    "Python",
+    "R",
+    "SQL",
+    "Statistics"
+  ],
+  "skills_source": "auto_taxonomy",
+  "source_url": "https://www.seek.com.au/job/35983604",
+  "source_type": "PUBLIC_JOB_AD_SEEK_2018_CC_BY_4.0",
+  "collected_date": "2018-04-13",
+  "raw_file": "seek_selected.csv",
+  "raw_row": 109
+}

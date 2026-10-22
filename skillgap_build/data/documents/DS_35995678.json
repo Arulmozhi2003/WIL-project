@@ -1,0 +1,17 @@
+{
+  "doc_id": "DS_35995678",
+  "role": "Graduate Data Scientist",
+  "title": "Data Scientist",
+  "text": "Data Scientist at Firebrand Talent (Sydney, CBD, Inner West & Eastern Suburbs; Full Time; salary: $120,000 - $189,999 + super). Australia's leading loyalty Fintech company are looking for passionate and experienced Data Scientists to come and join them on an exiting new project. The company are responsible for creating bespoke customer experience and rewards platforms for some of the Australia's largest organisations across the banking, insurance, utilities, sports & entertainment industries. We are looking for experienced Data Scientists to join us to help our customers create value for their unique needs using our products. This role is part of ensuring our customers are successful in using our products to solve their business needs. You will have the opportunity to apply your technical, problem solving and customer engagement skills to help customers solve problems in transportation, retail, property development, advertising, and other domains. This is an amazing opportunity to join a dynamic and highly innovative team with great social culture and become an active part of revolutionising the loyalty and payments space in Australia. With great work perks and employment incentives, the company provides opportunities for career progression and development locally and internationally. Please note that fleixibilty to travel between Melbourne and Sydney is required for this role. About the Role You will be working on a new project with one of Australia's most recognisable brands to help increase customer engagement and loyalty You will employ quantitative techniques such as forecasting, linear regression, machine learning, random forests, generalised boosting and others to develop models and methods to maximise performance that underpins loyalty strategy and tactical execution You will develop, manage, manipulate and extract within large data sets and build statistical models, in turn driving innovation and new revenue streams In partnership with the Loyalty & Marketing teams, you will provide both the insight to drive customer and segment strategies and the execution capability to deploy customer interactions across direct and intermediate channels",
+  "skills": [
+    "Forecasting",
+    "Machine Learning",
+    "Problem Solving"
+  ],
+  "skills_source": "auto_taxonomy",
+  "source_url": "https://www.seek.com.au/job/35995678",
+  "source_type": "PUBLIC_JOB_AD_SEEK_2018_CC_BY_4.0",
+  "collected_date": "2018-04-16",
+  "raw_file": "seek_selected.csv",
+  "raw_row": 27
+}

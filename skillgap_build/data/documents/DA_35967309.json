@@ -1,0 +1,21 @@
+{
+  "doc_id": "DA_35967309",
+  "role": "Graduate Data Analyst",
+  "title": "Marketing Data Analyst",
+  "text": "Marketing Data Analyst at Xpand Group Pty Ltd (Sydney, CBD, Inner West & Eastern Suburbs; Full Time; salary: not stated). Rare opportunity to shape the technology and tools you use in this newly created role for this growing established data driven technology provider. You will be at the heart of taking this companies new products to market. Working in a truly agile environment alongside a team who have worked in some of the worlds biggest brands, you will be responsible for finding nuggets of information across large and disparate data sets and evaluating campaigns to help inform and guide where to invest the business’s resources. Responsibilities: Develop the latest business analytics requirements with the Data Marketing Manager Explore and analyse data sets to find actionable insights to answer specific digital marketing needs Set up new extraction pipelines and workshop data extraction and transformation with Engineering Liaise with Product Data Science about how to apply their latest work to marketing Analyse past campaign’s results and effectiveness with recommendations on future investment. To succeed in this role you will need the following: Working experience with Spark, Flink, Hadoop, SQL, R, Python (or similar) Solid foundation in statistics and ideally experience with population modelling Willingness to learn and work with new technologies Ability to work effectively within a team in a fast paced, entrepreneurial environment If you have the required experience and Australian work rights hit APPLY today.",
+  "skills": [
+    "Agile",
+    "Hadoop",
+    "Python",
+    "R",
+    "SQL",
+    "Spark",
+    "Statistics"
+  ],
+  "skills_source": "auto_taxonomy",
+  "source_url": "https://www.seek.com.au/job/35967309",
+  "source_type": "PUBLIC_JOB_AD_SEEK_2018_CC_BY_4.0",
+  "collected_date": "2018-04-12",
+  "raw_file": "seek_selected.csv",
+  "raw_row": 117
+}

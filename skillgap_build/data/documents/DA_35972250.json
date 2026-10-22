@@ -1,0 +1,27 @@
+{
+  "doc_id": "DA_35972250",
+  "role": "Graduate Data Analyst",
+  "title": "Analytics Developer / Data Analyst",
+  "text": "Analytics Developer / Data Analyst at Peoplebank Australia VIC (Melbourne, CBD & Inner Suburbs; Full Time; salary: not stated). The Company: This leading Australian company within the Education sector is seeking a dynamic and energetic Analytics Developer / Data Analyst due to significant growth and expansion. They pride themselves on recruiting the best talent in the market and are passionate about innovation and evolution within their industry. About the role: Reporting to the Insights Leader, you will be working within a highly respected and tight-knit team to contribute to the continued innovation within the analytics and insights function and overall success of the business. As a pivotal team member, you will combine and analyse various data sets to extract business insights and tell the story of the business. In this hands-on role, you will be responsible for the design and development of business dashboards and reports (GoodData, Salesforce, Powerpivot) and build and support the data lake, data marts to underpin business analytics. Required Skills: Passion for manipulating and interpreting data to deliver improved customer engagement and commercial results Commercial experience with online business or sales organisation Demonstrable data analysis and storytelling skills Exposure to data / data environments / databases Strong SQL scripting and experience creating ad hoc business analysis / reporting An interest in coding with possible experience with R, SAS, or Python (academic experience included) Expert MS Excel skills and exposure to Business Intelligence solutions such as GoodData, Tableau, Power BI Exposure to Agile / Scrum methodologies Strong written and verbal communication skills Experience managing expectations and relationships with stakeholders Proven ability to manage competing workloads, meet tight deadlines, deliver on agreed quality standards and the ability to prioritise work Strong attention to detail and testing capabilities What's in it for you: Friendly and supportive team where you can make an impact Opportunity for career development and advancement Brand new collaborative office space that encourages a culture of connectivity and ownership Heavily subsided further education Community and Workplace giving programs Health and Wellbeing benefits And the list goes on! For more information or a confidential discussion, please contact Megan Henderson quoting reference: 183427.",
+  "skills": [
+    "Agile",
+    "Attention to Detail",
+    "Business Analysis",
+    "Communication",
+    "Data Visualisation",
+    "Excel",
+    "Power BI",
+    "Presentation",
+    "Python",
+    "R",
+    "SAS",
+    "SQL",
+    "Tableau"
+  ],
+  "skills_source": "auto_taxonomy",
+  "source_url": "https://www.seek.com.au/job/35972250",
+  "source_type": "PUBLIC_JOB_AD_SEEK_2018_CC_BY_4.0",
+  "collected_date": "2018-04-12",
+  "raw_file": "seek_selected.csv",
+  "raw_row": 142
+}

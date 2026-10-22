@@ -1,0 +1,20 @@
+{
+  "doc_id": "DS_35982327",
+  "role": "Graduate Data Scientist",
+  "title": "Data Scientist",
+  "text": "Data Scientist at FourQuarters Recruitment (Melbourne, CBD & Inner Suburbs; Part Time; salary: not stated). Data Scientist | Melbourne | Permanent Exciting opportunity with a leading organisation Chance to experiment and work on innovative projects Competitive package and ASAP start date About the Company The client is a leading company based in the Eastern Suburbs and they are looking for a Data Scientist to join and work on the most innovative projects within the business. There are multiple Data Scientists working across the organisation and they consider themselves to be a data-driven organisation. About the Role The Data Scientist will be responsible for solving complicated business problems, improving processes and driving commercial outcomes with analysis and insights. Required Experience and Knowledge: Strong experience working with Python Experience working with SQL and strong capability in data extraction and writing scripts Experience working with AWS redshift (other Cloud platforms accepted) Experience with visualisation tools such as Power BI, Tableau or Qlik How to Apply Click APPLY or contact Zale Stobbs, Big Data, BI & Data Analytics Consultant on (03) 9982 8489 for a confidential discussion.",
+  "skills": [
+    "AWS",
+    "Power BI",
+    "Python",
+    "Qlik",
+    "SQL",
+    "Tableau"
+  ],
+  "skills_source": "auto_taxonomy",
+  "source_url": "https://www.seek.com.au/job/35982327",
+  "source_type": "PUBLIC_JOB_AD_SEEK_2018_CC_BY_4.0",
+  "collected_date": "2018-04-13",
+  "raw_file": "seek_selected.csv",
+  "raw_row": 101
+}

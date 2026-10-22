@@ -1,0 +1,20 @@
+{
+  "doc_id": "DA_35991436",
+  "role": "Graduate Data Analyst",
+  "title": "Business Intelligence Analyst",
+  "text": "Business Intelligence Analyst at Sterning Group (Sydney, ; Contract/Temp; salary: not stated). My client is a global, reputable company that is looking to bring their Analytics capability to the forefront of its operations. This opportunity will allow you to use the technical skills and business acumen you have picked up in the past and apply it to a growing Analytics function. You will be working closely industry experts but also be given the autonomy to build relationships with the business and showcase your data driven insights. Key responsibilities - Liaise with stakeholders to understand business problems - Build up their SQL Data Warehouse - Architecting multiple data sources to establish well-documented process for self-service reporting & analytics - Create intuitive dashboards to present data-driven insights through reporting Must-have skills - Advanced SQL skills - Experience in working on end to end Data Warehousing/Business Intelligence solutions - Ability to understand business problems and experience in providing data-driven insights - Experience with visualisation tools such as Tableau, Qlikview, Power BI etc Ideal exposure - Experience across 2-3+ industries and be able to hit the ground running! - Ideally experience as a BI Consultant in Australia with tools such as SQL (MS & Oracle), Tableau, Alteryx etc",
+  "skills": [
+    "Data Visualisation",
+    "Data Warehousing",
+    "Power BI",
+    "Qlik",
+    "SQL",
+    "Tableau"
+  ],
+  "skills_source": "auto_taxonomy",
+  "source_url": "https://www.seek.com.au/job/35991436",
+  "source_type": "PUBLIC_JOB_AD_SEEK_2018_CC_BY_4.0",
+  "collected_date": "2018-04-16",
+  "raw_file": "seek_selected.csv",
+  "raw_row": 61
+}

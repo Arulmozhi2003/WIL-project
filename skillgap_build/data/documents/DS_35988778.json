@@ -1,0 +1,28 @@
+{
+  "doc_id": "DS_35988778",
+  "role": "Graduate Data Scientist",
+  "title": "Junior Data Scientist",
+  "text": "Junior Data Scientist at Correlate Resources (Sydney, CBD, Inner West & Eastern Suburbs; Full Time; salary: $70-80k pa). Our client is an industry pioneering Customer Analytics consultancy, who are disrupting the Australian market through delivering innovative, high profile, strategic projects that transform the way organisations engage and optimise experience for large customer bases. With a number of exciting new projects underway we are looking to recruit two Junior Data Scientists to join the team and are open to either contract or permanent applications. As a Junior Data Scientist the responsibilities of this role will involve but not be limited to: Work within a supportive team of industry pioneers on Blue Chip clients to map out complex customer strategies to be optimised through Data Science and Machine Learning techniques. Leverage strong programming skills in Python, R, SQL or SAS to manage and manipulate and supliment large volumes of customer data in preparation for modelling and analysis assignments. Develop creative and intuitive, insights driven dashboards leveraging cutting edge data visualisation tools such as Tableau, Qlikview, PowerBI, etc. Support delivery of a range of bespoke Data Science, Machine Learning, Statistical Modelling led projects leveraging techniques that may include; Linear/Logistic Regression, Confidence Interval, Test of Hypotheses, Clustering - Unsupervised & Supervised Learning, Time Series, Decision Trees , Monte-Carlo Simulation, Bayesian Statistics, Principal Component Analysis, Neural Networks, Gradient Boosting, Nearest Neighbors, (Geo-) Spatial Modeling, Recommendation Engines, Attribution Modeling, Segmentation, Predictive Modeling, Scoring Engine, Survival Analysis, Lift Modeling, Yield Optimization, Cross-Validation, Model Fitting, Experimental Design, etc. The successful applicant will come from a strong academic and commercial background working in a data driven analytics and insights environment and be able to demonstrate: Experience using R, Python, SQL or SAS to extract, manipulate and merge large customer behaviour or transactional data sets from a variety of source systems (SQL Teradata, Oracle SQL, SQL Server, AWS, SAS Base or R). At least 1yr of commercial experience extracting 'Customer Insights' from large and complex datasets relating to; customer strategy (acquisition, retention & growth), statistical modelling, marketing campaigns or credit risk analysis, etc. Educated to a minimum of degree level in an analytical discipline such as - Mathematics, Statistics, Econometrics, Actuarial Studies, Data Science, Computer Science etc. A genuine passion to build a career in Data Analytics / Data Science, implementing analytical techniques and concepts such as; Linear/Logistic Regression, Confidence Interval, Test of Hypotheses, Clustering - Unsupervised & Supervised Learning, Time Series, Decision Trees, Monte-Carlo Simulation, Bayesian Statistics, Principal Component Analysis, Neural Networks, Gradient Boosting, Nearest Neighbors, (Geo-) Spatial Modeling, Recommendation Engines, Attribution Modeling, Segmentation, Predictive Modeling, Scoring Engine, Survival Analysis, Lift Modeling, Yield Optimization, Cross-Validation, Model Fitting, Experimental Design, etc To apply for this position please click on the below or send your resume and cover note to Ben@correlateresources.com",
+  "skills": [
+    "A/B Testing",
+    "AWS",
+    "Data Visualisation",
+    "Deep Learning",
+    "Forecasting",
+    "Machine Learning",
+    "Power BI",
+    "Python",
+    "Qlik",
+    "R",
+    "SAS",
+    "SQL",
+    "Statistics",
+    "Tableau"
+  ],
+  "skills_source": "auto_taxonomy",
+  "source_url": "https://www.seek.com.au/job/35988778",
+  "source_type": "PUBLIC_JOB_AD_SEEK_2018_CC_BY_4.0",
+  "collected_date": "2018-04-15",
+  "raw_file": "seek_selected.csv",
+  "raw_row": 65
+}

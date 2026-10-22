@@ -1,0 +1,6 @@
+streamlit>=1.36,<2
+requests>=2.31,<3
+numpy>=1.26
+sentence-transformers>=3,<6
+matplotlib>=3.8
+pytest>=8,<10

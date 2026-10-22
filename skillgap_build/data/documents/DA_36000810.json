@@ -1,0 +1,18 @@
+{
+  "doc_id": "DA_36000810",
+  "role": "Graduate Data Analyst",
+  "title": "Data Analyst",
+  "text": "Data Analyst at TRS - Public Sector (Sydney, CBD, Inner West & Eastern Suburbs; Contract/Temp; salary: not stated). Data Analyst – NSW Government A Data Analyst is required for a NSW Government Department in Sydney’s CBD on an initial six-month contract Key accountabilities: Assess, research and analyse business and system needs Create ERD diagrams, Work Flow diagrams, procedures, test plans, etc. MS Excel and spreadsheet development and analysis Relational database design; Access to SQL server upsizing, data migration, link multiple data sources Advanced Form creation and reporting Evaluation and adoption of best practice and in-house standards and architectures for documentation, coding, build/release and testing Other tasks as required Selection criteria: Relevant tertiary-level qualifications 5+ years Microsoft Access/SQL Server development experience Competency in SQL Server – T-SQL, pass through queries, views, nuances of table linkage from Access High-level VBA knowledge and application experience Excellent written & verbal communication, problem-solving and time management skills Previous government experience beneficial If you have the relevant experience, apply now with your most recent CV (in Word format).",
+  "skills": [
+    "Communication",
+    "Excel",
+    "Problem Solving",
+    "SQL"
+  ],
+  "skills_source": "auto_taxonomy",
+  "source_url": "https://www.seek.com.au/job/36000810",
+  "source_type": "PUBLIC_JOB_AD_SEEK_2018_CC_BY_4.0",
+  "collected_date": "2018-04-16",
+  "raw_file": "seek_selected.csv",
+  "raw_row": 41
+}

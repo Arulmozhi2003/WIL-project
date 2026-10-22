@@ -1,0 +1,18 @@
+{
+  "doc_id": "DA_35994628",
+  "role": "Graduate Data Analyst",
+  "title": "Data Warehouse Analyst - Full life-cycle role.",
+  "text": "Data Warehouse Analyst - Full life-cycle role. at Alloc8 (Sydney, CBD, Inner West & Eastern Suburbs; Contract/Temp; salary: not stated). The Company: Alloc8 present another exclusive opportunity to join a market leading organisation who are about to kick start a large Data Integration and ETL Implementation programme. The Role: Working in a team of dedicated ETL and Data Integration developers you will play a key role in the delivery of ETL, Modelling and Data Warehouse solutions across the Informatica suite. Design, Implementation, Support and Business Analysis will form a large part of your role working with this client to develop the Data Warehouse and ETL solution they currently have. To be considered we are looking for people with the following attributes: At least 5 years working with Informatica at a design, development and implementation level. Deep understanding of the Kimbal DW methodology. Outstanding SQL skills with the ability to understand and write complex SQL queries and scripts. Informatica certification. Proven experience working with the Business Objects BI suite. Strong Modelling capabilities (Dimensional, Physical and Logical). Experience working in large, enterprise wide environments with large and complex data sets. Great ability to work well with the business, understand business requirements and translate these requirements to technical specifications. This role will see you involved in the entire life-cycle of a complex Data Integration, BI and ETL programme and will see you work with a range of Business Units. In return for this unique skills set they are offering an attractive rate, the opportunity to expose yourself to new world Data technology and a long term contract. Apply today. Please note that due to the nature of this role only Australian based Citizens and / or permanent residents can be considered.",
+  "skills": [
+    "Business Analysis",
+    "Data Warehousing",
+    "ETL",
+    "SQL"
+  ],
+  "skills_source": "auto_taxonomy",
+  "source_url": "https://www.seek.com.au/job/35994628",
+  "source_type": "PUBLIC_JOB_AD_SEEK_2018_CC_BY_4.0",
+  "collected_date": "2018-04-16",
+  "raw_file": "seek_selected.csv",
+  "raw_row": 13
+}

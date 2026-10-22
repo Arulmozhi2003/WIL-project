@@ -1,0 +1,19 @@
+{
+  "doc_id": "DS_35972040",
+  "role": "Graduate Data Scientist",
+  "title": "Data Scientist",
+  "text": "Data Scientist at 7-Eleven Australia (Melbourne, Eastern Suburbs; Full Time; salary: Base Salary plus Super and Bonus). About the Company There is more to 7 – Eleven than meets the eye. We are committed to delivering little moments of brightness to the everyday lives of our customers. Having operated for over 40 years in Australia, we are proud of our diverse culture and innovation and take pride in our people and their successes. About the Role An exciting opportunity now exists within the Strategy, Innovation and Business Development department for a Data Scientist. Reporting to the Skunkworks Manager, the Data Scientist will be responsible for identifying and addressing complex business problems by providing analysis, insights and models to stakeholders based on a range of data sources, thus supporting and driving high quality decision making, process improvements and a competitive advantage for the business. Duties & Responsibilities Research data assets to understand trends, anomalies, patterns and opportunities for commercial exploitation of data. Conduct analysis of the key drivers of profitability, transactions and market share in terms of category performance. Work with insights colleagues and broader business to ensure that solutions developed can deliver commercial value to end users. Design, develop and maintain data visualisation methods to effectively communicate complex concepts and numerical data. Communicate and report quantitative analytical findings to senior managers and stakeholders. Highlight strategic opportunities to for the business as well as providing insight as to possible threats to delivering identified strategies through forecasting the impact of trends and scenarios. Skills & Experience Bachelor’s Degree in Information Systems, Business, Data Management, or a related discipline is preferred. Experience with SAP, BI/Data mining tools skills desirable. Experience in SQL, Python and a Cloud Computing Platform are essential. Experience in retail or similar industry is highly desirable. Experience with data visualisation tools (e.g. Tableau) and reporting are desirable. Benefits Being part of a dynamic, innovative and growing business Strong career development opportunities Great training & development Health and Fitness Programs Fresh Fruit *Please note only shortlisted candidates will be contacted",
+  "skills": [
+    "Data Visualisation",
+    "Forecasting",
+    "Python",
+    "SQL",
+    "Tableau"
+  ],
+  "skills_source": "auto_taxonomy",
+  "source_url": "https://www.seek.com.au/job/35972040",
+  "source_type": "PUBLIC_JOB_AD_SEEK_2018_CC_BY_4.0",
+  "collected_date": "2018-04-12",
+  "raw_file": "seek_selected.csv",
+  "raw_row": 131
+}

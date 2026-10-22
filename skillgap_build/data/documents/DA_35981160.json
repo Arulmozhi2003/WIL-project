@@ -1,0 +1,22 @@
+{
+  "doc_id": "DA_35981160",
+  "role": "Graduate Data Analyst",
+  "title": "Data Analyst",
+  "text": "Data Analyst at Hireup (Sydney, North Shore & Northern Beaches; Full Time; salary: Salary negotiable upon experience). About Hireup Hireup is an Australian technology startup connecting people with disability and support workers online. We harness technology to give people with disability the power to find, hire and manage their own support workers. We’re a socially driven, for-purpose startup, run by a small but dedicated team of (big) thinkers, builders and doers. And we’re looking for our next recruit. If you’re an experienced, talented and motivated Data Analyst with a proven ability to control data flows and communicate trends across a business, we want to hear from you. About the role Data at Hireup is about hearing the voice of our community and being able to listen to our users at scale. It ensures that our community is always at the forefront of strategy and product development, and allows all of our employees to stay in touch with our users. We are seeking a highly experienced Data Analyst to work alongside our technical, product and growth teams to explore core business questions and provide insights to enable hyper growth, and maximise the experience of our users. Responsibilities The Data Analyst will be primarily responsible for the end to end delivery of data across the business, including: Managing the ETL and data pipeline Analysing data and working within growth and product teams to deliver core insights Other responsibilities include: Delivery and maintenance of live dashboards across several business and leadership teams Delivery of reports and communication of trends and insights to various stakeholders Deep exploration of core business questions to turn data into actionable insights Skills/experience: Technical Scripting knowledge and experience is essential SQL essential Python (preferred) and/or strong skills with R Understand and can work with various data formats (JSON, XML) Experience working with/within technical teams Experience working in a data warehouse or BI environment Experience with ETL tools (e.g. Hadoop) Proven analysis and visualisation skills Statistical, computer science or mathematical background is highly valued Non-technical Strong and confident communicator Experience working across several business units, particularly growth and product teams Experience within a online marketplace is highly valued Career development Join a growing team, report directly to head of data Accelerate and develop skills in etl and technical analysis as the business matures Exposed to hyper growth start-up environment How to apply: The position is full-time and the salary will be negotiable upon experience. For more information about the role and how it fits within Hireup, contact Sarah via people@hireup.com.au or on (02) 9113 5933. To apply, please send your CV and a cover letter to people@hireup.com.au.",
+  "skills": [
+    "Communication",
+    "Data Visualisation",
+    "Data Warehousing",
+    "ETL",
+    "Hadoop",
+    "Python",
+    "R",
+    "SQL"
+  ],
+  "skills_source": "auto_taxonomy",
+  "source_url": "https://www.seek.com.au/job/35981160",
+  "source_type": "PUBLIC_JOB_AD_SEEK_2018_CC_BY_4.0",
+  "collected_date": "2018-04-13",
+  "raw_file": "seek_selected.csv",
+  "raw_row": 82
+}

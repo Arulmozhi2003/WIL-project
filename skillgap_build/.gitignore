@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
+.env
+# Experiment outputs are committed on purpose: they are the evidence of each iteration.
+results/retrieval_eval.json
+# Raw source file is 66 MB; scripts/build_seek_dataset.py downloads and checksums it.
+data/raw/seek_australia.csv

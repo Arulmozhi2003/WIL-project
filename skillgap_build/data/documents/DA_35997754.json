@@ -1,0 +1,17 @@
+{
+  "doc_id": "DA_35997754",
+  "role": "Graduate Data Analyst",
+  "title": "Data Analyst",
+  "text": "Data Analyst at TRS - Public Sector (Sydney, CBD, Inner West & Eastern Suburbs; Contract/Temp; salary: not stated). Data Analyst – NSW Government Department A Data Analyst is required for a NSW Government Department based in the Sydney CBD for an initial 2.5-month contract. The Data Analyst will be This role will be responsible for collating and cleaning data from a large-scale survey. This survey has been in operation for several years and the data needs to be collated and cleaned for further analysis. The goal is to integrate information from multiple sources into a single working dataset. Key responsibilities: Collect and analyse information and data to produce intelligence Collate and clean survey data Use variable coding schemes Liaise with external contractors to gain further information regarding variable definitions Selection Criteria: Relevant tertiary qualifications (Psychology, statistics, econometrics, data science, social science, and/or finance) A background in quantitative analysis Understand how to manipulate data using at least one statistical package (R, Stata, SPSS, etc) An understanding of analysis requirements and data management protocols (desirable) Experience working with external clients (advantageous) Previous government experience beneficial (but not essential) If you meet the above criteria then APPLY now with a current version of your CV",
+  "skills": [
+    "R",
+    "SPSS",
+    "Statistics"
+  ],
+  "skills_source": "auto_taxonomy",
+  "source_url": "https://www.seek.com.au/job/35997754",
+  "source_type": "PUBLIC_JOB_AD_SEEK_2018_CC_BY_4.0",
+  "collected_date": "2018-04-16",
+  "raw_file": "seek_selected.csv",
+  "raw_row": 26
+}

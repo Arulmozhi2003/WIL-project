@@ -1,0 +1,31 @@
+{
+  "doc_id": "DS_35968826",
+  "role": "Graduate Data Scientist",
+  "title": "Junior to Mid Level Data Scientist",
+  "text": "Junior to Mid Level Data Scientist at Ajilon (Sydney, North West & Hills District; Full Time; salary: 100 - 120k Base + super and bonus). The Opportunity In this role you will build models that help optimise customer acquisition within our client's digital channels and maximise profit. You will also assist in evaluating the performance of digital marketing activity and communicate insights to the marketing team. Essential skills & experience Tertiary qualification in a relevant Computer Science, Statistics, Mathematics, Science or Engineering discipline Experience (typically 1-4 years) in a similar insight driven data analytics area with a focus on digital marketing analytics, preferably in financial services Strong experience in SQL (MSSQL/Postgres/BigQuery/Redshift) Proficiency in scripting or programming languages (Python/R/JavaScript/Java/C++/Scala/etc.) Experience creating dashboards with relevant tools (Tableau/D3.js/PowerBI) Experience building analytical models An understanding of machine learning algorithms and inferential statistical analysis Comprehensive understanding of MS Excel and other applications within the MS Office suite Strong conceptual, problem solving and analytical skills Strong communication and stakeholder management Excellent written and verbal communication skills Desirable Masters or PhD in a relevant discipline Exposure to Google analytics and other web based analytics systems An understanding of marketing mix modelling Working with APIs to pull from third party sources Experience working with code repositories (git/bitbucket) Success in Kaggle If this sounds like you, APPLY NOW !! Or reach out to Ankit Sharma in our Sydney Offices via Ankit.Sharma@ajilon.com.au \"Ajilon is an Equal Opportunity employer, committed to all forms of workforce inclusion. We actively invite and encourage applications by candidates from diverse backgrounds\"",
+  "skills": [
+    "C++",
+    "Communication",
+    "Data Visualisation",
+    "Excel",
+    "GCP",
+    "Git",
+    "Java",
+    "Machine Learning",
+    "Power BI",
+    "Problem Solving",
+    "Python",
+    "R",
+    "SQL",
+    "Scala",
+    "Stakeholder Management",
+    "Statistics",
+    "Tableau"
+  ],
+  "skills_source": "auto_taxonomy",
+  "source_url": "https://www.seek.com.au/job/35968826",
+  "source_type": "PUBLIC_JOB_AD_SEEK_2018_CC_BY_4.0",
+  "collected_date": "2018-04-12",
+  "raw_file": "seek_selected.csv",
+  "raw_row": 126
+}

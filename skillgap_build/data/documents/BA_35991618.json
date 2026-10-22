@@ -1,0 +1,22 @@
+{
+  "doc_id": "BA_35991618",
+  "role": "Graduate Business/Data Analyst",
+  "title": "Technical Business Analyst",
+  "text": "Technical Business Analyst at Macquarie Group Limited (Sydney, CBD, Inner West & Eastern Suburbs; Full Time; salary: Salary commensurate with experience). Macquarie Group is offering an exciting opportunity for an experienced Technical Business Analyst with a strong understanding of the trade lifecycle. The chosen candidate will join a diverse and innovative team that develops and maintains critical Trade Surveillance applications for our Risk Management Group. In this role, the chosen candidate will support the end-to-end delivery of projects and have an opportunity to gain exposure to various state of the art cloud based technologies. Key responsibilities of this role: work closely with business / technical stakeholders and perform analysis to identify how trade related data can be mapped from source systems into our various Trade Surveillance solutions produce project artefacts including use cases, functional / non-functional requirements specifications, process maps, data flows and technical specifications collaborate closely with developers to ensure requirements are interpreted correctly play a key role during testing phases by providing input into test planning, UAT support and resolution of defects found foster strong working and collaborative relationships with business and technology stakeholders located all around the world. To be successful in this role, you will have: 3+ years of experience working as a Technical Business Analyst robust knowledge of FX, Commodities and/or Equities trade domains and a strong understanding of the trade lifecycle prior experience working with Trade Surveillance solutions is highly desirable prior experience with FpML and FIXML is highly desirable strong understanding of XML strong data analysis and database skills, with experience in data mapping, modelling (UML or BPMN preferred), ETL technologies and proficiency with SQL experience with defining and documenting business rules requirements and solutions strong communication and presentation skills strong stakeholder management skills experience working in an agile environment prior exposure to collaborative toolsets including JIRA and Confluence is desirable. The Corporate Operations Group (COG) brings together specialist support services including workplace, human resources, market operations and technology. COG's purpose is to drive operational excellence through business-aligned services with a focus on quality, cost and risk. COG comprises the following divisions: Business Improvement and Strategy, Business Services, Human Resources, Market Operations, and Technology. Please apply for this role using the link given or reach out to lucy.glover@macquarie.com Find out more about Macquarie careers at www.macquarie.com/careers Macquarie understands the importance of diversity and inclusion - our long history of success has come from being different. At Macquarie we value the innovation and creativity that diversity of thought brings. The one thing we all have in common is our focus on high performance. If you're capable, motivated and can deliver, we want you on our team.",
+  "skills": [
+    "Agile",
+    "Communication",
+    "ETL",
+    "Jira",
+    "Presentation",
+    "Process Mapping",
+    "SQL",
+    "Stakeholder Management"
+  ],
+  "skills_source": "auto_taxonomy",
+  "source_url": "https://www.seek.com.au/job/35991618",
+  "source_type": "PUBLIC_JOB_AD_SEEK_2018_CC_BY_4.0",
+  "collected_date": "2018-04-16",
+  "raw_file": "seek_selected.csv",
+  "raw_row": 9
+}
