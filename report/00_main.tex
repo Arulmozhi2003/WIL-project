@@ -1,0 +1,187 @@
+\documentclass[a4paper, table, 11pt]{article}
+
+\input{00_macros}
+
+
+%----------------------------------
+%Cover page configuration
+%----------------------------------
+\newcommand\reporttitle{Work Integrated Learning Project: Written Report}
+\newcommand\reportsubtitle{SkillGap: Evidence-Grounded Career Answers for Data Graduates. Case Studies in Data Science, 2026}
+\newcommand\groupnumber{\textbf{WIL Project 84}}
+\newcommand\groupmentor{Mentor: Kaixin JI}
+
+%Logo path configurable
+\newcommand\logopath{img/rmit-university-logo-png-transparent.png}
+
+%RMIT and date
+\newcommand\placeanddate{
+    School of Computing Technologies \\
+    RMIT University \\
+    2026
+}
+
+%Author table (dynamic entries)
+\newcommand{\authorlist}{} % Initialise empty
+\newcommand{\addauthor}[2]{%
+    \gappto\authorlist{#1 & #2 \\}
+}
+
+%----------------------------------
+%Page style (header/footer)
+%----------------------------------
+\pagestyle{fancy}
+\lhead{\groupnumber}
+\rhead{\reporttitle}
+\renewcommand{\footrulewidth}{0.4pt}
+\cfoot{Page \thepage}
+
+
+%----------------------------------
+%Begin document
+%----------------------------------
+\begin{document}
+
+% ---------------------------------------------
+%Add student names
+% ---------------------------------------------
+\addauthor{Arulmozhi Ezhilarasi Arunachalam}{s4138509}
+\addauthor{Dharani Suresh}{s4118043}
+\addauthor{Lingkesh Natanasabapathy}{s4184049}
+\addauthor{Prakash Sudarsanraj}{s4135999}
+\addauthor{Sakthisree Gaddam}{s4136157}
+
+
+%----------------------------------
+%Title Page Setup
+%----------------------------------
+\begin{titlepage}
+\centering
+
+% --- Logo and Title Layout Using TikZ ---
+\begin{tikzpicture}
+    % Insert RMIT logo
+    \node[inner sep=0pt] (logo) at (0,0)
+        {\includegraphics[width=.3\textwidth]{\logopath}};
+    
+    % Title to the right of logo
+    \node[text width = 0.5\textwidth, right = of logo](title){
+        \sffamily\huge\reporttitle
+    };
+
+    % Subtitle below title
+    \node[text width = 0.5\textwidth, yshift = 0.75cm, below = of title](subtitle){
+        \sffamily\Large \reportsubtitle
+    };
+
+    % Draw a vertical line between logo and title
+    \gettikzxy{(subtitle.south)}{\subtitlex}{\subtitley}
+    \gettikzxy{(title.north)}{\titlex}{\titley}
+    \draw[line width=1mm]($(logo.east)!0.5!(title.west)$) +(0,\subtitley) -- +(0,\titley);
+\end{tikzpicture}
+
+%Spacer
+\vspace*{\stretch{1}}
+
+%--- Group info and tutor ---
+{\sffamily\Large\groupnumber\par}
+\vspace{0.5cm}
+{\sffamily\large\groupmentor\par}
+
+\vspace{0.5cm}
+{\sffamily\normalsize Overleaf project: \overleafurl\\ GitHub: \githuburl\\ Trello: \boardurl\par}
+
+\vspace{1cm}
+
+%--- Student author table ---
+\begin{table}[H]
+    \centering
+    \sffamily
+    \large
+    \begin{tabu} to 0.8\linewidth {cc}
+        \textbf{Full Name} & \textbf{Student ID} \\
+        \hline
+        \authorlist
+    \end{tabu}
+\end{table}
+
+\vfill
+
+%--- Footer info ---
+{\sffamily\Large\placeanddate}
+
+\end{titlepage}
+
+
+\newpage
+
+% Set page number style to Roman numerals
+\pagenumbering{roman}
+
+% Executive Summary
+\section*{Executive Summary}
+\addcontentsline{toc}{section}{Executive Summary}
+\input{01_exec_summary}
+\newpage
+
+% Table of Contents
+\addcontentsline{toc}{section}{Contents}
+\tableofcontents\thispagestyle{empty}
+\newpage
+
+% Generates a list of figures
+\listoffigures\thispagestyle{empty}
+\newpage
+
+% Generates a list of tables
+\listoftables\thispagestyle{empty}
+\newpage
+
+% Switch back to Arabic numerals for the rest of the document
+\pagenumbering{arabic}
+
+
+% Includes all the content
+\input{02_problem}
+\input{03_methodology}
+\input{04_findings}
+\input{05_impact}
+\input{06_project_management}
+
+\clearpage
+
+
+%%
+%% The acknowledgments section is defined using the "acks" environment (see macros)
+%% (and NOT an unnumbered section). This ensures the proper
+%% identification of the section in the article metadata, and the
+%% consistent spelling of the heading.
+\begin{center}
+    \noindent \textcolor{purple}{\emph{-- Content below this line does not count for the page/word limit. --}}
+\end{center}
+
+
+\section*{Declaration of Use of Generative AI}
+\addcontentsline{toc}{section}{Declaration of Use of Generative AI}
+Generative AI (Claude Code, Anthropic) was used for parts of the code, data curation, the QA audit, drafting this report, and \textbf{all annotation}: the faithfulness and correctness judgements of generated answers, the label audit, and the blind skill labels. The annotation criteria, every judgement and its reason are stored in the repository. All results in this report come from the scripts and output files in the repository. The individual self-reflections in Appendix~\ref{app:reflect} were drafted with AI assistance from the project record (change log, Milestone~1 roles and results), and each member is responsible for checking and adjusting their own. The team is responsible for checking the code, results, sources and final submitted content.
+
+I certify that the submission of this assignment is incomplete without the submission of the completed \textbf{Condition 3 Bounded Process AI Declaration Form} (templates available in the specification of the assignment on Canvas).
+
+\begin{acks}
+We acknowledge the Wurundjeri people of the Kulin Nation as the Traditional Custodians of the land on which RMIT University in Melbourne stands, and pay respect to their Elders past and present.
+\end{acks}
+
+
+
+%%
+%% The next two lines define the bibliography style to be used, and
+%% the bibliography file.
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{99_references}
+
+%%
+%% If your work has an appendix, this is the place to put it.
+\appendix % Any section after this command will have a letter as an index
+\input{99_appendix}
+
+\end{document}

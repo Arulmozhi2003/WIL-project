@@ -1,0 +1,92 @@
+
+%----------------------------------
+% Graphics, figures, colour, and tables
+%----------------------------------
+\usepackage{graphicx}                  % For including images
+\usepackage{float}                     % For precise figure/table placement using [H]
+\usepackage{longtable}
+\usepackage{caption}                   % Customisation of figure/table captions
+\usepackage{xcolor}
+
+\usepackage{tabularx}                  % Tables with flexible-width columns
+\usepackage{tabu}                      % Extended table capabilities
+\usepackage{booktabs}                  % Improved horizontal rules in tables
+\usepackage[numbers]{natbib} % Enables numbered citations
+
+%----------------------------------
+%Custom commands (for development notes)
+%----------------------------------
+\newcommand{\todo}[1]{\textcolor{red}{\bf [[TODO: #1]]}} 
+\newcommand{\instructions}[1]{\textcolor{blue}{\textbf{[[Remove before submitting:} #1]]}} 
+
+
+\newcommand{\update}[1]{\textcolor{blue}{\textbf{[[Update before submitting:} #1]]}} %Instructions to be removed before submitting
+
+%----------------------------------
+% SkillGap report additions
+%----------------------------------
+\usepackage{array}
+\usepackage{enumitem}
+\setlist{itemsep=2pt,topsep=4pt}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage[framemethod=default]{mdframed}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\newcommand{\groupid}{WIL Project 84}
+\newcommand{\overleafurl}{\url{https://www.overleaf.com/project/69eae9c8f437cd161947a172}}
+\newcommand{\githuburl}{\url{https://github.com/Arulmozhi2003/WIL-project}}
+\newcommand{\boardurl}{\url{https://trello.com/b/1GEPr6pe/wil-project}}
+
+% Plain-language call-out for the business reader
+\newmdenv[linecolor=blue!50!black,linewidth=0.8pt,backgroundcolor=blue!4,
+  innertopmargin=6pt,innerbottommargin=6pt,skipabove=8pt,skipbelow=8pt]{takeaway}
+
+
+%----------------------------------
+% Document layout and structure
+%----------------------------------
+\usepackage[utf8]{inputenc}            % Support for UTF-8 encoded input
+\setlength{\parskip}{1em}              % Adds vertical space between paragraphs
+\usepackage[margin=2.5cm]{geometry}    % Set custom page margins
+\usepackage{titlesec}                  % Custom formatting for section headings
+\usepackage{titletoc}                  % Custom table of contents formatting
+\usepackage{appendix}                  % Support for appendices
+
+% Automatically include bibliography and appendix in TOC, but not TOC itself
+\usepackage[nottoc,numbib]{tocbibind}
+
+\usepackage{fancyhdr}                  % Allows customization of headers and footers
+
+\usepackage{hyperref}                  % Enables clickable references and links
+\hypersetup{
+    colorlinks=true,                   % Use colored text for links (instead of boxes)
+    linkcolor=blue,                    % Color for internal links
+    citecolor=blue,                    % Color for citation links
+    urlcolor=blue                      % Color for URL links
+}
+\urlstyle{same}                        % Keep URLs in the same font as the surrounding text
+
+
+%----------------------------------
+%TikZ graphics for cover page
+%----------------------------------
+\usepackage{tikz}                      % Drawing diagrams and layout elements
+\usetikzlibrary{positioning, calc, arrows.meta, fit, backgrounds}     % Extra TikZ libraries (calc/positioning for the cover; the rest for the pipeline diagram)
+
+% Define coordinate extraction command used on the title page
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+}
+\makeatother
+
+%----------------------------------
+%Acknowledgements 
+%----------------------------------
+\newenvironment{acks}{
+  \section*{Acknowledgments}
+  \addcontentsline{toc}{section}{Acknowledgments}
+}{}

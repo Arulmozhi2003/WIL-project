@@ -1,0 +1,26 @@
+%Add any additional packages and commands here
+
+%%
+%% This command processes the author and affiliation and title
+%% information and builds the first part of the formatted document.
+
+\usepackage{hyperref}
+\usepackage[most]{tcolorbox}
+
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{geometry}
+\newcommand{\wordcount}[1]{\noindent\textbf{[Word count: #1]}} %macro for word count
+
+\newcommand{\todo}[1]{\textcolor{red}{\bf [[TODO: #1]]}} 
+\newcommand{\instructions}[1]{\textcolor{blue}{\textbf{[[Remove before submitting:} #1]]}} %Instructions to be removed before submitting
+
+\newcommand{\update}[1]{\textcolor{blue}{\textbf{[[Update before submitting:} #1]]}} %Instructions to be removed before submitting
+
+
+%\newcommand{\instructions}[1]{} %Instructions to be removed before submitting
+
+%extra packages for the tables in the appendix
+\usepackage{longtable}
+\usepackage{array}
+\renewcommand{\arraystretch}{1.5}

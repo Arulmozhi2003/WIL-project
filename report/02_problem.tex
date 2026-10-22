@@ -1,0 +1,42 @@
+% 02_problem.tex: ported from the SkillGap report draft
+\section{Problem Definition}\label{sec:problem}
+
+\subsection{Motivation and business case}
+
+Students finishing a data degree ask the same questions again and again: \emph{Do I need SQL to be a data analyst? Is Power BI or Tableau more common? Do graduate data scientist roles want R or Python?} The answers exist, scattered across hundreds of job ads, but reading them is slow, and a student cannot tell whether one ad is typical. University careers advisers face the same problem at scale: their advice has to be credible, current and traceable, and they cannot read every ad.
+
+General-purpose chatbots look like a shortcut, but they create a new business risk. They answer from training data of unknown date and origin, give no sources, and rarely admit when they do not know. For a careers service, a confident wrong answer (``all data analyst roles require Python'') is worse than no answer, because it changes what a student studies.
+
+Retrieval-Augmented Generation (RAG) addresses this by retrieving the relevant documents first and asking a language model to answer only from them \citep{lewis2020rag}. The course's reference system, Walert \citep{pathiyan2024walert}, showed that a RAG chatbot for university open-day questions can be evaluated systematically, including how often it leaves a question unanswered. SkillGap applies the same test-driven idea to a different domain: graduate employability.
+
+\subsection{Stakeholders}
+
+\begin{description}[leftmargin=0pt]
+  \item[Graduates and students] (primary users), especially international data students new to the Australian job market, want quick, trustworthy answers and a list of skills to work on.
+  \item[University careers services and course coordinators] (the business owner in our case) want a low-cost tool that scales advice, is defensible because every claim is sourced, and shows which skills employers name, to inform curriculum and workshop planning.
+  \item[Employers] benefit indirectly from graduates who understand what the ads actually ask for.
+\end{description}
+
+\subsection{Questions this project answers}
+
+\begin{description}[leftmargin=0pt]
+  \item[RQ1 Retrieval and refusal.] Can a lightweight, locally run search find the job ads that answer a graduate's question, and \emph{decline} questions the ads cannot answer, better than a starter baseline?
+  \item[RQ2 Grounded answers.] Does a small, free, local language model produce answers that are faithful to the retrieved ads, cite them, and refuse when it should?
+  \item[RQ3 Skill-gap evidence.] Can the system give a stable, accurate, evidence-backed skill profile for each role, and how much of that evidence is genuinely entry-level?
+  \item[RQ4 Business value.] Under what conditions does SkillGap create value for a careers service, and what risks must be controlled first?
+\end{description}
+
+\subsection{Scope and changes during the project}
+
+At Milestone~1 the team proposed \emph{SkillGap: a Test-Driven RAG Career Navigator for International Data and IT Students}, with the user story: ``As an international data or IT student, I want to understand the skills commonly required for my target graduate role so that I can identify and prioritise gaps in my current skill set.'' The aim, the user story and the evaluation plan (retrieval, correctness, faithfulness, source attribution and refusal, followed by failure analysis and a controlled improvement) were all delivered. The scope changed in two justified ways:
+
+\begin{enumerate}
+  \item \textbf{From ``data and IT'' to three data roles.} Data Analyst, Business/Data Analyst and Data Scientist ads share a clear, testable skill vocabulary (SQL, Excel, Python, \dots), so labels could be derived and audited reliably. General IT roles would have multiplied the taxonomy and question set without adding depth. This follows the Milestone~1 risk plan to limit the set of target roles.
+  \item \textbf{International-student questions are answered only where the ads speak to them.} Only 21 of the 159 ads (13\%) mention work rights, citizenship, visas or sponsorship at all, and none mentions international students. SkillGap therefore keeps international students as a key user group. It answers work-rights questions from those ads (for example, one ad states that visa sponsorship is not available) and declines them otherwise, rather than guessing.
+\end{enumerate}
+
+The documented changes made during the build were:
+(i) the synthetic starter documents were replaced by real SEEK ads, because three toy documents and four tuning questions could not tell configurations apart (Section~\ref{sec:fail});
+(ii) a newer 2026 job-ad dataset (NextGig) was rejected for the 2018 SEEK data (Section~\ref{sec:data});
+(iii) an experience-level filter was added after the team measured how few ads are genuinely entry-level; and
+(iv) role-wide questions (``What skills does this role need?'') were routed to a deterministic skill count, because keyword search cannot answer them (Section~\ref{sec:overview}).

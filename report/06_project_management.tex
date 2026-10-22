@@ -1,0 +1,56 @@
+% 06_project_management.tex: ported from the SkillGap report draft
+\section{Project Management}\label{sec:pm}
+
+\subsection{Approach: build, measure, learn}
+
+We followed a lean, iterative approach \citep{ries2011lean}. Each iteration made one change, measured it against the fixed question set, and kept or reverted it based on evidence. This is the same discipline the test-driven RAG framework applies to the system. Every finding, failure and fix was logged in \texttt{CHANGELOG.md}, every evaluation run in \texttt{results/run\_log.csv}, and the source in the Git repository (\githuburl). Tasks were tracked on the team's Trello board (\boardurl). Milestone~1 set a three-week plan: (1)~confirm scope, user stories and evaluation criteria; (2)~build the knowledge base, a baseline RAG pipeline and a test set; (3)~evaluate the baseline, analyse failures and test a controlled improvement. Table~\ref{tab:iter} shows how that plan was carried out. The team met once a week: each meeting reviewed the Trello board (done, in progress, blocked), agreed the next iteration's single change, and assigned cards by role. Progress and open questions were taken to the weekly mentoring sessions with Kaixin Ji, and decisions from those sessions were recorded on the board and in the change log.
+
+\begin{table}[H]
+\caption{Iterations, reconstructed from the change log and run log.}\label{tab:iter}
+\small
+\begin{tabularx}{\linewidth}{lYY}
+\toprule
+Iteration & Built / changed & Measured and learned \\
+\midrule
+Before Milestone 1 & Set up Trello and GitHub; reproduced Walert's retrieval evaluation (Python 3.9; dependency and Apple Silicon issues resolved) & Dense/FAISS best on known topics (nDCG@3 0.612); BM25 best on inferred topics (nDCG@3 0.257). Gave the baseline-vs-improvement method reused in SkillGap \\
+29 Sep 2026 (a) & Reviewed the starter prototype; fixed 10 defects (no refusal, string skills split into letters, C++ lost, gaps changing with wording, \dots) & Unanswerable questions were always answered: abstain rate 0.0 \\
+29 Sep 2026 (b) & Tuning pipeline with dev/test split and bootstrap CIs & Threshold at the edge of the range overfitted on synthetic data; midpoint rule adopted \\
+29 Sep 2026 (c) & Replaced synthetic data with 159 real SEEK ads; 54 questions & Test selection 0.767 to 0.862; dense and hybrid not selected \\
+30 Sep 2026 & Role-overview route, refusal-detector fix, prompt v3 trial & v3 rejected (wrong refusals); 49 demo questions behave as expected \\
+30 Sep 2026 & Experience-level labels and job-level filter & Only 6 early-career ads; kept all ads, added filter \\
+1 Oct 2026 & Reliability patches, grounding gate, prompt v4, range-parsing fix & Uncited answers withheld; filtered subsets marked not validated \\
+5 Oct 2026 & Independent QA audit (72 test cases) & 6 defects logged; release recommendation: local demo only \\
+22 Oct 2026 & Annotation of answers, labels and skill tags (AI annotator) & v2 81\% faithful, 93\% correct; citations do not predict faithfulness; label accuracy 97\%; tagging F1 0.92; Power BI URL bug found \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Team organisation and roles}
+
+\begin{table}[H]
+\caption{Roles (as agreed at Milestone~1) and main contributions. The team agreed on an equal contribution of 20\% each, as recorded on the submitted contribution sheet.}\label{tab:roles}
+\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.24\linewidth}Yr}
+\toprule
+Member & Role and main contributions & Share \\
+\midrule
+Arulmozhi Ezhilarasi Arunachalam (s4138509) & \textbf{RAG evaluation \& project coordination.} Walert reproduction and baseline; retrieval experiment ladder (B0--BT, dense, hybrid), threshold tuning and bootstrap CIs; Trello and GitHub management; meeting coordination. & 20\% \\
+Dharani Suresh (s4118043) & \textbf{Data collection \& knowledge base.} Dataset search and selection (SEEK vs.\ NextGig); selection funnel, cleaning, encoding repair and de-duplication; provenance manifest; skill taxonomy; experience-level labels and audit. & 20\% \\
+Lingkesh Natanasabapathy (s4184049) & \textbf{Retrieval \& RAG development.} BM25, dense MiniLM and hybrid retrievers; Ollama generation and prompts v1--v4; grounding gate and evidence tables; role-overview route; Streamlit app. & 20\% \\
+Prakash Sudarsanraj (s4135999) & \textbf{Testing \& evaluation.} Question set and dev/test protocol; generation and 49-question demo evaluation; QA audit, regression tests and bug report; annotation of answers, labels and skill tags. & 20\% \\
+Sakthisree Gaddam (s4136157) & \textbf{Documentation, ethics \& user experience.} User requirements and user story; ethics, privacy and licensing analysis; app wording (warnings, potential-gap framing); written report and presentation. & 20\% \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Issues and how they were resolved}
+
+\begin{itemize}
+  \item \textbf{Scarce entry-level data.} The team questioned whether the data matched the graduate audience, measured it, and decided as a group to keep all ads and add a transparent filter rather than shrink the knowledge base.
+  \item \textbf{Slow local generation.} One long generation call took 186\,s on a CPU-only laptop and was cut off at the token limit. The app now answers role-wide questions without the model, and the full generation evaluation was scoped to what could be run.
+  \item \textbf{Annotation workload.} The three annotation sheets (about 160 judgements) were not completed by the team in time. They were filled by an AI annotator with written criteria and a recorded reason for each judgement, and the report flags them as provisional.
+  \item \textbf{Environment mismatch.} The Python 3.9 environment used for the Walert reproduction could not install the required Streamlit version. The app was run on Python 3.14, and the minimum version is recorded as an open issue.
+  \item \textbf{A surprising reversal.} In the Walert reproduction, dense retrieval won on known topics. On SkillGap it lost to BM25. The team kept both in the experiment ladder rather than assuming the Walert result would transfer, and the data decided.
+  \item \textbf{Keeping five parallel workstreams consistent.} Data, retrieval, generation, evaluation and documentation were built by different members, so a change in one could silently break another (for example, the experience-level fix changed the filtered subsets the retriever was tuned on). The team handled this by changing one thing per iteration, logging every change in \texttt{CHANGELOG.md}, and re-running the automated tests and the fixed question set before accepting a change.
+  \item \textbf{Workload balance.} Some phases loaded one role more than others (data cleaning early, evaluation and reporting late). Trello cards were re-assigned at the weekly meeting so that members with lighter phases supported the busiest workstream, which is why the team agreed an equal 20\% contribution.
+\end{itemize}

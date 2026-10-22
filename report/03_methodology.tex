@@ -1,0 +1,135 @@
+% 03_methodology.tex: ported from the SkillGap report draft
+\section{Methodology}\label{sec:method}
+
+\subsection{Knowledge base}\label{sec:data}
+
+\paragraph{Source and justification.} We used \emph{30000 job postings from SEEK Australia} \citep{jobspikr2018seek}, a public Zenodo dataset licensed CC~BY~4.0. It was chosen because it (a)~is real Australian data, (b)~contains the full text of each ad, (c)~keeps each ad's original SEEK URL and post date, so every answer can be traced to a source, and (d)~has a licence that allows reuse with attribution. Our build script checks the download against the published MD5 checksum, so anyone can confirm they have the identical file. We considered and rejected a newer 2026 dataset (NextGig): it contained only about five relevant Australian ads, its descriptions were AI-written summaries rather than employer text, and it had no source links, so no claim built on it could be verified.
+
+\paragraph{From 30,000 ads to 159.} Following the course advice to keep the knowledge base manageable, a deterministic script reduces the file to a curated set (Table~\ref{tab:funnel}). Ads are grouped by job title into three role families. Senior titles are removed because the target user is a graduate. Text with broken character encoding is repaired, HTML is stripped, and duplicates and reposts of the same ad in several cities are removed. \texttt{MANIFEST.csv} maps each kept document to its row in the raw file.
+
+\begin{table}[H]
+\caption{Selection funnel, reproduced exactly by \texttt{scripts/build\_seek\_dataset.py}.}\label{tab:funnel}
+\small
+\begin{tabularx}{\linewidth}{lYr}
+\toprule
+Step & Rule & Ads left \\
+\midrule
+Source & Every posting, 10--17 April 2018 & 30,000 \\
+Role by title & Title matches a role family, e.g.\ ``data scien'', ``reporting analyst'', ``business analyst'' & -- \\
+Graduate focus & Remove senior titles (senior, lead, principal, manager, director, architect, consultant, \dots): 8,916 removed & -- \\
+BA data check & A business analyst ad must name at least one data skill: 142 removed & 181 \\
+Cleaning & Strip HTML, repair encoding, drop ads under 300 characters (1) & 180 \\
+Exact duplicates & Identical text (15) & 165 \\
+Reposts & Same title and $\geq$80\% overlapping wording (6) & \textbf{159} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The final knowledge base has \textbf{159 ads} (80 Data Analyst, 58 Business/Data Analyst, 21 Data Scientist), 59,562 words in total, median 350 words per ad. Each ad is stored as one JSON file holding its ID, role, title, text, skills, SEEK URL and date.
+
+\paragraph{Skill tagging.} Each ad is tagged with the skills it \emph{explicitly names}, using a taxonomy of 47 skills and their spellings (``PowerBI'', ``Power-BI'' and ``Microsoft Power BI'' all count as Power BI). Ambiguous names such as \emph{R}, \emph{Excel} and \emph{Spark} are matched case-sensitively, so ``r'' inside an ordinary word is not counted. Nothing is inferred: a skill that is not named is not tagged. The tagger's accuracy was measured against independent labels (Section~\ref{sec:rq3}).
+
+\subsection{System overview}
+
+Figure~\ref{fig:pipeline} shows the two stages. The offline stage prepares the data and chooses the configuration once. The online stage runs for every question in a Streamlit web app.
+
+\begin{figure}[H]\centering
+\begin{tikzpicture}[font=\small, node distance=5mm and 5mm,
+  box/.style={draw, rounded corners=2pt, align=center, minimum height=11mm, text width=27mm, fill=white},
+  dec/.style={box, fill=orange!12},
+  llm/.style={box, fill=blue!10},
+  det/.style={box, fill=green!10},
+  arr/.style={-{Stealth[length=2mm]}, thick}]
+% offline
+\node[box] (raw) {SEEK ads\\(30,000)};
+\node[box, right=of raw] (clean) {Select, clean,\\de-duplicate};
+\node[box, right=of clean] (kb) {Knowledge base\\159 ads + skills};
+\node[box, right=of kb] (tune) {Tune on dev\\questions; test once};
+\draw[arr] (raw) -- (clean); \draw[arr] (clean) -- (kb); \draw[arr] (kb) -- (tune);
+% online
+\node[box, below=14mm of raw] (q) {Question, role,\\job level, my skills};
+\node[box, right=of q] (ret) {BM25 search\\(top 3, scoped)};
+\node[dec, right=of ret] (gate) {Best score\\$\geq$ threshold?};
+\node[llm, right=of gate] (gen) {Llama 3.2 3B\\cited answer};
+\node[dec, below=of gen] (check) {Citation\\check};
+\node[box, left=of check] (abs) {``Not enough\\evidence''};
+\node[det, below=of ret] (gap) {Skill gap table\\(all role ads)};
+\draw[arr] (q) -- (ret); \draw[arr] (ret) -- (gate);
+\draw[arr] (gate) -- node[above]{yes} (gen);
+\draw[arr] (gate) -- node[left]{no} (abs);
+\draw[arr] (gen) -- (check);
+\draw[arr] (q) |- (gap);
+\draw[arr, dashed] (tune.south) -- ++(0,-6mm) -| node[pos=0.25, below]{\scriptsize saved threshold \& settings} (gate.north);
+\begin{scope}[on background layer]
+\node[draw=gray!60, dashed, rounded corners, inner sep=3mm, fit=(raw)(tune), label={[gray]above left:Offline (once)}] {};
+\node[draw=gray!60, dashed, rounded corners, inner sep=3mm, fit=(q)(gen)(check)(gap), label={[gray]below right:Online (every question)}] {};
+\end{scope}
+\end{tikzpicture}
+\caption{SkillGap pipeline. Orange boxes are the two safety gates; green is computed without any AI model; blue is the language model.}\label{fig:pipeline}
+\end{figure}
+
+\subsection{Retrieval and the decision to decline}
+
+\paragraph{Search.} For each question, only ads for the selected role are searched. We use \textbf{BM25} \citep{robertson2009bm25}, the standard keyword-ranking formula behind many search engines. An ad scores highly when it contains the question's rare, specific words (``Tableau'' counts for more than ``skills''), and long ads are penalised so they do not win just by being long. Questions are lower-cased, filler words removed, and words reduced to a stem so ``requested'', ``requests'' and ``request'' match. The tokenizer keeps names such as \emph{C++} and \emph{C\#} intact.
+
+\paragraph{Declining (abstention).} We divide each ad's score by the highest score the question could possibly achieve. This gives a 0--1 value meaning ``how much of the question's important vocabulary this ad covers''. If even the best ad falls below a tuned threshold, SkillGap declines. Normalising first lets one threshold work for short and long questions alike.
+
+\paragraph{Alternatives compared.} We also tested a dense ``meaning-based'' retriever using MiniLM sentence embeddings \citep{reimers2019sbert,wang2020minilm}, with its own tuned threshold. We also tested a hybrid that merges both rankings with Reciprocal Rank Fusion \citep{cormack2009rrf}.
+
+\subsection{Answer generation and the grounding gate}
+
+The three retrieved ads, the target role and the question go to \textbf{Llama~3.2 3B} \citep{grattafiori2024llama3}, run locally through Ollama \citep{ollama}. The model is free and needs no paid API, and no data leaves the machine. Temperature is 0, so answers are repeatable. The system prompt (Appendix~\ref{app:prompts}) tells the model to use only the supplied ads, to end each claim with a citation such as \texttt{[SOURCE DA\_35991436]}, to treat ad text as untrusted (a defence against instructions hidden in documents~\citep{greshake2023injection}), and to reply with a fixed sentence when the ads do not answer the question. Four prompt versions are kept in the code (v1--v4); v2 and v3 were evaluated in full, and the app uses v4.
+
+After generation, an automatic \textbf{grounding gate} checks that (a)~the answer contains at least one citation, (b)~every cited ID belongs to an ad that was actually retrieved, and (c)~there are no placeholder counts such as ``N of the retrieved documents''. Answers that fail are \emph{withheld} and shown only in a clearly labelled ``rejected draft'' panel. Accepted answers are shown with an \emph{evidence table} that pairs each claim with an excerpt from the cited ad and its SEEK link. The gate checks that citations are well-formed and genuine. It does \emph{not} check that the cited ad supports the claim, and Section~\ref{sec:rq2} shows why that matters.
+
+\subsection{Deterministic skill gaps, role overviews and job level}\label{sec:overview}
+
+\paragraph{Skill gaps without AI.} The skill-gap table is \emph{not} written by the language model. For the chosen role, it counts how many ads name each skill (``SQL: named in 38 of 80 ads''), then removes the skills the user says they have. Because the count covers \emph{all} ads for the role, the table does not change with the wording of the question, and the model cannot invent a gap. A ``source proof'' panel shows the ad excerpts behind each count.
+
+\paragraph{Role-wide questions.} Questions made only of generic words (``What skills are required for this role?'') are detected and answered from the same deterministic counts, cited as \texttt{[SOURCE SKILL\_PROFILE]}. Keyword search cannot answer them, because the words appear in almost every ad (Section~\ref{sec:fail}).
+
+\paragraph{Job level.} Each ad is labelled from explicit wording only: \emph{Graduate/entry wording} in the title, \emph{0--1 year}, \emph{2+ years}, or \emph{Experience not stated}. Stated years override the title. Ranges use the upper bound (``1--2 years'' counts as 2+), and only year counts next to ``experience'' or ``working with/in/as'' are used, so company ages and contract lengths are ignored. ``Not stated'' is kept separate from ``zero experience''. Users can filter evidence by level. Because filtering changes the score distribution, the tuned threshold is only used on the full knowledge base, and filtered results are labelled \emph{not validated}.
+
+\subsection{Evaluation framework}\label{sec:eval}
+
+The framework is \emph{test-driven}: the questions and their correct answers were fixed before tuning, and every change was scored against them. It has three layers: retrieval, generated answers, and the accuracy of the labels and skill tags themselves.
+
+\paragraph{Question set.} \texttt{scripts/build\_questions.py} generates 54 labelled questions with a fixed random seed, in three types, spread across the three roles: \emph{skill} questions (``Do business analyst roles require advanced Excel?''; relevant ads = those whose tagged skills include Excel), \emph{specific-ad} questions, and 12 \emph{unanswerable} questions (future salaries, Kubernetes certification, tuition fees, interview pass rates, forklift licences). Questions were split 60/40 into \textbf{dev} (33; used for all tuning) and \textbf{test} (21: 15 answerable, 6 unanswerable; scored once at the end). One unanswerable question (visa sponsorship) was dropped for the Business Analyst role after three ads were found to mention sponsorship.
+
+\paragraph{Metrics.} Table~\ref{tab:metrics} explains each metric in plain terms. Following Walert, we measure not only ranking quality but whether the system correctly chooses to answer or decline.
+
+\begin{table}[H]
+\caption{Evaluation metrics ($k=3$ retrieved ads).}\label{tab:metrics}
+\small
+\begin{tabularx}{\linewidth}{lY}
+\toprule
+Metric & What it means for a user \\
+\midrule
+Hit@3 & Share of answerable questions with at least one relevant ad in the top three. \\
+MRR & How high the first relevant ad appears (1 = first place, 0.5 = second, \dots). \\
+nDCG@3 & Overall ranking quality of the top three, rewarding relevant ads near the top \citep{jarvelin2002ndcg}. \\
+Decision accuracy & Share of \emph{all} questions where the system correctly chose to answer or decline. \\
+Abstain (unanswerable) & Share of unanswerable questions correctly declined: protects users from made-up answers. \\
+False abstain & Share of answerable questions wrongly declined: the cost of being too cautious. \\
+Selection score & Mean of nDCG@3 and decision accuracy; the single number used to choose the system. \\
+\midrule
+Citation present / valid & Generated answers containing a citation / whose citations all point to retrieved ads. \\
+Correct refusal & Unanswerable questions answered with the fixed refusal sentence, end to end. \\
+Faithful & Every substantive claim is supported by the retrieved ads and attributed to the right ad. \\
+Correct & The answer gives the right answer to the question, with no material error or misleading omission. \\
+\midrule
+Label accuracy & Share of sampled (question, relevant ad) labels that are genuinely relevant. \\
+Tagging P / R / F1 & Precision, recall and F1 of automatic skill tags against independent labels. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{Protocol.} Changes were made one at a time on dev (Table~\ref{tab:test}, B0 to BT), and the threshold was swept over every distinct score. To reduce overfitting, the threshold is placed at the \emph{middle} of the widest range of thresholds that score best on dev, not at its edge (Figure~\ref{fig:sweep}). The final system was chosen on dev only. Every configuration was then scored on test once, and test results were never used to make changes. For the chosen system we report 95\% percentile-bootstrap confidence intervals over test questions \citep{efron1993bootstrap}. Every run is logged with a fingerprint of the dataset (\texttt{results/run\_log.csv}).
+
+\paragraph{Generated answers.} Generation was evaluated on the 33 dev questions with prompts v2 and v3. The automatic checks covered citations and refusals. Faithfulness and correctness of every answered question were judged by reading each answer against the full text of its retrieved ads. The system was also run on 49 realistic ``demo'' questions, written as a student would ask them, recording the outcome and response time.
+
+\paragraph{Checking our own labels.} Because the relevance labels and the skill counts both come from the automatic skill tagger, we checked the tagger itself. We judged a stratified sample of 72 (question, relevant ad) pairs (\texttt{label\_audit.csv}). We also labelled the skills in 20 randomly sampled ads without seeing the automatic tags (\texttt{skill\_labels.csv}), and scored the tagger against those labels.
+
+\paragraph{Who annotated.} All three annotation sheets were completed by a single AI annotator (Claude, Anthropic) on 22~October~2026, following the written criteria above. Each judgement and its reason are recorded in the sheets. There was no second annotator, so no inter-annotator agreement can be reported. These scores are therefore provisional until a team member spot-checks them (Section~\ref{sec:limits}).
+
+\paragraph{Software quality.} The code has 30 automated tests (29 pass; 1 is a deliberately recorded known defect). A separate QA audit on 5~October 2026 wrote 72 test cases, executed 55, and logged six defects (Appendix~\ref{app:qa}).

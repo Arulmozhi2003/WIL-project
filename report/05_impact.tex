@@ -1,0 +1,57 @@
+% 05_impact.tex: ported from the SkillGap report draft
+\section{Impact and Significance of Results}\label{sec:impact}
+
+\subsection{Value to stakeholders}
+
+\paragraph{Time saved.} Table~\ref{tab:time} compares the effort of getting a role's skill profile by reading the ads with getting it from SkillGap. Reading time assumes an average silent reading speed of 238 words per minute for non-fiction \citep{brysbaert2019reading}, which is optimistic for dense job ads.
+
+\begin{table}[H]
+\caption{Estimated effort to build a role's skill profile by hand vs.\ with SkillGap.}\label{tab:time}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Role & Ads & Words & Reading time (est.) & SkillGap \\
+\midrule
+Data Analyst & 80 & 28,592 & $\approx$ 2.0 h & immediate (no AI call) \\
+Business/Data Analyst & 58 & 22,463 & $\approx$ 1.6 h & immediate (no AI call) \\
+Data Scientist & 21 & 8,507 & $\approx$ 0.6 h & immediate (no AI call) \\
+\midrule
+Specific question & \multicolumn{3}{l}{search and skim the relevant ads (minutes)} & median 7\,s, with sources \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For a careers service, this time is multiplied by every student who asks. Reading also yields only an impression, where SkillGap gives counts with links to each ad. The counts were also verified: the tagger behind them reached F1 0.92 against independent labels.
+
+\paragraph{Trust and risk reduction.} The main value over a general chatbot is not speed but \emph{accountability}. Accepted answers carry real, clickable sources (0 invented citation IDs across all runs). With the chosen prompt, 93\% of answers were correct and 81\% faithful in every claim. Questions the evidence cannot answer are declined: end to end, all 6 unanswerable dev questions and all 9 on the demo list were refused, and on the held-out test the tuned search alone declined 3 of 6, where the starter declined none. Every claim can be checked by a person in one click. A general chatbot does not offer that, and it is what lets an institution stand behind the tool.
+
+\paragraph{Cost and privacy.} All components are free and local (Python, Streamlit, BM25, Llama 3.2 3B through Ollama, a 2\,GB model). There are no per-question API fees, and student questions and skills never leave the device. This matters for a university's privacy obligations.
+
+\paragraph{Decision support beyond students.} The deterministic role profiles (Table~\ref{tab:skills}) are a by-product with value of their own. A course coordinator can see, with evidence, that SQL appears in about half of data analyst ads, and use this to prioritise workshops or curriculum. The pipeline is role-agnostic, so new roles or a current ad export can be added with \texttt{ingest.py}.
+
+\paragraph{The finding that a cheaper method wins.} Showing that plain BM25 out-performed neural retrieval on this task (Table~\ref{tab:test}) is directly useful to a business. Similar systems can run without GPU hardware or embedding models.
+
+\subsection{Social, ethical and professional considerations}
+
+\begin{itemize}
+  \item \textbf{Outdated data can mislead.} The ads are from one week in April 2018. Power BI, for example, is likely under-represented relative to today. The app shows a historical-data warning. Any real deployment must use current ads.
+  \item \textbf{Sample bias.} Sydney (72 ads) and Melbourne (37) dominate, and the Data Scientist collection is small (21 ads). Skill shares describe \emph{these} documents, not the Australian market.
+  \item \textbf{A gap is not a verdict.} The prompt and interface describe missing skills as \emph{potential} gaps relative to the evidence, never as a judgement of the user's ability or employability. SkillGap makes no claim about job outcomes.
+  \item \textbf{Licensing, attribution and personal data.} The dataset is CC~BY~4.0 and attributed. The ad text was written by employers, so we use it for non-commercial study only and always link back to the original ad. The data describes job openings, not job seekers. However, 32 ads include an email address and 47 a phone number for a recruiter or contact person. These are part of the public ad text and SkillGap does not use them, but a production version should strip them before display.
+  \item \textbf{Security.} Ad text is treated as untrusted input to resist prompt injection. The QA audit found that the app, as launched, listens on all network interfaces without a login. It must be restricted to the local machine or placed behind authentication before any shared deployment.
+  \item \textbf{AI judging AI.} The answer-quality scores come from an AI annotator. This is fast and documented, but it can share blind spots with the system it judges. A human check is required before any decision rests on these numbers.
+\end{itemize}
+
+\subsection{Limitations}\label{sec:limits}
+
+All annotation (answer faithfulness and correctness, the label audit, the skill labels) was done by one AI annotator, so there is no agreement measure. A team member should re-judge a random sample of at least 20 answers and report agreement before these figures are relied on. Automated measures such as RAGAS \citep{es2024ragas} could complement that review, but not replace it. Generation quality was measured on dev questions only (27 answerable), so the faithfulness rates have wide uncertainty. The retrieval test set is also small (21 questions). The current default prompt (v4) has not had a full evaluation. Any further tuning now needs a fresh test set, because the current one has been seen.
+
+\subsection{Recommendation to the business}\label{sec:recommendation}
+
+SkillGap demonstrates that a free, local, test-driven RAG system can give graduates traceable, mostly accurate answers and decline what it cannot support. We recommend a \textbf{supervised pilot} with a careers service, conditional on:
+\begin{enumerate}
+  \item \textbf{Current data:} rebuild the knowledge base from a current, licensed ad export with the existing pipeline, stripping URLs and contact details before skill tagging.
+  \item \textbf{Human validation:} have two people re-judge a sample of the AI annotations, report agreement, and evaluate prompt v4 on a fresh test set. Set a minimum faithfulness rate (for example 90\%) before launch.
+  \item \textbf{A stronger safeguard:} replace or extend the citation-format gate with a claim-level support check, and test a larger local model.
+  \item \textbf{Safe deployment:} bind to the local machine or add authentication, and fix the evaluation-trace and input-validation defects (QA-01, QA-04).
+\end{enumerate}

@@ -1,0 +1,21 @@
+% 01_exec_summary.tex: ported from the SkillGap report draft
+
+This report presents the results of a study of \textbf{SkillGap}, a test-driven Retrieval-Augmented Generation (RAG) assistant for graduate job seekers. Graduates applying for data roles have to read many job advertisements to work out what employers ask for, and general-purpose chatbots answer these questions confidently without showing where the answer came from. SkillGap is a working prototype that answers a graduate's questions about three entry-level roles (Data Analyst, Business/Data Analyst and Data Scientist) \emph{only} from 159 real Australian job ads. Every answer it shows is tied to the ads it came from, and it says ``I do not have enough evidence'' when the ads cannot answer the question. It also lists the skills the ads ask for that the user has not yet named.
+
+The study aimed to determine whether a free, locally run RAG system can answer graduates' questions from real job ads accurately, cite its sources, and decline questions the ads cannot answer, and what value this offers a university careers service. The study used 159 SEEK Australia job ads; the system was built and evaluated in weekly iterations, with the recorded runs between 29 September and 22 October 2026. We built SkillGap test-first: 54 questions with known answers were written and split into a tuning set and a held-out test set \emph{before} the system was tuned, and every design change was kept or rejected according to those scores. The study showed that:
+
+\begin{itemize}
+  \item On held-out test questions, the tuned system declined \textbf{3 of 6} questions the ads cannot answer (e.g.\ future salaries), where the starter system declined \textbf{none}, and wrongly declined \textbf{0 of 15} answerable questions. A relevant ad was in its top three results for \textbf{14 of 15} answerable questions.
+  \item Overall quality (one score combining ranking and the answer/decline decision) rose from \textbf{0.767 to 0.862} (95\% confidence interval 0.752--0.953).
+  \item With the chosen prompt, \textbf{22 of 27} generated answers were fully faithful to their sources and \textbf{25 of 27} answered the question correctly. The model never invented a source ID.
+  \item A simple keyword search engine (BM25) beat a modern neural search on this data. This is a low-cost result for anyone building a similar system.
+\end{itemize}
+
+The whole system runs on a laptop with free software: no ad text or user question leaves the machine, and there are no licence or API costs. Reading the Data Analyst ads alone to build the same skill summary would take about two hours. SkillGap returns it immediately, with sources.
+
+The prototype is \textbf{not yet ready for unsupervised public use}. The answer review was done by a single AI annotator and still needs a human spot-check. Having a citation turned out not to predict whether an answer is faithful, so the app's citation check is a weaker safeguard than it looks. The ads also date from 2018. Key recommendations from this study are (Section~\ref{sec:recommendation}):
+\begin{enumerate}
+  \item Run a \textbf{supervised pilot} with a university careers service, rebuilt on a current, licensed set of job ads.
+  \item Have two people \textbf{validate answer quality} on a sample and set a minimum faithfulness rate before launch.
+  \item Replace the citation-format check with a \textbf{claim-level support check}, and restrict the app to local use or add a login.
+\end{enumerate}
