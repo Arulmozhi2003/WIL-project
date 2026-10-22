@@ -1,0 +1,375 @@
+id,split,role,question,expected_unanswerable,expected,retrieved,prompt,model,answer,abstained,has_citation,citations_valid,invalid_citations,faithful,correct,annotator,notes
+Q01,dev,Graduate Business/Data Analyst,Do business analyst roles require advanced Excel?,0,BA_35957423 BA_35967128 BA_35967910 BA_35968844 BA_35969007 BA_35969751 BA_35969842 BA_35970257 BA_35971457 BA_35972828 BA_35973140 BA_35974670 BA_35974837 BA_35975297 BA_35975828 BA_35978626 BA_35979880 BA_35980382 BA_35981631 BA_35982216 BA_35982863 BA_35983821 BA_35984148 BA_35985635 BA_35985706 BA_35989279 BA_35989786 BA_35990076 BA_35991279 BA_35991552 BA_35991794 BA_35993535 BA_35993960 BA_35994299 BA_35995703 BA_35997766 BA_36001438,BA_35982863 BA_35991794 BA_35971457,v2,llama3.2:3b,"According to the retrieved documents, advanced Excel skills are mentioned as a requirement for the Business Analyst role at Michael Page [SOURCE BA_35991794]. Specifically, it states: ""Advanced Excel Skills"" as one of the key criteria for the role.",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q01,dev,Graduate Business/Data Analyst,Do business analyst roles require advanced Excel?,0,BA_35957423 BA_35967128 BA_35967910 BA_35968844 BA_35969007 BA_35969751 BA_35969842 BA_35970257 BA_35971457 BA_35972828 BA_35973140 BA_35974670 BA_35974837 BA_35975297 BA_35975828 BA_35978626 BA_35979880 BA_35980382 BA_35981631 BA_35982216 BA_35982863 BA_35983821 BA_35984148 BA_35985635 BA_35985706 BA_35989279 BA_35989786 BA_35990076 BA_35991279 BA_35991552 BA_35991794 BA_35993535 BA_35993960 BA_35994299 BA_35995703 BA_35997766 BA_36001438,BA_35982863 BA_35991794 BA_35971457,v3,llama3.2:3b,"According to [SOURCE BA_35982863], a Business Analyst role requires ""Advanced Excel Skills"" as a key criterion.
+
+Additionally, [SOURCE BA_35991794] mentions ""Advanced Excel Skills"" as a requirement for the role, and [SOURCE BA_35971457] states that the successful candidate will have ""Advanced Excel Skills"" as part of the job offer.
+
+It appears that advanced Excel skills are a common requirement for Business Analyst roles.",0,1,1,,0,1,"Claude (AI), 2026-10-22","quotes ""Advanced Excel Skills"" for BA_35982863 and BA_35971457, which word it differently; calls it part of the ""job offer"""
+Q02,dev,Graduate Business/Data Analyst,Is SQL knowledge expected for business analysts?,0,BA_35956021 BA_35972530 BA_35974670 BA_35974925 BA_35975681 BA_35984029 BA_35985635 BA_35989786 BA_35991618 BA_35991757 BA_35993535 BA_35994299 BA_35995703 BA_35997872,BA_35970257 BA_35985635 BA_35997872,v2,llama3.2:3b,"According to the sources, SQL knowledge is not explicitly stated as a requirement for Business Analysts. However, it is mentioned that Horizon Consulting's Business Analyst - Government role requires ""Competency in SQL Server – T-SQL, pass through queries, views, nuances of table linkage from Access"" [SOURCE BA_35985635]. 
+
+Potential gap: SQL knowledge may be beneficial for Business Analysts, but it is not explicitly stated as a requirement.",0,1,1,,0,0,"Claude (AI), 2026-10-22","says SQL is not explicitly required, contradicting its own quote and BA_35997872 (""Demonstrated capability in SQL"")"
+Q02,dev,Graduate Business/Data Analyst,Is SQL knowledge expected for business analysts?,0,BA_35956021 BA_35972530 BA_35974670 BA_35974925 BA_35975681 BA_35984029 BA_35985635 BA_35989786 BA_35991618 BA_35991757 BA_35993535 BA_35994299 BA_35995703 BA_35997872,BA_35970257 BA_35985635 BA_35997872,v3,llama3.2:3b,"According to [SOURCE BA_35985635], a Business Analyst - Government role requires ""Competency in SQL Server – T-SQL, pass through queries, views, nuances of table linkage from Access"". This suggests that SQL knowledge is expected for this role.",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q04,dev,Graduate Business/Data Analyst,Is business process mapping part of the job?,0,BA_35957423 BA_35972116 BA_35973636 BA_35976281 BA_35982863 BA_35989279 BA_35991618 BA_35997872 BA_36000606,BA_35997872 BA_35982863 BA_35993535,v2,llama3.2:3b,"According to [SOURCE BA_35982863], the Business Analyst role involves ""Writing test scripts for future TM1 implementation"" and ""Supporting the project team with other ad hoc requests/deliverables as required"", but there is no explicit mention of business process mapping. However, [SOURCE BA_35993535] mentions that the Technical Business Analyst role involves ""Producing and maintaining user documentation and/or business process maps and supports training of users as part of Operational Readiness practices"". 
+
+Potential gap: Business process mapping skills.",0,1,1,,0,1,"Claude (AI), 2026-10-22","says BA_35982863 does not mention process mapping; it lists ""Process mapping"""
+Q04,dev,Graduate Business/Data Analyst,Is business process mapping part of the job?,0,BA_35957423 BA_35972116 BA_35973636 BA_35976281 BA_35982863 BA_35989279 BA_35991618 BA_35997872 BA_36000606,BA_35997872 BA_35982863 BA_35993535,v3,llama3.2:3b,"According to [SOURCE BA_35982863], the Business Analyst role involves ""Writing test scripts for future TM1 implementation"" and ""Supporting the project team with other ad hoc requests/deliverables as required"", but there is no explicit mention of business process mapping.
+
+However, [SOURCE BA_35993535] mentions that the Technical Business Analyst role involves ""Producing and maintaining user documentation and/or business process maps and supports training of users as part of Operational Readiness practices"".
+
+It appears that business process mapping may be part of the job, but it is not explicitly stated in the job description of [SOURCE BA_35982863].",0,1,1,,0,0,"Claude (AI), 2026-10-22","same false claim about BA_35982863; concludes process mapping ""may be"" part of the job although 3 ads state it"
+Q07,dev,Graduate Business/Data Analyst,How much stakeholder engagement is involved in these roles?,0,BA_35957423 BA_35967128 BA_35969751 BA_35971204 BA_35971457 BA_35972116 BA_35972530 BA_35975297 BA_35975681 BA_35976281 BA_35979880 BA_35980382 BA_35983821 BA_35984029 BA_35991618,BA_35975297 BA_35967128 BA_35991794,v2,llama3.2:3b,"According to the sources, stakeholder engagement is a significant aspect of these roles. 
+
+* The Business Analyst at Chandler Macleod Group (SOURCE BA_35975297) will be responsible for maintaining and updating the Stakeholder Engagement Contacts Register, preparing/extracting individual or regional engagement briefs, and establishing and maintaining individual Community/Location Market Readiness profiles. 
+* The APS4 - Business Analyst at DFP Recruitment (SOURCE BA_35967128) will provide assistance with the establishment and ongoing support of the Stakeholder Engagement Team of a Large Regional Hub, and will be responsible for monitoring communications and engagements through the stakeholder engagement tracker inboxes.
+* The Business Analyst at Michael Page (SOURCE BA_35991794) will be involved in liaising with senior stakeholders and providing insights into the KPI's of the organisation, but the extent of stakeholder engagement is not explicitly stated.
+
+Potential gaps: Developing skills in stakeholder engagement, communication, and relationship-building.",0,0,0,,1,1,"Claude (AI), 2026-10-22","supported, but citations written as (SOURCE id) so not counted"
+Q07,dev,Graduate Business/Data Analyst,How much stakeholder engagement is involved in these roles?,0,BA_35957423 BA_35967128 BA_35969751 BA_35971204 BA_35971457 BA_35972116 BA_35972530 BA_35975297 BA_35975681 BA_35976281 BA_35979880 BA_35980382 BA_35983821 BA_35984029 BA_35991618,BA_35975297 BA_35967128 BA_35991794,v3,llama3.2:3b,"According to [SOURCE BA_35975297], the Business Analyst will be responsible for:
+
+* Maintaining and updating the Stakeholder Engagement Contacts Register
+* Preparing/extracting individual or regional engagement briefs outlining previous engagement history
+* Establishing and maintaining individual Community/Location Market Readiness profiles
+* Conducting and supporting thematic, quantitative, qualitative and cost analysis of Qld North data
+
+This suggests a significant amount of stakeholder engagement, including:
+
+* Managing stakeholder relationships and engagement
+* Analyzing and reporting on stakeholder engagement data
+* Developing and maintaining stakeholder engagement strategies
+
+Similarly, [SOURCE BA_35967128] mentions:
+
+* Maintaining and updating Contacts Register
+* Preparing/extracting individual or regional engagement briefs
+* Establishing and maintaining Market Readiness profiles
+
+This also suggests a significant amount of stakeholder engagement, including:
+
+* Managing stakeholder relationships and engagement
+* Analyzing and reporting on stakeholder engagement data
+* Developing and maintaining stakeholder engagement strategies
+
+Finally, [SOURCE BA_35991794] does not explicitly mention stakeholder engagement, but the role involves:
+
+* Liaising with senior stakeholders
+* Providing insights into KPI's of the organisation
+* Undertaking financial analysis and data modelling
+
+This suggests that stakeholder engagement is not a primary focus of this role, but rather a secondary aspect of the Business Analyst's responsibilities.",0,1,1,,1,1,"Claude (AI), 2026-10-22","""stakeholder engagement strategies"" is the model's inference, presented as such"
+Q08,dev,Graduate Business/Data Analyst,Will I be creating reports and dashboards?,0,BA_35969751 BA_35972325 BA_35974670 BA_35974925 BA_35980382 BA_35983821 BA_35991552 BA_35993891 BA_35993906 BA_35995703 BA_35997089 BA_35997331 BA_36000606,BA_35969751 BA_35972325 BA_35995703,v2,llama3.2:3b,"According to [SOURCE BA_35969751], the successful candidate needs to have ""Strong Reporting skills"" and ""Created Dashboards"" as a Must Have. 
+
+Additionally, [SOURCE BA_35995703] mentions that the right candidate will have ""Ability to build dashboards"" as a requirement.",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q08,dev,Graduate Business/Data Analyst,Will I be creating reports and dashboards?,0,BA_35969751 BA_35972325 BA_35974670 BA_35974925 BA_35980382 BA_35983821 BA_35991552 BA_35993891 BA_35993906 BA_35995703 BA_35997089 BA_35997331 BA_36000606,BA_35969751 BA_35972325 BA_35995703,v3,llama3.2:3b,"[SOURCE BA_35969751] Must Have: Created Dashboards
+[SOURCE BA_35972325] Develop and create customized reports and dashboards
+[SOURCE BA_35995703] Build templates and dashboards to readily read/share data
+
+These roles require creating reports and dashboards as part of the job responsibilities.",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q10,dev,Graduate Business/Data Analyst,What does the Business Analyst role at RAC involve?,0,BA_35969842,BA_35969842 BA_35991794 BA_35997872,v2,llama3.2:3b,"According to [SOURCE BA_35969842], the Business Analyst role at RAC involves:
+Utilising excellent relationship management skills to work collaboratively with internal and external stakeholders.
+Analysis and solution definition.
+Business case development.
+Making recommendations.
+Performing testing and providing evaluations.
+Project management and execution.
+Facilitating meetings and training.
+Implementing change management initiatives.
+Reporting to the Projects & Analysis Manager.
+
+Note: The role does not specify the exact tasks involved, but rather the overall responsibilities and expectations of the position.",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q10,dev,Graduate Business/Data Analyst,What does the Business Analyst role at RAC involve?,0,BA_35969842,BA_35969842 BA_35991794 BA_35997872,v3,llama3.2:3b,"According to [SOURCE BA_35969842], the Business Analyst role at RAC involves:
+
+* Utilising excellent relationship management skills to work collaboratively with internal and external stakeholders
+* Analysis and solution definition
+* Business case development
+* Making recommendations
+* Performing testing and providing evaluations
+* Project management and execution
+* Facilitating meetings and training
+* Implementing change management initiatives
+* Reporting to the Projects & Analysis Manager
+
+These responsibilities are part of a 6-month maximum term contract.",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q11,dev,Graduate Business/Data Analyst,What does the Business Analyst - Exciting Greenfield Project role at Private Advertiser involve?,0,BA_35957423,BA_35957423 BA_36000606 BA_35972325,v2,llama3.2:3b,"The Business Analyst - Exciting Greenfield Project role at Private Advertiser involves:
+* Work with stakeholders and clients to gather and analyse functional and non-functional requirements, translating them into agile user stories for Technology and readily consumable artefacts for consumption by the business and clients [SOURCE BA_35957423].
+* End to end business analysis responsibilities from project concept/ start-up phase through to delivery [SOURCE BA_35957423].
+* Facilitate business requirements and process mapping workshops, documenting current and future state processes, documenting business requirements (functional and non-functional), producing business and client facing documents (incl. procedure documents, user manuals, etc.) [SOURCE BA_35957423].
+* Promote collaboration, knowledge transfer, and skills transfer [SOURCE BA_35957423].
+* Lead workshops with key stakeholders to document user stories and develop acceptance tests [SOURCE BA_35957423].
+* Carry out cost benefit analysis for a variety of project activities [SOURCE BA_35957423].
+* Apply Agile best practise to manage and prioritise the product backlog and improve organisational productivity [SOURCE BA_35957423].
+* Negotiate requirements dependencies with other teams, reprioritising as appropriate, together with the Project Managers [SOURCE BA_35957423].
+* Engage stakeholders and promote deliverables to the business and clients through presentations and product update materials [SOURCE BA_35957423].
+* Gather and analyse data in relation to R&D, resource utilisation and other reporting and compliance or audit requirements for the business [SOURCE BA_35957423].",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q11,dev,Graduate Business/Data Analyst,What does the Business Analyst - Exciting Greenfield Project role at Private Advertiser involve?,0,BA_35957423,BA_35957423 BA_36000606 BA_35972325,v3,llama3.2:3b,"The Business Analyst - Exciting Greenfield Project role at Private Advertiser involves:
+* Work with stakeholders and clients to gather and analyse functional and non-functional requirements, translating them into agile user stories for Technology and readily consumable artefacts for consumption by the business and clients.
+* End to end business analysis responsibilities from project concept/ start-up phase through to delivery.
+* Facilitate business requirements and process mapping workshops, documenting current and future state processes, documenting business requirements (functional and non-functional), producing business and client facing documents (incl. procedure documents, user manuals, etc.).
+* Develop business test cases and running business testing.
+* Promote collaboration, knowledge transfer, and skills transfer.
+* Lead workshops with key stakeholders to document user stories and develop acceptance tests.
+* Carry out cost benefit analysis for a variety of project activities.
+* Apply Agile best practise to manage and prioritise the product backlog and improve organisational productivity.
+* Negotiate requirements dependencies with other teams, reprioritising as appropriate, together with the Project Managers.
+* Engage stakeholders and promote deliverables to the business and clients through presentations and product update materials.
+* Gather and analyse data in relation to R&D, resource utilisation and other reporting and compliance or audit requirements for the business.
+
+[SOURCE BA_35957423]",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q13,dev,Graduate Business/Data Analyst,What does the Business Analyst / Identity Access Management role at Davidson Technology involve?,0,BA_35973636,BA_35973636,v2,llama3.2:3b,"The Business Analyst / Identity Access Management role at Davidson Technology involves:
+
+* Business Analysis for Functional and Non-Functional analysis and documentation [SOURCE BA_35973636]
+* Helping the business to enable key business needs to be translated into technical specifications
+* Facilitating the delivery of an enhanced experience in the IDAM space
+* Requirements gathering, Data, process mapping and data modelling [SOURCE BA_35973636]
+* Working as part of a large-scale Transformation project.
+
+Note: The role does not involve a stated salary, and the job description does not provide further details on the day-to-day responsibilities.",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q13,dev,Graduate Business/Data Analyst,What does the Business Analyst / Identity Access Management role at Davidson Technology involve?,0,BA_35973636,BA_35973636,v3,llama3.2:3b,"The Business Analyst / Identity Access Management role at Davidson Technology involves:
+
+* Business Analysis for Functional and Non-Functional analysis and documentation [SOURCE BA_35973636]
+* Helping the business to enable the key business needs to be translated into technical specifications
+* Facilitating the delivery of an enhanced experience in the IDAM space
+* Requirements gathering, Data, process mapping and data modelling [SOURCE BA_35973636]
+* Skills/Experience Required: 5 years+ experience as a BA with proven experience working on Identity Access Management projects, ideally related to member portals [SOURCE BA_35973636]
+
+Potential gaps relative to the ads include: experience with modern technologies, Application, Cloud and Web, Business Process and Workflow documentation, Information and System Security Technologies, and strong interpersonal skills with both direct team members and senior stakeholders.",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q14,dev,Graduate Business/Data Analyst,What does the Business Analyst role at Hays Accountancy & Finance involve?,0,BA_35972828,BA_35972828 BA_35981631,v2,llama3.2:3b,"According to [SOURCE BA_35972828], the Business Analyst role at Hays Accountancy & Finance involves:
+
+* Providing operational insights to support decision making and cost saving initiatives
+* Project performance tracking
+* General ledger data integrity
+* Developing internal stakeholder relationships to support business decisions
+* Reporting to Commercial Finance, with a focus on operational performance and other reporting requests for both internal and external stakeholders.
+
+Potential gaps relative to these documents include:
+* Developing expertise in general ledger data integrity
+* Building strong relationships with internal stakeholders
+* Improving analytical skills to support decision making and cost saving initiatives.",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q14,dev,Graduate Business/Data Analyst,What does the Business Analyst role at Hays Accountancy & Finance involve?,0,BA_35972828,BA_35972828 BA_35981631,v3,llama3.2:3b,"The Business Analyst role at Hays Accountancy & Finance involves providing operational insights to support decision making and cost saving initiatives, with a focus on operational performance and any other reporting requests for both internal and external stakeholders. [SOURCE BA_35972828]
+
+Key responsibilities include:
+
+* Project performance tracking
+* General ledger data integrity
+* Developing internal stakeholder relationships to support business decisions
+* Providing commercial financial analysis underpinning and validating business case assumptions for decision
+* Supporting the Commercial Finance Team in delivering required strategic commercial outputs aligned to the business plan
+
+I do not have enough evidence in this knowledge base to answer that the role involves using financial analysis techniques to deliver day to day support and provide insight, analysis and trends on critical business issues impacting the performance of a business unit. [SOURCE BA_35981631]",0,1,1,,0,0,"Claude (AI), 2026-10-22",attributes duties from BA_35981631 (a different ad) to the Hays role; garbled refusal sentence mid-answer
+Q15,dev,Graduate Business/Data Analyst,Is a forklift licence required for this job?,1,,,v2,llama3.2:3b,I do not have enough evidence in this knowledge base to answer that.,1,0,0,,,,,correctly refused
+Q15,dev,Graduate Business/Data Analyst,Is a forklift licence required for this job?,1,,,v3,llama3.2:3b,I do not have enough evidence in this knowledge base to answer that.,1,0,0,,,,,correctly refused
+Q18,dev,Graduate Business/Data Analyst,Will the company pay my university tuition fees?,1,,,v2,llama3.2:3b,I do not have enough evidence in this knowledge base to answer that.,1,0,0,,,,,correctly refused
+Q18,dev,Graduate Business/Data Analyst,Will the company pay my university tuition fees?,1,,,v3,llama3.2:3b,I do not have enough evidence in this knowledge base to answer that.,1,0,0,,,,,correctly refused
+Q21,dev,Graduate Data Analyst,Is experience building dashboards in Tableau requested?,0,DA_35959226 DA_35967493 DA_35968969 DA_35969432 DA_35969827 DA_35971439 DA_35972250 DA_35972454 DA_35978574 DA_35979429 DA_35981150 DA_35982055 DA_35986458 DA_35990093 DA_35991436 DA_35992211 DA_35992806 DA_35993319 DA_35994633 DA_35996984 DA_35997489,DA_35991436 DA_35994633 DA_35968969,v2,llama3.2:3b,"According to [SOURCE DA_35991436], creating intuitive dashboards to present data-driven insights through reporting is a key responsibility, but it does not explicitly state that experience building dashboards in Tableau is required.
+
+However, [SOURCE DA_35994633] explicitly states that the ability to help customers realise the benefits of Tableau from a presentation and dashboarding perspective is a required attribute, which implies that experience building dashboards in Tableau is desirable.
+
+Therefore, potential gap: Experience building dashboards in Tableau.",0,1,1,,1,1,"Claude (AI), 2026-10-22","underplays DA_35994633, which requires Tableau dashboard delivery, as ""desirable"""
+Q21,dev,Graduate Data Analyst,Is experience building dashboards in Tableau requested?,0,DA_35959226 DA_35967493 DA_35968969 DA_35969432 DA_35969827 DA_35971439 DA_35972250 DA_35972454 DA_35978574 DA_35979429 DA_35981150 DA_35982055 DA_35986458 DA_35990093 DA_35991436 DA_35992211 DA_35992806 DA_35993319 DA_35994633 DA_35996984 DA_35997489,DA_35991436 DA_35994633 DA_35968969,v3,llama3.2:3b,"Yes, creating intuitive dashboards to present data-driven insights through reporting is a key responsibility of the Business Intelligence Analyst role, and experience with visualisation tools such as Tableau is an ideal skill for the position [SOURCE DA_35991436].",0,1,1,,1,1,"Claude (AI), 2026-10-22","calls Tableau an ""ideal"" skill; the ad lists it among required tools"
+Q22,dev,Graduate Data Analyst,Do the ads mention Microsoft Power BI?,0,DA_35855299 DA_35957246 DA_35968969 DA_35971439 DA_35972250 DA_35973606 DA_35974823 DA_35991436 DA_35992806 DA_35996984 DA_35997489 DA_36001145,DA_35974823 DA_35973606 DA_35996984,v2,llama3.2:3b,"Yes, the ads mention Microsoft Power BI. 
+
+All three job ads mention Microsoft Power BI as a required skill or tool for the role.",0,0,0,,1,1,"Claude (AI), 2026-10-22",supported but uncited
+Q22,dev,Graduate Data Analyst,Do the ads mention Microsoft Power BI?,0,DA_35855299 DA_35957246 DA_35968969 DA_35971439 DA_35972250 DA_35973606 DA_35974823 DA_35991436 DA_35992806 DA_35996984 DA_35997489 DA_36001145,DA_35974823 DA_35973606 DA_35996984,v3,llama3.2:3b,"Yes, the ads mention Microsoft Power BI. 
+
+[SOURCE DA_35974823] 
+Lead all aspects of assigned reporting including report setup, scheduling, standardisation, and modification of reporting solutions using Microsoft Power BI based on data that is largely sourced from SAP / SAP BW.
+
+[SOURCE DA_35973606] 
+Lead all aspects of assigned reporting including report setup, scheduling, standardisation, and modification of reporting solutions using Microsoft PowerBI based on data that is largely sourced from SAP/ SAP BW.
+
+[SOURCE DA_35996984] 
+technically you will be using SharePoint, Power BI and Project Web Access (PWA).",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q23,dev,Graduate Data Analyst,Is Python programming experience required for analyst roles?,0,DA_35957246 DA_35967236 DA_35967309 DA_35967493 DA_35971824 DA_35972250 DA_35973086 DA_35981160 DA_35993319 DA_35997489 DA_35997944 DA_35998945,DA_35971824 DA_35973086 DA_35972250,v2,llama3.2:3b,"According to the sources, Python programming experience is not explicitly stated as a requirement for the Graduate Data Analyst roles. However, it is mentioned that experience with R, Python, SQL, SAS, or SPSS is required, and experience with other programming languages would be well-regarded. 
+
+Potential gap: Some of the Graduate Data Analyst roles may benefit from experience with Python programming.",0,0,0,,1,1,"Claude (AI), 2026-10-22",uncited
+Q23,dev,Graduate Data Analyst,Is Python programming experience required for analyst roles?,0,DA_35957246 DA_35967236 DA_35967309 DA_35967493 DA_35971824 DA_35972250 DA_35973086 DA_35981160 DA_35993319 DA_35997489 DA_35997944 DA_35998945,DA_35971824 DA_35973086 DA_35972250,v3,llama3.2:3b,"According to [SOURCE DA_35971824], experience in working in (or with) the Australian Higher Education sector would be a strong advantage, but it does not specifically mention Python programming experience as a requirement for the role.
+
+However, [SOURCE DA_35973086] mentions that experience with R/Python, SQL and Excel is required for the role, but it does not specify that Python programming experience is required.
+
+[SOURCE DA_35972250] mentions that experience with R, SAS, or Python (academic experience included) is required, but it does not explicitly state that Python programming experience is necessary for the role.
+
+Therefore, I do not have enough evidence in this knowledge base to answer that.",0,1,1,,0,0,"Claude (AI), 2026-10-22",claims DA_35971824 does not mention Python (it does); ends with a refusal after answering
+Q25,dev,Graduate Data Analyst,Will I need to build ETL processes to load data?,0,DA_35967236 DA_35969432 DA_35969822 DA_35971439 DA_35972454 DA_35973252 DA_35981134 DA_35981160 DA_35981456 DA_35982055 DA_35983270 DA_35992211 DA_35994628,DA_35983270 DA_35973252 DA_35981456,v2,llama3.2:3b,"N of the retrieved documents suggest that building ETL processes to load data is a required skill for the Graduate Data Analyst role. [SOURCE DA_35983270] and [SOURCE DA_35981456] both mention ""ETL techniques"" and ""data migration"" as part of the job requirements. [SOURCE DA_35973252] also mentions ""ETL processes"" as a required skill.",0,1,1,,0,1,"Claude (AI), 2026-10-22","placeholder ""N of""; attributes ""ETL techniques"" and ""data migration"" to the wrong ads"
+Q25,dev,Graduate Data Analyst,Will I need to build ETL processes to load data?,0,DA_35967236 DA_35969432 DA_35969822 DA_35971439 DA_35972454 DA_35973252 DA_35981134 DA_35981160 DA_35981456 DA_35982055 DA_35983270 DA_35992211 DA_35994628,DA_35983270 DA_35973252 DA_35981456,v3,llama3.2:3b,"According to [SOURCE DA_35973252], the Data Migration Analyst role at Full Circle Partners requires designing and developing data scripting for the OUAF/Oracle ODI application, which implies working with ETL processes.
+
+Additionally, [SOURCE DA_35981456] mentions that the Data Analyst role at Talent requires developing and maintaining data migration scripts and documentation, which also involves working with ETL processes.
+
+It is likely that building ETL processes to load data will be a part of the role, but the exact requirements and expectations are not specified in the job postings.",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q26,dev,Graduate Data Analyst,Is the R language asked for?,0,DA_35967236 DA_35967309 DA_35971117 DA_35971824 DA_35972250 DA_35973086 DA_35976810 DA_35978574 DA_35981160 DA_35987682 DA_35997489 DA_35997754,DA_35984893 DA_35971824 DA_35967236,v2,llama3.2:3b,"According to [SOURCE DA_35971824], the Data Analyst (Client Facing) role requires experience in using data science tools such as R, Python, SQL, SAS or SPSS to manipulate large data sets. 
+
+Potential gap: Familiarity with R programming language.",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q26,dev,Graduate Data Analyst,Is the R language asked for?,0,DA_35967236 DA_35967309 DA_35971117 DA_35971824 DA_35972250 DA_35973086 DA_35976810 DA_35978574 DA_35981160 DA_35987682 DA_35997489 DA_35997754,DA_35984893 DA_35971824 DA_35967236,v3,llama3.2:3b,"The R language is mentioned as one of the tools that the Data Analyst may be required to use, but it is not explicitly stated that the R language is required for the role.
+
+[SOURCE DA_35971824] Key Selection Criteria: Strong conceptual and analytical skills with the ability to explain complex statistical concepts to non-technical audience.",0,1,1,,1,1,"Claude (AI), 2026-10-22",hedged but accurate
+Q27,dev,Graduate Data Analyst,What does the Student Experience and Data Analyst role at The University of Sydney involve?,0,DA_35956778,DA_35956778 DA_35959226 DA_35978331,v2,llama3.2:3b,"The Student Experience and Data Analyst role at The University of Sydney involves:
+* Providing analytical support to the Associate Dean (Education) and the Manager, Education Initiatives [SOURCE DA_35956778].
+* Reviewing and analyzing KPI data pertaining to student feedback, graduate outcomes, and benchmark data [SOURCE DA_35956778].
+* Interpreting student feedback and benchmarking data to inform project plans and remedial strategies to improve learner engagement, student support, and graduate outcomes [SOURCE DA_35956778].
+* Presenting findings and drafting recommendations focused on improving the student experience and graduate outcomes for consideration by the Faculty Leadership Group [SOURCE DA_35956778].
+* Collaborating with Faculty and School Managers to ensure the interpretation of data and student feedback is understood and necessary support is provided [SOURCE DA_35956778].
+
+Potential gaps in skills for this role include:
+* Experience with data analysis and interpretation in a service delivery environment [SOURCE DA_35956778].
+* Strong project management and planning skills [SOURCE DA_35956778].
+* Excellent customer service, negotiation, and interpersonal skills [SOURCE DA_35956778].",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q27,dev,Graduate Data Analyst,What does the Student Experience and Data Analyst role at The University of Sydney involve?,0,DA_35956778,DA_35956778 DA_35959226 DA_35978331,v3,llama3.2:3b,"The Student Experience and Data Analyst role at The University of Sydney involves:
+* Providing analytical support to the Associate Dean (Education) and the Manager, Education Initiatives.
+* Reviewing and analyzing KPI data pertaining to student feedback, graduate outcomes, and benchmark data.
+* Interpreting student feedback and benchmarking data to inform project plans and remedial strategies to improve learner engagement, student support, and graduate outcomes.
+* Presenting findings and drafting recommendations focused on improving the student experience and graduate outcomes for consideration by the Faculty Leadership Group.
+* Collaborating with Faculty and School Managers to ensure the interpretation of data and student feedback is understood and the necessary support is provided to draft project plans and strategic initiatives to improve Faculty performance.
+
+[SOURCE DA_35956778]",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q28,dev,Graduate Data Analyst,What does the Data and Reporting Analyst role at ActewAGL Distribution involve?,0,DA_35969287,DA_35969287 DA_35970735 DA_35980354,v2,llama3.2:3b,"The Data and Reporting Analyst role at ActewAGL Distribution involves providing safety performance monitoring, reporting, and analysis services to Evoenergy and ActewAGL. Key responsibilities include:
+
+* Providing timely and accurate health and safety data management, analysis, and reporting to improve knowledge sharing and promote an understanding of safety performance to all levels of the organisation.
+* Influencing an improved standard of data accuracy within ActewAGL and Evoenergy to improve HS&WP business operational reporting.
+* Engaging key stakeholders and building strong relationships across ActewAGL and Evoenergy, developing and implementing improvements to the health and safety management system (Cintellate).
+* Mentoring the Health and Safety Graduate on rotation and teaching data analysis on the Cintellate system.
+* Co-ordinating with the safety management team to progress and close health and safety incidents and near misses, investigations, and actions, and process improvements in Guardian.
+* Identifying system and process improvement opportunities, providing recommendations, and implementing approved changes.
+* Monitoring project and program expenditure for the HS&WP Business Plans.
+* Analyzing and reporting on current and historical data HS&WP reporting.
+* Promoting a strong commitment to a quality culture, implementing standards of excellence and a continuous improvement business focus.
+
+[SOURCE DA_35969287]",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q28,dev,Graduate Data Analyst,What does the Data and Reporting Analyst role at ActewAGL Distribution involve?,0,DA_35969287,DA_35969287 DA_35970735 DA_35980354,v3,llama3.2:3b,"The Data and Reporting Analyst role at ActewAGL Distribution involves providing safety performance monitoring, reporting, and analysis services to Evoenergy and ActewAGL. Key responsibilities include:
+
+* Delivering a range of business support functions, including data cleansing, data management, data analysis and extraction, management reporting, dashboard development and reporting, SQL scripting, variance analysis and trending.
+* Monitoring the health and safety management system (Cintellate) in real time, including correct registration and logging of incidents and actions.
+* Providing advice, coaching and mentoring to system users, including conducting root cause analysis, documenting findings and preparing reports.
+* Engaging key stakeholders and building strong relationships across ActewAGL and Evoenergy.
+* Defining, developing and maintaining a reporting framework for HS&WP to facilitate the effective and timely definition of year to date, the rolling of 12 and 24 month reporting to the business.
+* Mentoring the Health and Safety Graduate on rotation and teaching data analysis on the Cintellate system.
+* Co-ordinating with the safety management team the progress and closure of health and safety incidents and near misses, investigations and actions and process improvements in Guardian.
+* Identifying system and process improvement opportunities, providing recommendations and implementing approved changes.
+* Monitoring project and program expenditure for the HS&WP Business Plans.
+* Analyzing and reporting on current and historical data HS&WP reporting.
+* Promoting a strong commitment to a quality culture, implementing standards of excellence and a continuous improvement business focus.
+
+Potential gaps relative to these ads include:
+
+* Data analysis and interpretation skills
+* Experience with Cintellate EH&S Software
+* Strong communication and stakeholder engagement skills
+* Ability to work in a dynamic environment and build strong relationships with stakeholders.",0,0,0,,1,1,"Claude (AI), 2026-10-22",
+Q31,dev,Graduate Data Analyst,What does the Data Migration Analyst role at Peoplebank Australia WA involve?,0,DA_35994661,DA_35994661 DA_35973252 DA_35981456,v2,llama3.2:3b,"According to [SOURCE DA_35994661], the Data Migration Analyst role at Peoplebank Australia WA involves:
+- Assisting in a Business Analyst/Data Analyst capacity with data migration from an old Access DB into a new internal IT System
+- Writing scripts on an Access DB to retrieve information and working with the technical team to understand and implement client requirements
+- Liaising with stakeholders (including non-technical users) to understand Database Scheme and being involved with data checking.
+
+Key Skills include: Strong, recent commercial experience working in a Data Migration, Technical Business Analyst or similar role; Ability to work in a Technical BA/Data Analyst capacity; Must have excellent technical Database knowledge/experience; Strong technical experience with SQL Server and MS Access Databases; MS Access Scripting experience; Excellent communication and stakeholder engagement skills.",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q31,dev,Graduate Data Analyst,What does the Data Migration Analyst role at Peoplebank Australia WA involve?,0,DA_35994661,DA_35994661 DA_35973252 DA_35981456,v3,llama3.2:3b,"The Data Migration Analyst role at Peoplebank Australia WA involves assisting in a Business Analyst/Data Analyst capacity with data migration from an old Access DB into a new internal IT System. The major responsibilities include:
+
+* Writing scripts on an Access DB to retrieve information and working with the technical team to understand and implement client requirements
+* Liaising with stakeholders (including non-technical users) to understand Database Scheme and being involved with data checking
+* Strong technical experience with SQL Server and MS Access Databases
+* MS Access Scripting experience
+* Excellent communication and stakeholder engagement skills.
+
+[SOURCE DA_35994661]",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q32,dev,Graduate Data Analyst,What does the Master Data Analyst role at Hays Accountancy & Finance involve?,0,DA_36001775,DA_36001775 DA_36001488,v2,llama3.2:3b,"The Master Data Analyst role at Hays Accountancy & Finance involves:
+* Working with a collaborative and high performing team
+* Using SAP and Excel for supplier data cleansing projects, including data analysis and maintenance
+* Processing high volume transactions in accordance with finance procedures
+* Identifying and reporting on unusual data
+* Communicating information to internal and external stakeholders related to supplier master data and existing processes [SOURCE DA_36001775].",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q32,dev,Graduate Data Analyst,What does the Master Data Analyst role at Hays Accountancy & Finance involve?,0,DA_36001775,DA_36001775 DA_36001488,v3,llama3.2:3b,"The Master Data Analyst role at Hays Accountancy & Finance involves:
+
+* Working with a collaborative and high performing team
+* Using SAP and Excel for supplier data cleansing projects, including data analysis and maintenance
+* Processing high volume transactions in accordance with finance procedures
+* Identifying and reporting on unusual data
+* Communicating information to internal and external stakeholders related to supplier master data and existing processes.
+
+[SOURCE DA_36001775]",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q33,dev,Graduate Data Analyst,Is a forklift licence required for this job?,1,,DA_35992110,v2,llama3.2:3b,I do not have enough evidence in this knowledge base to answer that.,1,0,0,,,,,correctly refused
+Q33,dev,Graduate Data Analyst,Is a forklift licence required for this job?,1,,DA_35992110,v3,llama3.2:3b,I do not have enough evidence in this knowledge base to answer that.,1,0,0,,,,,correctly refused
+Q35,dev,Graduate Data Analyst,What percentage of applicants pass the interview?,1,,,v2,llama3.2:3b,I do not have enough evidence in this knowledge base to answer that.,1,0,0,,,,,correctly refused
+Q35,dev,Graduate Data Analyst,What percentage of applicants pass the interview?,1,,,v3,llama3.2:3b,I do not have enough evidence in this knowledge base to answer that.,1,0,0,,,,,correctly refused
+Q37,dev,Graduate Data Scientist,Which data scientist roles ask for Python?,0,DS_35968826 DS_35970032 DS_35972040 DS_35980266 DS_35982327 DS_35983106 DS_35983604 DS_35984642 DS_35988778 DS_35990008 DS_35990048 DS_35990359 DS_35991535 DS_35996335 DS_35997822 DS_35998738 DS_35999086,DS_35991535 DS_35980266 DS_35997822,v2,llama3.2:3b,"Two job postings ask for Python:
+
+* Data Scientist at FourQuarters Recruitment (Melbourne, [SOURCE DS_35980266])
+* Data Scientist - Digital, Python, R at Evolution Recruitment Solutions Pty Ltd (Sydney, Parramatta & Western Suburbs, [SOURCE DS_35997822])",0,1,1,,0,0,"Claude (AI), 2026-10-22","says two ads ask for Python; all three retrieved ads do (DS_35991535: ""utilize tech such as Python and R"")"
+Q37,dev,Graduate Data Scientist,Which data scientist roles ask for Python?,0,DS_35968826 DS_35970032 DS_35972040 DS_35980266 DS_35982327 DS_35983106 DS_35983604 DS_35984642 DS_35988778 DS_35990008 DS_35990048 DS_35990359 DS_35991535 DS_35996335 DS_35997822 DS_35998738 DS_35999086,DS_35991535 DS_35980266 DS_35997822,v3,llama3.2:3b,"Two job postings ask for Python:
+
+* Data Scientist at FourQuarters Recruitment (Melbourne, [SOURCE DS_35980266]) requires experience with Python.
+* Data Scientist - Digital, Python, R at Evolution Recruitment Solutions Pty Ltd (Sydney, Parramatta & Western Suburbs; [SOURCE DS_35997822]) requires experience with Python.",0,1,1,,0,0,"Claude (AI), 2026-10-22",same wrong count as v2
+Q38,dev,Graduate Data Scientist,Do data scientist ads want experience with R?,0,DS_35968826 DS_35969591 DS_35970032 DS_35980266 DS_35983106 DS_35983604 DS_35984642 DS_35988778 DS_35990359 DS_35991535 DS_35996335 DS_35997822 DS_35998738,DS_35991535 DS_35997822 DS_35980266,v2,llama3.2:3b,"N of the retrieved documents suggest that experience with R is highly valued, with 2 out of 3 job postings requiring or mentioning R as a necessary skill [SOURCE DS_35991535, SOURCE DS_35997822].",0,0,0,,0,1,"Claude (AI), 2026-10-22","placeholder ""N of""; says 2 of 3 ads mention R, all 3 do; malformed citation"
+Q38,dev,Graduate Data Scientist,Do data scientist ads want experience with R?,0,DS_35968826 DS_35969591 DS_35970032 DS_35980266 DS_35983106 DS_35983604 DS_35984642 DS_35988778 DS_35990359 DS_35991535 DS_35996335 DS_35997822 DS_35998738,DS_35991535 DS_35997822 DS_35980266,v3,llama3.2:3b,"According to the job ads, 2 out of 3 ads require experience with R.
+
+* SOURCE DS_35991535: No specific mention of R experience, but it is mentioned that the role involves ""utilizing tech such as Python & R"".
+* SOURCE DS_35997822: Experience with R is essential.
+* SOURCE DS_35980266: Experience with R is required.
+
+The only ad that does not require R experience is SOURCE DS_35991535.",0,0,0,,0,1,"Claude (AI), 2026-10-22","contradicts itself on DS_35991535; says 2 of 3, all 3 mention R"
+Q41,dev,Graduate Data Scientist,Do data scientists also need SQL for querying databases?,0,DS_35968826 DS_35970032 DS_35972040 DS_35976919 DS_35982327 DS_35983106 DS_35983604 DS_35984642 DS_35988778 DS_35990359 DS_35996335 DS_35997822 DS_35999086,DS_35984642 DS_35999086 DS_35990008,v2,llama3.2:3b,"According to the sources, data scientists are expected to have experience with SQL and NoSQL databases, including query optimisation and performance tuning [SOURCE DS_35984642].",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q41,dev,Graduate Data Scientist,Do data scientists also need SQL for querying databases?,0,DS_35968826 DS_35970032 DS_35972040 DS_35976919 DS_35982327 DS_35983106 DS_35983604 DS_35984642 DS_35988778 DS_35990359 DS_35996335 DS_35997822 DS_35999086,DS_35984642 DS_35999086 DS_35990008,v3,llama3.2:3b,"According to the job descriptions, data scientists are expected to have experience with SQL and NoSQL databases, but it is not explicitly stated that they need to know SQL for querying databases.
+
+However, the job descriptions do mention that data scientists will be responsible for performing advanced custom queries and analysis into master data where required, and that they will need to have experience with query optimisation and performance tuning.
+
+It is likely that SQL skills will be beneficial for data scientists in this role, but it is not a requirement.
+
+Potential gaps for the target role of Graduate Data Scientist include:
+
+* Experience with SQL for querying databases
+* Knowledge of NoSQL databases
+* Familiarity with query optimisation and performance tuning techniques",0,0,0,,0,0,"Claude (AI), 2026-10-22","says SQL is ""not a requirement""; DS_35984642 lists ""Experience using SQL and NoSQL databases"""
+Q43,dev,Graduate Data Scientist,Is SAS software mentioned as a requirement?,0,DS_35969591 DS_35970032 DS_35988778 DS_35996335,DS_35969591,v2,llama3.2:3b,"Yes, the job posting mentions SAS software as a required skill, specifically stating ""programming experience using statistical software programs such as SAS, STATA or R (2 years minimum)"" [SOURCE DS_35969591].",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q43,dev,Graduate Data Scientist,Is SAS software mentioned as a requirement?,0,DS_35969591 DS_35970032 DS_35988778 DS_35996335,DS_35969591,v3,llama3.2:3b,"Yes, SAS software is mentioned as a required programming experience, along with STATA or R, for the Statistician role. [SOURCE DS_35969591]",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q44,dev,Graduate Data Scientist,Do the jobs involve forecasting or time series modelling?,0,DS_35970032 DS_35972040 DS_35976919 DS_35983106 DS_35988778 DS_35990008 DS_35990048 DS_35995678,DS_35988778 DS_35983106 DS_35990048,v2,llama3.2:3b,"Yes, the jobs involve forecasting and time series modelling. 
+
+* The Junior Data Scientist role at Correlate Resources involves developing creative and intuitive, insights-driven dashboards leveraging cutting-edge data visualisation tools, and supporting the delivery of bespoke Data Science, Machine Learning, Statistical Modelling led projects that may include time series analysis, decision trees, and Monte-Carlo Simulation [SOURCE DS_35988778].
+* The Data Scientist (Machine Learning) role at BT People P/L involves performing data mining by applying machine learning and supervised learning algorithms, including clustering, segmentation, logistic and multivariate regression, decision/CART trees, neural networks, time-series analysis, and Bayesian analysis [SOURCE DS_35983106].
+* The Junior Quantitative Analyst - PhD role at Bluefin Resources Pty Limited involves developing trading strategies using either Bayesian inference, Kalman filters, data mining techniques, stochastic processes, Fourier transform, time series or theoretical and computational physics based models [SOURCE DS_35990048].",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q44,dev,Graduate Data Scientist,Do the jobs involve forecasting or time series modelling?,0,DS_35970032 DS_35972040 DS_35976919 DS_35983106 DS_35988778 DS_35990008 DS_35990048 DS_35995678,DS_35988778 DS_35983106 DS_35990048,v3,llama3.2:3b,"Yes, both jobs involve time series modelling. 
+
+[SOURCE DS_35988778] mentions ""Time Series, Decision Trees, Monte-Carlo Simulation, Bayesian Statistics, Principal Component Analysis, Neural Networks, Gradient Boosting, Nearest Neighbors, (Geo-) Spatial Modeling, Recommendation Engines, Attribution Modeling, Segmentation, Predictive Modeling, Scoring Engine, Survival Analysis, Lift Modeling, Yield Optimization, Cross-Validation, Model Fitting, Experimental Design, etc."" 
+
+[SOURCE DS_35983106] mentions ""time-series analysis"" and ""sentiment analysis"" as part of the essential functions. 
+
+[SOURCE DS_35990048] mentions ""Fourier transform, time series or theoretical and computational physics based models"" as preferred skills for the Junior Quantitative Analyst role.",0,1,1,,1,1,"Claude (AI), 2026-10-22","says ""both jobs"" for three ads"
+Q45,dev,Graduate Data Scientist,What does the Graduate Data Scientist role at WesTrac Pty Ltd involve?,0,DS_35956039,DS_35956039 DS_35998738 DS_35983604,v2,llama3.2:3b,"According to the job description, the Graduate Data Scientist at WesTrac Pty Ltd involves:
+* Assisting the Product Support Sales Team to grow parts sales through development and ongoing management of customer loyalty agreements
+* Developing and managing a data platform to drive visualisation of marketing campaigns and identify opportunities and trends within the industry
+* Working closely with the Digital Marketing team, Business Intelligence and E Business teams to review and build a data platform
+* Providing data analysis and analytics to drive business efficiencies
+* Liaising with customers and a diverse range of interdepartmental team members
+* Demonstrating attention to detail, ability to analyse problems and provide appropriate solutions
+[SOURCE DS_35956039]",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q45,dev,Graduate Data Scientist,What does the Graduate Data Scientist role at WesTrac Pty Ltd involve?,0,DS_35956039,DS_35956039 DS_35998738 DS_35983604,v3,llama3.2:3b,"According to the job description, the Graduate Data Scientist role at WesTrac Pty Ltd involves:
+* Assisting the Product Support Sales Team to grow parts sales through development and ongoing management of customer loyalty agreements
+* Developing and managing a data platform to drive visualisation of marketing campaigns and identify opportunities and trends within the industry
+* Working closely with the Digital Marketing team, Business Intelligence and E Business teams to review and build a data platform
+* Providing data analysis and analytics to drive business efficiencies
+* Liaising with customers and a diverse range of interdepartmental team members
+* Demonstrating attention to detail, ability to analyse problems and provide appropriate solutions
+* Knowledge of the heavy equipment industry is highly desirable, but not essential [SOURCE DS_35956039].",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q47,dev,Graduate Data Scientist,What does the Junior Quantitative Analyst - PhD role at Bluefin Resources Pty Limited involve?,0,DS_35990048,DS_35990048 DS_35990359 DS_35988778,v2,llama3.2:3b,"The Junior Quantitative Analyst - PhD role at Bluefin Resources Pty Limited involves developing trading strategies using Bayesian inference, Kalman filters, data mining techniques, stochastic processes, Fourier transform, time series, or theoretical and computational physics-based models. The role also requires a strong programming background in either Python or C++.",0,0,0,,1,1,"Claude (AI), 2026-10-22",uncited
+Q47,dev,Graduate Data Scientist,What does the Junior Quantitative Analyst - PhD role at Bluefin Resources Pty Limited involve?,0,DS_35990048,DS_35990048 DS_35990359 DS_35988778,v3,llama3.2:3b,"The Junior Quantitative Analyst - PhD role at Bluefin Resources Pty Limited involves developing trading strategies using Bayesian inference, Kalman filters, data mining techniques, stochastic processes, Fourier transform, time series, or theoretical and computational physics-based models. [SOURCE DS_35990048]
+
+The role also involves a strong programming background in either Python or C++. [SOURCE DS_35990048]
+
+Additionally, the role is open to candidates with a strong academic background and experience in developing trading strategies, with a passion for financial markets being highly desirable. [SOURCE DS_35990048]",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q49,dev,Graduate Data Scientist,What does the Data Scientist (Machine Learning) role at BT People P/L involve?,0,DS_35983106,DS_35983106 DS_35983604 DS_35997822,v2,llama3.2:3b,"According to [SOURCE DS_35983106], the Data Scientist (Machine Learning) role at BT People P/L involves:
+
+* Data Exploratory Analysis
+* Development of new Predictive models working with internal stakeholders from gathering requirements to delivery
+* Perform data mining by applying machine learning and supervised learning algorithms
+* Support advanced analytical and data mining efforts
+* Think creatively and work well both as part of a team and as an individual contributor.
+
+Note: The role requires a minimum of five years of relevant experience, and the candidate should have hands-on experience developing predictive models using analytical methods such as regression, decision trees, support vector machines, Random Forests, Neural Networks.",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q49,dev,Graduate Data Scientist,What does the Data Scientist (Machine Learning) role at BT People P/L involve?,0,DS_35983106,DS_35983106 DS_35983604 DS_35997822,v3,llama3.2:3b,"The Data Scientist (Machine Learning) role at BT People P/L involves:
+* Data Exploratory Analysis
+* Development of new Predictive models working with internal stakeholders from gathering requirements to delivery
+* Perform data mining by applying machine learning and supervised learning algorithms
+* Support advanced analytical and data mining efforts
+* Think creatively and work well both as part of a team and as an individual contributor.
+
+[SOURCE DS_35983106]",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q50,dev,Graduate Data Scientist,What does the Data Scientist role at 7-Eleven Australia involve?,0,DS_35972040,DS_35972040 DS_35995678 DS_35988778,v2,llama3.2:3b,"The Data Scientist role at 7-Eleven Australia involves identifying and addressing complex business problems by providing analysis, insights and models to stakeholders based on a range of data sources, thus supporting and driving high quality decision making, process improvements and a competitive advantage for the business [SOURCE DS_35972040].",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q50,dev,Graduate Data Scientist,What does the Data Scientist role at 7-Eleven Australia involve?,0,DS_35972040,DS_35972040 DS_35995678 DS_35988778,v3,llama3.2:3b,"The Data Scientist role at 7-Eleven Australia involves identifying and addressing complex business problems by providing analysis, insights and models to stakeholders based on a range of data sources, thus supporting and driving high quality decision making, process improvements and a competitive advantage for the business [SOURCE DS_35972040].",0,1,1,,1,1,"Claude (AI), 2026-10-22",
+Q52,dev,Graduate Data Scientist,What percentage of applicants pass the interview?,1,,,v2,llama3.2:3b,I do not have enough evidence in this knowledge base to answer that.,1,0,0,,,,,correctly refused
+Q52,dev,Graduate Data Scientist,What percentage of applicants pass the interview?,1,,,v3,llama3.2:3b,I do not have enough evidence in this knowledge base to answer that.,1,0,0,,,,,correctly refused
+Q54,dev,Graduate Data Scientist,What will the average salary for this role be in 2030?,1,,,v2,llama3.2:3b,I do not have enough evidence in this knowledge base to answer that.,1,0,0,,,,,correctly refused
+Q54,dev,Graduate Data Scientist,What will the average salary for this role be in 2030?,1,,,v3,llama3.2:3b,I do not have enough evidence in this knowledge base to answer that.,1,0,0,,,,,correctly refused
