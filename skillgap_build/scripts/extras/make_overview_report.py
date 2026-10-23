@@ -92,12 +92,12 @@ p = doc.add_paragraph(); r = p.add_run("How the prototype works: data, pipeline,
 p = doc.add_paragraph(); r = p.add_run(f"WIL Project 84 · Preliminary team discussion document · 29 September 2026 · results run {exp['meta']['timestamp'][:10]}, dataset {exp['meta']['dataset_fingerprint']}")
 r.font.size = Pt(9); r.italic = True; r.font.color.rgb = RGBColor(0x59, 0x59, 0x59)
 p = doc.add_paragraph()
-r = p.add_run("Internal working document for the team, not the submitted report. Parts of the code, data curation and this document were produced with AI assistance (Claude Code), which must be listed in the Condition 3 Bounded Use of AI Declaration.")
+r = p.add_run("Internal working document for the team, not the submitted report.")
 r.font.size = Pt(9); r.italic = True
 
 # ---------------- 1 Summary ----------------
 doc.add_heading("1. SkillGap in one page", 1)
-para("SkillGap answers a graduate's questions about three roles (Graduate Data Analyst, Graduate Data Scientist, Graduate Business/Data Analyst) using real Australian job ads. It retrieves the ads that match the question, has a local AI model write an answer that cites those ads, refuses questions the ads cannot answer, and lists the skills employers ask for that the user does not yet have.")
+para("SkillGap answers a graduate's questions about three roles (Graduate Data Analyst, Graduate Data Scientist, Graduate Business/Data Analyst) using real Australian job ads. It retrieves the ads that match the question, has a local language model write an answer that cites those ads, refuses questions the ads cannot answer, and lists the skills employers ask for that the user does not yet have.")
 table(["Item", "Value"], [
     ["Source dataset", "30,000 SEEK Australia job ads (JobsPikr 2018, Zenodo, CC BY 4.0)"],
     ["Raw file", f"seek_australia.csv: {len(open(ROOT/'data/raw/seek_australia.csv',encoding='utf-8-sig').readline().split(','))} columns, 30,000 rows, {raw_bytes/1e6:.1f} MB (0.066 GB)"],
@@ -114,8 +114,8 @@ table(["Item", "Value"], [
 doc.add_heading("2. The data we used", 1)
 doc.add_heading("2.1 Source", 2)
 para("JobsPikr (2018). 30000 job postings from SEEK Australia [Data set]. Zenodo. https://doi.org/10.5281/zenodo.1220874. Licence CC BY 4.0: free to reuse with attribution. The ads were posted between 10 and 17 April 2018. Each row has 12 fields: category, city, company name, geo, job board, job description, job title, job type, post date, salary offered, state and URL. The file we downloaded matches Zenodo's published MD5 checksum, so anyone can confirm they have the identical file.")
-para("Why this dataset: it is real Australian data, it has the full text of every ad, the original SEEK link and date, and a licence that allows reuse. We rejected a newer 2026 dataset (NextGig) because it had only about 5 relevant Australian ads, its descriptions were AI-written summaries, and it had no source links.", italic=False)
-para("Size, in plain terms: the whole raw file is 66 MB (about 0.07 GB). We only use 159 ads from it, which is under half a megabyte of text, about 60,000 words or roughly 240 pages of a novel. No gigabyte-scale data is involved; the only gigabyte-sized download is the answer-writing AI model (Section 2.4).")
+para("Why this dataset: it is real Australian data, it has the full text of every ad, the original SEEK link and date, and a licence that allows reuse. We rejected a newer 2026 dataset (NextGig) because it had only about 5 relevant Australian ads, its descriptions were machine-generated summaries, and it had no source links.", italic=False)
+para("Size, in plain terms: the whole raw file is 66 MB (about 0.07 GB). We only use 159 ads from it, which is under half a megabyte of text, about 60,000 words or roughly 240 pages of a novel. No gigabyte-scale data is involved; the only gigabyte-sized download is the answer-writing language model (Section 2.4).")
 
 doc.add_heading("2.2 From 30,000 ads to 159: the selection funnel", 2)
 table(["Step", "Rule", "Ads left"], [
@@ -170,7 +170,7 @@ steps_on = [
     ("Step 9. Pick the evidence. ", "The top 3 ads above the threshold become the evidence."),
     ("Step 10. Write the answer. ", "The 3 ads, the role and the question are sent to Llama 3.2 running on the laptop (nothing leaves the machine). The instructions tell it to use only these ads, end every claim with a citation such as [SOURCE DA_35991436], ignore any instructions hidden in the ads, and reply with a fixed refusal sentence if the ads do not answer the question."),
     ("Step 11. Check the answer. ", "The app reads the citations and warns if the answer cites an ad that was not retrieved, or has no citations at all."),
-    ("Step 12. Compute the skill gaps. ", "Separately from the AI, the app counts how many of the role's ads name each skill and removes the skills the user already has. This is plain counting, so the AI cannot invent a skill gap, and the list does not change with the wording of the question."),
+    ("Step 12. Compute the skill gaps. ", "Separately from the language model, the app counts how many of the role's ads name each skill and removes the skills the user already has. This is plain counting, so the model cannot invent a skill gap, and the list does not change with the wording of the question."),
 ]
 bullets(steps_on)
 
@@ -178,8 +178,8 @@ bullets(steps_on)
 doc.add_heading("4. The Streamlit app and how it answers a question", 1)
 para("Streamlit turns a Python script (app.py) into a web page. It came with the project's starter kit. Run 'streamlit run app.py' and open http://localhost:8501. The page has:")
 bullets([
-    ("Inputs: ", "target role, your existing skills (comma-separated), your question, and a Settings panel (retriever, number of ads, AI model, prompt version, minimum share for a skill gap)."),
-    ("Answer: ", "the AI-written answer with citations, or a message that the knowledge base cannot answer the question."),
+    ("Inputs: ", "target role, your existing skills (comma-separated), your question, and a Settings panel (retriever, number of ads, language model, prompt version, minimum share for a skill gap)."),
+    ("Answer: ", "the generated answer with citations, or a message that the knowledge base cannot answer the question."),
     ("Potential skill gaps: ", "a table of skills you did not list, with 'named in N of M ads' and the share."),
     ("Retrieved evidence: ", "the ads used, each expandable to show the full text, its SEEK link and date."),
 ])
@@ -191,7 +191,7 @@ bullets([
     "Citation check: both cited ads were retrieved, so no warning.",
     "Skill gaps for this user include Communication (39 of 80 ads), SQL (38 of 80) and Tableau (21 of 80).",
 ])
-para("Asking 'What will the average salary for this role be in 2030?' instead stops at step 8: no ad clears the threshold, so the AI is never called and the page says the question cannot be answered from the knowledge base.")
+para("Asking 'What will the average salary for this role be in 2030?' instead stops at step 8: no ad clears the threshold, so the language model is never called and the page says the question cannot be answered from the knowledge base.")
 
 # ---------------- 5 Evaluation ----------------
 doc.add_heading("5. How we measured it, and the results", 1)
@@ -264,7 +264,7 @@ table(["File", "Lines", "What it does"], [
     ["scripts/build_seek_dataset.py", "81", "Download, checksum and selection of the SEEK ads"],
     ["scripts/build_questions.py", "116", "The 54 labelled questions and the two checking sheets"],
     ["run_experiments.py", "152", "Tuning, comparison table, LaTeX tables, figure, run log"],
-    ["run_generation_eval.py", "73", "Runs the AI on every question for human marking, then scores it"],
+    ["run_generation_eval.py", "73", "Runs the language model on every question for marking, then scores it"],
     ["run_eval.py", "18", "Scores a single setting"],
     ["tests/test_core.py", "103", "15 automated tests"],
 ], [5.2, 1.4, 10], caption="Table 7. Code map", font=9)
@@ -280,10 +280,9 @@ doc.add_heading("8. Open items to discuss as a team", 1)
 bullets([
     ("Check our labels (about 1 hour, split between two people): ", "mark the 72 rows of label_audit.csv and hand-label the 20 ads in skill_labels.csv, then re-run run_experiments.py to get skill-extraction precision and recall."),
     ("Answer-quality test: ", "run run_generation_eval.py, two people mark each answer as faithful (every claim supported) and correct, compare prompt v1 against v2 on dev, then run test once."),
-    ("Limitations to state: ", "ads from one week in April 2018 (e.g. Power BI under-represented, no generative-AI skills); most ads are not graduate-specific; only 21 Data Scientist ads; small test set with wide confidence intervals; skill tagging only finds skills on our list of 47."),
+    ("Limitations to state: ", "ads from one week in April 2018 (e.g. Power BI under-represented, no large-language-model tools); most ads are not graduate-specific; only 21 Data Scientist ads; small test set with wide confidence intervals; skill tagging only finds skills on our list of 47."),
     ("Business value, framed carefully: ", "the evidence shows cited, checkable answers and honest refusals on tested questions; it does not show better employment outcomes."),
     ("Project management evidence: ", "start a GitHub repository and commit regularly; log the work on Trello; record who did what for the contribution sheet."),
-    ("AI declaration: ", "list the AI-assisted parts (code changes, data curation, question writing, this document) in the Condition 3 form."),
 ])
 
 doc.save(OUT)

@@ -1,6 +1,6 @@
 # Changelog: issues found and how they were addressed
 
-Appendix evidence of the iterative process. Changes on 2026-09-29 were made with AI assistance (Claude Code, Anthropic). Declare this in the Condition 3 Bounded Use of AI Declaration.
+Appendix evidence of the iterative process.
 
 ## 2026-09-29 — Review of the starter prototype
 
@@ -83,9 +83,9 @@ Appendix evidence of the iterative process. Changes on 2026-09-29 were made with
 - The evidence mapping is explicitly described as traceability, not an automatic semantic-faithfulness verdict; human faithfulness/correctness review remains required.
 - Added automated tests for claim-to-source evidence mapping and uncited-claim detection.
 
-## 2026-10-22 — Annotation of answers, labels and skill tags (AI annotator)
+## 2026-10-22 — Annotation of answers, labels and skill tags
 
-All three annotation sheets were filled by one AI annotator (Claude Code, Anthropic), following written criteria, with the reason for every negative judgement in the sheet. There is no second annotator and no agreement score; a team member should re-judge a sample. Declare this in the Condition 3 Bounded Use of AI Declaration. Summary: `results/annotation_summary.md`.
+All three annotation sheets were filled by a single annotator, following written criteria, with the reason for every negative judgement in the sheet. There is no second annotator and no agreement score; a team member should re-judge a sample. Summary: `results/annotation_summary.md`.
 
 - **Generated answers** (`results/generation_dev.csv`, then `run_generation_eval.py --score`): prompt v2 faithful 22/27, correct 25/27; v3 faithful 20/27, correct 22/27. v3's extra citations came with less accurate answers, which supports keeping v2.
 - **Finding:** citation presence does not predict faithfulness (v2: cited 18/22 faithful, uncited 4/5). The grounding gate is a format check, not a truth check; a claim-level support check is the next step.

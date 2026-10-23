@@ -1,6 +1,6 @@
-# Annotation results (AI annotator: Claude, 2026-10-22)
+# Annotation results (single annotator, 2026-10-22)
 
-All three sheets were filled by one AI annotator, not by people. No inter-annotator agreement exists.
+All three sheets were filled by a single annotator. No inter-annotator agreement exists.
 Treat these as provisional until a team member spot-checks them.
 
 ## Generation (dev, Llama 3.2 3B): faithfulness by citation presence

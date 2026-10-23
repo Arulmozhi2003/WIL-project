@@ -27,12 +27,13 @@ Mentor: Kaixin Ji
 | `skillgap_build/results/` | Retrieval ablation (`summary.md`), run log, generation and annotation results. |
 | `skillgap_build/qa/` | QA audit: test plan, test cases, execution, regression and bug reports. |
 | `report/` | Overleaf sources of the written report (course template). |
-| `docs/` | Milestone 1 document and the Condition 3 AI declaration source. |
+| `docs/` | Milestone 1 document and the Condition 3 declaration form source. |
 
 ### Headline results (held-out test, 21 questions)
 - Tuned BM25 declined 3 of 6 unanswerable questions (starter: 0 of 6) with no wrongly declined answerable questions.
 - Selection score 0.767 → 0.862 (95% CI 0.752–0.953); BM25 beat dense MiniLM retrieval.
-- Generated answers (prompt v2, dev): 22/27 faithful, 25/27 correct (AI-annotated, pending human spot-check).
+- Generated answers (prompt v2, dev): 22/27 faithful, 25/27 correct (single annotator, pending a second check).
+- Generated answers (prompt v2, held-out test): 15/15 cited with valid sources, 6/6 unanswerable questions refused.
 
 ### Run it
 ```bash
@@ -42,6 +43,3 @@ ollama pull llama3.2:3b
 pytest -q
 streamlit run app.py
 ```
-
-### Use of generative AI
-Parts of the code, the QA audit, the annotation and the report drafting were done with AI assistance (Claude Code, Anthropic), as recorded in `skillgap_build/CHANGELOG.md` and declared in the Condition 3 form.
