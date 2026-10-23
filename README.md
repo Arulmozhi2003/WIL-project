@@ -17,7 +17,7 @@ Mentor: Kaixin Ji
 
 ### Links
 - Trello board: https://trello.com/b/1GEPr6pe/wil-project
-- Overleaf report: https://www.overleaf.com/project/69eae9c8f437cd161947a172
+- Overleaf report: https://www.overleaf.com/project/6adab3359e9cf095edc66620
 
 ### Repository layout
 | Path | Contents |

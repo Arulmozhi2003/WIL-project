@@ -98,11 +98,12 @@
     \centering
     \sffamily
     \large
-    \begin{tabu} to 0.8\linewidth {cc}
+    % tabular instead of tabu: tabu fails on current TeX Live (Overleaf)
+    \begin{tabular}{cc}
         \textbf{Full Name} & \textbf{Student ID} \\
         \hline
         \authorlist
-    \end{tabu}
+    \end{tabular}
 \end{table}
 
 \vfill
