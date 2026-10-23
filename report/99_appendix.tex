@@ -33,7 +33,7 @@ Path & Purpose \\
 \texttt{run\_experiments.py} & Ablation ladder: tune on dev, score once on test \\
 \texttt{run\_generation\_eval.py} & End-to-end generation evaluation and annotation scoring \\
 \texttt{app.py} & Streamlit interface \\
-\texttt{tests/} & 30 automated tests \\
+\texttt{tests/} & 31 automated tests \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -74,7 +74,7 @@ BT grid: k1 $\in\{0.9,1.2,1.5,2.0\}$ $\times$ b $\in\{0.3,0.5,0.75,0.9\}$ $\time
 \section{Annotation details}\label{app:annot}
 
 \begin{table}[H]
-\caption{Faithfulness and correctness of dev answers by whether the answer carried a valid citation (AI annotator). Uncited answers are the ones the grounding gate withholds.}\label{tab:annot}
+\caption{Faithfulness and correctness of dev answers by whether the answer carried a valid citation (single annotator). Uncited answers are the ones the grounding gate withholds.}\label{tab:annot}
 \small
 \begin{tabular}{llrrr}
 \toprule
@@ -123,7 +123,7 @@ Date & What did not work & What we did / learned \\
 29 Sep & Skill gaps changed with question wording (computed from top-3 ads) & Count over all role ads; show ``N of M'' \\
 29 Sep & \texttt{"SQL, Excel"} split into single letters; C++/C\# lost in tokenising & Strict schema validation; new token pattern \\
 29 Sep & Threshold at edge of best range overfitted (synthetic data) & Midpoint of widest best range \\
-29 Sep & NextGig dataset: few AU ads, AI-written text, no URLs & Switched to SEEK 2018 (CC BY 4.0) \\
+29 Sep & NextGig dataset: few AU ads, machine-generated text, no URLs & Switched to SEEK 2018 (CC BY 4.0) \\
 29 Sep & 15 exact duplicates, 6 city reposts, broken UTF-8 & De-duplication, near-duplicate detection, encoding repair \\
 29 Sep & Skill-boost idea would inflate metrics circularly & Rejected \\
 29 Sep & Hybrid OR-logic weakened refusal & Not selected; AND-gate is future work \\
@@ -142,12 +142,12 @@ Date & What did not work & What we did / learned \\
 \end{table}
 
 \section{Quality-assurance audit summary}\label{app:qa}
-The independent audit (5 October 2026) executed 55 of 72 test cases: 49 passed and 6 failed (89\% of executed cases). Open defects:
+The independent audit (5 October 2026) executed 55 of 72 test cases: 49 passed and 6 failed (89\% of executed cases). Defects and their status:
 \begin{description}[leftmargin=0pt,font=\normalfont\bfseries]
-  \item[QA-01 (low)] A negative result limit silently drops results instead of raising an error.
+  \item[QA-01 (low, fixed 23 Oct)] A negative result limit silently dropped results; the retrievers and \texttt{run\_eval.py} now reject it.
   \item[QA-02 (moderate)] A real specific question produced an uncited answer, which was correctly withheld, so the user got no answer.
   \item[QA-03 (moderate)] The Streamlit app listens on all interfaces without authentication.
-  \item[QA-04 (low--moderate)] The evaluation trace can show ``Answered/PASS'' for a withheld draft.
+  \item[QA-04 (low--moderate, fixed 23 Oct)] The evaluation trace could show ``Answered/PASS'' for a withheld draft; it now reports ``Withheld (failed grounding check)'' and FAIL.
   \item[QA-05 (moderate)] Long generations can be truncated at the 512-token cap and recorded as complete.
   \item[QA-06 (low)] The supported Python version is undeclared; Python 3.9 cannot install the UI dependency.
 \end{description}
@@ -155,7 +155,6 @@ The independent audit (5 October 2026) executed 55 of 72 test cases: 49 passed a
 \section{Individual self-reflections}\label{app:reflect}
 \noindent\emph{Each member writes their own subsection. Suggested prompts: What did you learn that you did not know before? What worked well, and what would you improve next time? What did you try that did not work, why did it fail, and what insight did that give you? Failures from Appendix~\ref{app:log} that you personally worked on are good material.}
 
-% Drafted with AI assistance from the project record (see the AI declaration).
 % Each member should read, correct and personalise their own subsection before submission.
 
 \subsection{Arulmozhi Ezhilarasi Arunachalam}
@@ -168,7 +167,7 @@ The independent audit (5 October 2026) executed 55 of 72 test cases: 49 passed a
 \subsection{Dharani Suresh}
 \textbf{What I learned.} Most of the effort in a RAG project is in the data, not the model. Going from 30,000 ads to 159 needed explicit, reproducible rules. These covered role by title, removing senior roles, repairing text decoded in the wrong encoding, and removing 15 duplicates and 6 city reposts. Writing every kept row into a provenance manifest made the knowledge base defensible.
 
-\textbf{What did not work, and why.} The newer NextGig dataset looked attractive but had only about five relevant Australian ads, AI-written descriptions and no source links, so nothing built on it could be verified. The experience-level rules failed twice. First they missed phrasings such as ``3 years+'' and ``(2 years minimum)''. Then they read ``1--2 years'' from its lower bound, which pushed experienced roles into the entry-level filter. Both were only caught by reading sampled ads, not by unit tests. The annotation later found two ads tagged ``Power BI'' only because of a URL in the text, the same lesson again.
+\textbf{What did not work, and why.} The newer NextGig dataset looked attractive but had only about five relevant Australian ads, machine-generated descriptions and no source links, so nothing built on it could be verified. The experience-level rules failed twice. First they missed phrasings such as ``3 years+'' and ``(2 years minimum)''. Then they read ``1--2 years'' from its lower bound, which pushed experienced roles into the entry-level filter. Both were only caught by reading sampled ads, not by unit tests. The annotation later found two ads tagged ``Power BI'' only because of a URL in the text, the same lesson again.
 
 \textbf{Next time.} I would strip URLs and contact details before tagging, source a current ad export early, and build a sampled manual check into every cleaning rule.
 

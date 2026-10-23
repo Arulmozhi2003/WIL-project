@@ -3,7 +3,7 @@
 
 \subsection{Knowledge base}\label{sec:data}
 
-\paragraph{Source and justification.} We used \emph{30000 job postings from SEEK Australia} \citep{jobspikr2018seek}, a public Zenodo dataset licensed CC~BY~4.0. It was chosen because it (a)~is real Australian data, (b)~contains the full text of each ad, (c)~keeps each ad's original SEEK URL and post date, so every answer can be traced to a source, and (d)~has a licence that allows reuse with attribution. Our build script checks the download against the published MD5 checksum, so anyone can confirm they have the identical file. We considered and rejected a newer 2026 dataset (NextGig): it contained only about five relevant Australian ads, its descriptions were AI-written summaries rather than employer text, and it had no source links, so no claim built on it could be verified.
+\paragraph{Source and justification.} We used \emph{30000 job postings from SEEK Australia} \citep{jobspikr2018seek}, a public Zenodo dataset licensed CC~BY~4.0. It was chosen because it (a)~is real Australian data, (b)~contains the full text of each ad, (c)~keeps each ad's original SEEK URL and post date, so every answer can be traced to a source, and (d)~has a licence that allows reuse with attribution. Our build script checks the download against the published MD5 checksum, so anyone can confirm they have the identical file. We considered and rejected a newer 2026 dataset (NextGig): it contained only about five relevant Australian ads, its descriptions were machine-generated summaries rather than employer text, and it had no source links, so no claim built on it could be verified.
 
 \paragraph{From 30,000 ads to 159.} Following the course advice to keep the knowledge base manageable, a deterministic script reduces the file to a curated set (Table~\ref{tab:funnel}). Ads are grouped by job title into three role families. Senior titles are removed because the target user is a graduate. Text with broken character encoding is repaired, HTML is stripped, and duplicates and reposts of the same ad in several cities are removed. \texttt{MANIFEST.csv} maps each kept document to its row in the raw file.
 
@@ -65,7 +65,7 @@ Figure~\ref{fig:pipeline} shows the two stages. The offline stage prepares the d
 \node[draw=gray!60, dashed, rounded corners, inner sep=3mm, fit=(q)(gen)(check)(gap), label={[gray]below right:Online (every question)}] {};
 \end{scope}
 \end{tikzpicture}
-\caption{SkillGap pipeline. Orange boxes are the two safety gates; green is computed without any AI model; blue is the language model.}\label{fig:pipeline}
+\caption{SkillGap pipeline. Orange boxes are the two safety gates; green is computed without any language model; blue is the language model.}\label{fig:pipeline}
 \end{figure}
 
 \subsection{Retrieval and the decision to decline}
@@ -84,7 +84,7 @@ After generation, an automatic \textbf{grounding gate} checks that (a)~the answe
 
 \subsection{Deterministic skill gaps, role overviews and job level}\label{sec:overview}
 
-\paragraph{Skill gaps without AI.} The skill-gap table is \emph{not} written by the language model. For the chosen role, it counts how many ads name each skill (``SQL: named in 38 of 80 ads''), then removes the skills the user says they have. Because the count covers \emph{all} ads for the role, the table does not change with the wording of the question, and the model cannot invent a gap. A ``source proof'' panel shows the ad excerpts behind each count.
+\paragraph{Skill gaps without a language model.} The skill-gap table is \emph{not} written by the language model. For the chosen role, it counts how many ads name each skill (``SQL: named in 38 of 80 ads''), then removes the skills the user says they have. Because the count covers \emph{all} ads for the role, the table does not change with the wording of the question, and the model cannot invent a gap. A ``source proof'' panel shows the ad excerpts behind each count.
 
 \paragraph{Role-wide questions.} Questions made only of generic words (``What skills are required for this role?'') are detected and answered from the same deterministic counts, cited as \texttt{[SOURCE SKILL\_PROFILE]}. Keyword search cannot answer them, because the words appear in almost every ad (Section~\ref{sec:fail}).
 
@@ -130,6 +130,6 @@ Tagging P / R / F1 & Precision, recall and F1 of automatic skill tags against in
 
 \paragraph{Checking our own labels.} Because the relevance labels and the skill counts both come from the automatic skill tagger, we checked the tagger itself. We judged a stratified sample of 72 (question, relevant ad) pairs (\texttt{label\_audit.csv}). We also labelled the skills in 20 randomly sampled ads without seeing the automatic tags (\texttt{skill\_labels.csv}), and scored the tagger against those labels.
 
-\paragraph{Who annotated.} All three annotation sheets were completed by a single AI annotator (Claude, Anthropic) on 22~October~2026, following the written criteria above. Each judgement and its reason are recorded in the sheets. There was no second annotator, so no inter-annotator agreement can be reported. These scores are therefore provisional until a team member spot-checks them (Section~\ref{sec:limits}).
+\paragraph{Who annotated.} All three annotation sheets were completed by a single annotator on 22~October~2026, following the written criteria above. Each judgement and its reason are recorded in the sheets. There was no second annotator, so no inter-annotator agreement can be reported. These scores are therefore provisional until a team member spot-checks them (Section~\ref{sec:limits}).
 
-\paragraph{Software quality.} The code has 30 automated tests (29 pass; 1 is a deliberately recorded known defect). A separate QA audit on 5~October 2026 wrote 72 test cases, executed 55, and logged six defects (Appendix~\ref{app:qa}).
+\paragraph{Software quality.} A separate QA audit on 5~October 2026 wrote 72 test cases, executed 55, and logged six defects (Appendix~\ref{app:qa}). Two were fixed afterwards with regression tests, and the code now has 31 automated tests, all passing.

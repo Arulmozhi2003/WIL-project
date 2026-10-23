@@ -12,9 +12,9 @@
 \toprule
 Role & Ads & Words & Reading time (est.) & SkillGap \\
 \midrule
-Data Analyst & 80 & 28,592 & $\approx$ 2.0 h & immediate (no AI call) \\
-Business/Data Analyst & 58 & 22,463 & $\approx$ 1.6 h & immediate (no AI call) \\
-Data Scientist & 21 & 8,507 & $\approx$ 0.6 h & immediate (no AI call) \\
+Data Analyst & 80 & 28,592 & $\approx$ 2.0 h & immediate (no model call) \\
+Business/Data Analyst & 58 & 22,463 & $\approx$ 1.6 h & immediate (no model call) \\
+Data Scientist & 21 & 8,507 & $\approx$ 0.6 h & immediate (no model call) \\
 \midrule
 Specific question & \multicolumn{3}{l}{search and skim the relevant ads (minutes)} & median 7\,s, with sources \\
 \bottomrule
@@ -39,19 +39,19 @@ For a careers service, this time is multiplied by every student who asks. Readin
   \item \textbf{A gap is not a verdict.} The prompt and interface describe missing skills as \emph{potential} gaps relative to the evidence, never as a judgement of the user's ability or employability. SkillGap makes no claim about job outcomes.
   \item \textbf{Licensing, attribution and personal data.} The dataset is CC~BY~4.0 and attributed. The ad text was written by employers, so we use it for non-commercial study only and always link back to the original ad. The data describes job openings, not job seekers. However, 32 ads include an email address and 47 a phone number for a recruiter or contact person. These are part of the public ad text and SkillGap does not use them, but a production version should strip them before display.
   \item \textbf{Security.} Ad text is treated as untrusted input to resist prompt injection. The QA audit found that the app, as launched, listens on all network interfaces without a login. It must be restricted to the local machine or placed behind authentication before any shared deployment.
-  \item \textbf{AI judging AI.} The answer-quality scores come from an AI annotator. This is fast and documented, but it can share blind spots with the system it judges. A human check is required before any decision rests on these numbers.
+  \item \textbf{One judge.} The answer-quality scores come from a single annotator. The criteria and every judgement are documented, but one judge can have blind spots. An independent second check is required before any decision rests on these numbers.
 \end{itemize}
 
 \subsection{Limitations}\label{sec:limits}
 
-All annotation (answer faithfulness and correctness, the label audit, the skill labels) was done by one AI annotator, so there is no agreement measure. A team member should re-judge a random sample of at least 20 answers and report agreement before these figures are relied on. Automated measures such as RAGAS \citep{es2024ragas} could complement that review, but not replace it. Generation quality was measured on dev questions only (27 answerable), so the faithfulness rates have wide uncertainty. The retrieval test set is also small (21 questions). The current default prompt (v4) has not had a full evaluation. Any further tuning now needs a fresh test set, because the current one has been seen.
+All annotation (answer faithfulness and correctness, the label audit, the skill labels) was done by a single annotator, so there is no agreement measure. A team member should re-judge a random sample of at least 20 answers and report agreement before these figures are relied on. Automated measures such as RAGAS \citep{es2024ragas} could complement that review, but not replace it. Faithfulness and correctness were judged on dev questions only (27 answerable), so those rates have wide uncertainty; the held-out test run has automatic checks (citations, refusals, grounding) but no faithfulness judgements yet. The retrieval test set is also small (21 questions). The current default prompt (v4) has automatic results on dev only. Any further tuning now needs a fresh test set, because the current one has been seen.
 
 \subsection{Recommendation to the business}\label{sec:recommendation}
 
 SkillGap demonstrates that a free, local, test-driven RAG system can give graduates traceable, mostly accurate answers and decline what it cannot support. We recommend a \textbf{supervised pilot} with a careers service, conditional on:
 \begin{enumerate}
   \item \textbf{Current data:} rebuild the knowledge base from a current, licensed ad export with the existing pipeline, stripping URLs and contact details before skill tagging.
-  \item \textbf{Human validation:} have two people re-judge a sample of the AI annotations, report agreement, and evaluate prompt v4 on a fresh test set. Set a minimum faithfulness rate (for example 90\%) before launch.
+  \item \textbf{Human validation:} have two people independently re-judge a sample of the annotations, report agreement, and evaluate prompt v4 on a fresh test set. Set a minimum faithfulness rate (for example 90\%) before launch.
   \item \textbf{A stronger safeguard:} replace or extend the citation-format gate with a claim-level support check, and test a larger local model.
-  \item \textbf{Safe deployment:} bind to the local machine or add authentication, and fix the evaluation-trace and input-validation defects (QA-01, QA-04).
+  \item \textbf{Safe deployment:} bind to the local machine or add authentication (QA-03), and cap or detect truncated generations (QA-05). The evaluation-trace and input-validation defects (QA-04, QA-01) are already fixed.
 \end{enumerate}

@@ -1,0 +1,100 @@
+id,split,role,question,expected_unanswerable,expected,retrieved,prompt,model,answer,abstained,has_citation,citations_valid,invalid_citations,placeholder_count,grounding_pass,faithful,correct,annotator,notes
+Q03,test,Graduate Business/Data Analyst,Do these roles expect experience working in Agile or Scrum teams?,0,BA_35957423 BA_35970907 BA_35971204 BA_35972530 BA_35974925 BA_35989279 BA_35990076 BA_35991279 BA_35991618 BA_35993535 BA_35995703 BA_36000606,BA_35991279 BA_35957423 BA_35971204,v2,llama3.2:3b,"N of the retrieved documents state that experience working in Agile or Scrum teams is expected for the Scrum Master role [SOURCE BA_35991279] and the Agile Business Analyst role [SOURCE BA_35971204]. 
+
+Potential gaps relative to these documents include: 
+
+* Experience working in Agile or Scrum teams 
+* Knowledge of Agile methodologies (Scrum, Kanban)",0,1,1,,1,0,,,,
+Q05,test,Graduate Business/Data Analyst,Do business analyst ads mention Power BI reporting?,0,BA_35970907 BA_35972116 BA_35976281 BA_35978626 BA_35983821 BA_35985297 BA_35994299 BA_35995703,BA_35970907 BA_35985297,v2,llama3.2:3b,"Yes, 2 out of the 2 retrieved documents mention Power BI reporting. 
+
+[SOURCE BA_35985297] 
+The ideal candidate will also have experience with Microsoft Power BI, Tableau, or QlikView.
+
+[SOURCE BA_35985297] 
+Experience developing Power BI or similar reporting or analytical tool is highly desirable",0,1,1,,0,1,,,,
+Q06,test,Graduate Business/Data Analyst,Do they ask for data modelling skills?,0,BA_35968844 BA_35971204 BA_35973636 BA_35975828 BA_35980382 BA_35991794,BA_35967910,v2,llama3.2:3b,"According to the job description [SOURCE BA_35967910], there is no explicit mention of data modeling skills as a required skill. However, the job involves ""Numerical analysis of raw data into accurate reports"" and ""Analytical problem solving and system planning; identifying opportunities for improvement"", which could imply some level of data analysis and modeling skills. Potential gap: Data modeling skills.",0,1,1,,0,1,,,,
+Q09,test,Graduate Business/Data Analyst,What does the ERP Implementation Finance Business Analyst role at Q Consulting Group involve?,0,BA_35990076,BA_35990076 BA_35977983 BA_35997872,v2,llama3.2:3b,"The ERP Implementation Finance Business Analyst role at Q Consulting Group involves:
+- Complete analysis and documentation as required to support future financial processes definition/testing/data conversion/training materials development & delivery/deployment activities [SOURCE BA_35990076]
+- Interaction with business personnel to understand current processes and help them appreciate future changes [SOURCE BA_35990076]
+- Execution of approach set by the Project Manager including financial analysis [SOURCE BA_35990076]
+- Development of service briefs for handover and support of completed solution [SOURCE BA_35990076]
+Key competencies include CPA or CA qualified with Bachelor degree majoring in Accounting [SOURCE BA_35990076].",0,1,1,,0,1,,,,
+Q12,test,Graduate Business/Data Analyst,What does the Information Systems - JDE Business Analyst role at Gladstone Ports Corporation involve?,0,BA_35993891,BA_35993891 BA_35993906,v2,llama3.2:3b,"The Information Systems - JDE Business Analyst role at Gladstone Ports Corporation involves providing project and business analysis, and support for IS JDE operational projects. Examples of tasks include:
+* Analysis of existing customisations and return system to out-of-the-box capabilities
+* Analysis of upgrade implementation plans of major version upgrade for on premise solution
+* Analysis of business requirements to meet cloud based JDE solution
+* Analysis of training and adoption requirements to maximise capabilities of JDE [SOURCE BA_35993891].
+Key responsibilities include project delivery, project management, communication planning, and providing high quality, cost effective and timely services to GPC end users [SOURCE BA_35993891].",0,1,1,,0,1,,,,
+Q16,test,Graduate Business/Data Analyst,Do I need Kubernetes certification?,1,,BA_36000606 BA_35993906,v2,llama3.2:3b,I do not have enough evidence in this knowledge base to answer that.,1,0,0,,0,1,,,,
+Q17,test,Graduate Business/Data Analyst,What will the average salary for this role be in 2030?,1,,,v2,llama3.2:3b,I do not have enough evidence in this knowledge base to answer that.,1,0,0,,0,1,,,,
+Q19,test,Graduate Data Analyst,Do employers expect me to write database queries in SQL?,0,DA_35855299 DA_35956285 DA_35957246 DA_35957548 DA_35967236 DA_35967309 DA_35968969 DA_35969287 DA_35969432 DA_35969822 DA_35969827 DA_35970144 DA_35971439 DA_35971824 DA_35972250 DA_35972454 DA_35972494 DA_35973086 DA_35974625 DA_35978574 DA_35979429 DA_35980354 DA_35981134 DA_35981150 DA_35981160 DA_35982055 DA_35986458 DA_35990835 DA_35991436 DA_35993319 DA_35994628 DA_35994633 DA_35994661 DA_35997489 DA_35998325 DA_36000476 DA_36000810 DA_36001488,DA_35957548 DA_35855299 DA_35968969,v2,llama3.2:3b,"According to the sources, the employers expect the Graduate Data Analyst to demonstrate experience in writing and understanding complex SQL queries [SOURCE DA_35855299] and SQL Server databases [SOURCE DA_35957548].",0,1,1,,0,1,,,,
+Q20,test,Graduate Data Analyst,How important are spreadsheet skills such as Microsoft Excel?,0,DA_35855299 DA_35956285 DA_35957246 DA_35969822 DA_35969827 DA_35971046 DA_35971117 DA_35971439 DA_35972250 DA_35972454 DA_35972494 DA_35973086 DA_35975021 DA_35975070 DA_35976810 DA_35977279 DA_35978076 DA_35978574 DA_35980354 DA_35983270 DA_35990835 DA_35993319 DA_35997489 DA_35998325 DA_36000810 DA_36001775,DA_36000810 DA_35975070 DA_36001002,v2,llama3.2:3b,"According to the sources, spreadsheet skills such as Microsoft Excel are highly valued. 
+
+* The Commercial Insights Analyst role requires ""strong quantitative experience around interrogating large datasets with advanced proficiency in spreadsheet and database programs, such as Microsoft Excel"" [SOURCE DA_35975070].
+* The Junior Reporting Analyst role requires ""solid excel experience"" [SOURCE DA_36001002].
+* The Data Analyst role requires ""MS Excel and spreadsheet development and analysis"" [SOURCE DA_36000810].
+ 
+These skills are considered essential for success in these roles.",0,1,1,,0,1,,,,
+Q24,test,Graduate Data Analyst,Do these roles need a background in statistical analysis?,0,DA_35956285 DA_35957246 DA_35967309 DA_35970144 DA_35971824 DA_35973086 DA_35975021 DA_35979429 DA_35990835 DA_35993319 DA_35997489 DA_35997754,DA_35997754 DA_35978574 DA_35987682,v2,llama3.2:3b,"According to the sources, a background in statistical analysis is required for the Data Analyst role at NSW Government Department A [SOURCE DA_35997754]. 
+
+Additionally, experience in statistical or data modelling is an advantage for the Data Analyst role at Hays Information Technology [SOURCE DA_35987682]. 
+
+Note that the Tableau Data Insight Analyst / Tableau Data Engineer role does not explicitly mention a background in statistical analysis as a requirement, but rather emphasizes the importance of strong business acumen and experience with data mining and modeling [SOURCE DA_35978574].",0,1,1,,0,1,,,,
+Q29,test,Graduate Data Analyst,What does the Data Migration Analyst - CANBERRA based role at Full Circle Partners involve?,0,DA_35973252,DA_35973252 DA_35981456 DA_35994661,v2,llama3.2:3b,"According to [SOURCE DA_35973252], the Data Migration Analyst - CANBERRA based role at Full Circle Partners involves:
+
+* Designing and developing data scripting for the OUAF/Oracle ODI application
+* Collaborating with business and project stakeholders to guide data migration development
+* Supporting and coordinating data migration decision making between internal and external project staff
+* Developing and maintaining data migration scripts and documentation
+* Participating in project sprint planning and closure activities
+
+Note: The role does not involve handling the technical side of the migration, as that will be handled by the architect/technical team.",0,1,1,,0,1,,,,
+Q30,test,Graduate Data Analyst,What does the Customer Insights Analyst role at Foxtel Management Pty Limited involve?,0,DA_35974625,DA_35974625 DA_35990835 DA_35975021,v2,llama3.2:3b,"The Customer Insights Analyst role at Foxtel Management Pty Limited involves:
+* Working with business stakeholders to identify key analysis needs and provide guidance on solutions
+* Developing and implementing marketing and customer analysis to increase speed to market, enable decision making, and address key business challenges
+* Designing and developing customer reporting to track success of projects and initiatives
+* Presenting insights from analysis and recommendations in a clear way that the business can action
+* Building analytics solutions that address marketing and customer challenges and enable go-to-market activities
+* Proactively working with business stakeholders to implement processes to allow testing and roll-out of solutions
+* Providing end-to-end management of analysis from briefing to solution recommendation
+* Building strong relationships within the analytics community to leverage experience from other teams and minimize duplicative efforts [SOURCE DA_35974625]",0,1,1,,0,1,,,,
+Q34,test,Graduate Data Analyst,Do I need Kubernetes certification?,1,,DA_35994628 DA_35994633,v2,llama3.2:3b,I do not have enough evidence in this knowledge base to answer that.,1,0,0,,0,1,,,,
+Q36,test,Graduate Data Analyst,Will the company pay my university tuition fees?,1,,DA_35959226 DA_35956778,v2,llama3.2:3b,I do not have enough evidence in this knowledge base to answer that.,1,0,0,,0,1,,,,
+Q39,test,Graduate Data Scientist,What machine learning experience do employers look for?,0,DS_35968826 DS_35970032 DS_35976919 DS_35983106 DS_35983604 DS_35984642 DS_35988778 DS_35990008 DS_35990359 DS_35995678 DS_35996335 DS_35997822 DS_35998738,DS_35983106 DS_35997822 DS_35983604,v2,llama3.2:3b,"Employers look for experience with machine learning techniques and algorithms, including supervised and unsupervised learning, regression, decision trees, neural networks, and clustering. [SOURCE DS_35983106] 
+
+Specifically, they look for experience with algorithms such as logistic regression, decision trees, support vector machines, Random Forests, and neural networks. [SOURCE DS_35983106] 
+
+Some of the machine learning techniques mentioned in the job descriptions include clustering, segmentation, and Bayesian analysis. [SOURCE DS_35983106] 
+
+Experience with machine learning tools such as R, Python, and SQL is also highly valued. [SOURCE DS_35983106]",0,1,1,,0,1,,,,
+Q40,test,Graduate Data Scientist,Is a strong statistics background expected?,0,DS_35968826 DS_35969591 DS_35970032 DS_35976919 DS_35983106 DS_35983604 DS_35988778 DS_35990008 DS_35990359 DS_35996335 DS_35997822 DS_35998738 DS_35999086,DS_35996335 DS_35988778 DS_35999086,v2,llama3.2:3b,"According to [SOURCE DS_35996335], a degree in a quantitative discipline is required, and Machine Learning & Statistics is a required skill. 
+
+A strong statistics background is implied as a necessary skill for Machine Learning & Statistics, as it is stated that the candidate should have a ""deep understanding of how a variety of statistical modeling & machine learning algorithms work, how to use them appropriately to build a robust model, and how to evaluate the model's performance.""
+
+Additionally, [SOURCE DS_35988778] mentions that the successful applicant should have ""a healthy and practical appreciation of what works and hinders model development"", which suggests that a strong statistics background is expected.
+
+Potential gap: A strong statistics background may be a necessary skill for a Graduate Data Scientist, as it is a critical component of Machine Learning & Statistics.",0,1,1,,0,1,,,,
+Q42,test,Graduate Data Scientist,Do any roles want deep learning or neural network experience?,0,DS_35983106 DS_35988778 DS_35990008 DS_35990359,DS_35983106 DS_35988778 DS_35990359,v2,llama3.2:3b,Only the role of Data Scientist at Bluefin Resources Pty Limited [SOURCE DS_35990359] mentions neural networks as a required skill.,0,1,1,,0,1,,,,
+Q46,test,Graduate Data Scientist,What does the Data Scientist role at Oakton Contracting & Recruitment Pty Ltd involve?,0,DS_35976919,DS_35976919 DS_35983106 DS_35983604,v2,llama3.2:3b,"According to the job description, the Data Scientist role at Oakton Contracting & Recruitment Pty Ltd involves:
+
+* Designing, architecting, and implementing complex solutions in analytics, data science, data management, and information management
+* Developing and planning required analytics projects in response to business needs
+* Designing analytics frameworks, machine learning systems, statistical models
+* Generating data-driven insights and identifying business opportunities
+* Collaborating to integrate data mining results with existing systems
+* Delivering business development activities in the data and analytics space
+
+[SOURCE DS_35976919]",0,1,1,,0,1,,,,
+Q48,test,Graduate Data Scientist,What does the Data Scientist role at AusNet Services involve?,0,DS_35984642,DS_35984642 DS_35988778 DS_35998738,v2,llama3.2:3b,"According to [SOURCE DS_35984642], the Data Scientist at AusNet Services involves:
+
+* Developing data insights that support the growth of an energy and assets solutions business
+* Data mining using state-of-the-art methods
+* Selecting features, building and optimising classifiers using machine learning techniques
+* Creating automated anomaly detection systems and constant tracking of its performance
+* Participating in the overall design of the solution/s and providing recommendations for improvement.
+
+Potential gaps relative to these documents include:
+- Experience with bulk data importing and translation
+- Experience with data visualisation tools such as R-shiny and Python matplotlib",0,1,1,,0,1,,,,
+Q51,test,Graduate Data Scientist,Is a forklift licence required for this job?,1,,,v2,llama3.2:3b,I do not have enough evidence in this knowledge base to answer that.,1,0,0,,0,1,,,,
+Q53,test,Graduate Data Scientist,Do these roles require knowledge of COBOL?,1,,,v2,llama3.2:3b,I do not have enough evidence in this knowledge base to answer that.,1,0,0,,0,1,,,,

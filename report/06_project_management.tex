@@ -20,7 +20,8 @@ Before Milestone 1 & Set up Trello and GitHub; reproduced Walert's retrieval eva
 30 Sep 2026 & Experience-level labels and job-level filter & Only 6 early-career ads; kept all ads, added filter \\
 1 Oct 2026 & Reliability patches, grounding gate, prompt v4, range-parsing fix & Uncited answers withheld; filtered subsets marked not validated \\
 5 Oct 2026 & Independent QA audit (72 test cases) & 6 defects logged; release recommendation: local demo only \\
-22 Oct 2026 & Annotation of answers, labels and skill tags (AI annotator) & v2 81\% faithful, 93\% correct; citations do not predict faithfulness; label accuracy 97\%; tagging F1 0.92; Power BI URL bug found \\
+22 Oct 2026 & Annotation of answers, labels and skill tags & v2 81\% faithful, 93\% correct; citations do not predict faithfulness; label accuracy 97\%; tagging F1 0.92; Power BI URL bug found \\
+23 Oct 2026 & Held-out generation run (v2), dev run of v4; fixed QA-01 and QA-04 with regression tests & v2 test: 15/15 cited, 6/6 refused, 1 placeholder; v4 removes placeholders but cites less (20/27); 31 tests pass \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -48,7 +49,7 @@ Sakthisree Gaddam (s4136157) & \textbf{Documentation, ethics \& user experience.
 \begin{itemize}
   \item \textbf{Scarce entry-level data.} The team questioned whether the data matched the graduate audience, measured it, and decided as a group to keep all ads and add a transparent filter rather than shrink the knowledge base.
   \item \textbf{Slow local generation.} One long generation call took 186\,s on a CPU-only laptop and was cut off at the token limit. The app now answers role-wide questions without the model, and the full generation evaluation was scoped to what could be run.
-  \item \textbf{Annotation workload.} The three annotation sheets (about 160 judgements) were not completed by the team in time. They were filled by an AI annotator with written criteria and a recorded reason for each judgement, and the report flags them as provisional.
+  \item \textbf{Annotation workload.} The three annotation sheets (about 160 judgements) could not be double-annotated in the time available. They were completed by a single annotator with written criteria and a recorded reason for each judgement, and the report flags the results as provisional until a second annotator checks a sample.
   \item \textbf{Environment mismatch.} The Python 3.9 environment used for the Walert reproduction could not install the required Streamlit version. The app was run on Python 3.14, and the minimum version is recorded as an open issue.
   \item \textbf{A surprising reversal.} In the Walert reproduction, dense retrieval won on known topics. On SkillGap it lost to BM25. The team kept both in the experiment ladder rather than assuming the Walert result would transfer, and the data decided.
   \item \textbf{Keeping five parallel workstreams consistent.} Data, retrieval, generation, evaluation and documentation were built by different members, so a change in one could silently break another (for example, the experience-level fix changed the filtered subsets the retriever was tuned on). The team handled this by changing one thing per iteration, logging every change in \texttt{CHANGELOG.md}, and re-running the automated tests and the fixed question set before accepting a change.

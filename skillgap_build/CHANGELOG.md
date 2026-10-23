@@ -92,3 +92,12 @@ All three annotation sheets were filled by one AI annotator (Claude Code, Anthro
 - **Retrieval labels** (`data/evaluation/label_audit.csv`): 70/72 correct. Both errors are ads tagged Power BI only because a Microsoft customer-story URL in the text contains `power-bi`. In 25 rows the stored evidence sentence does not contain the skill (the ad does elsewhere).
 - **Skill tagging** (`data/annotation/skill_labels.csv`, labelled blind to `auto_skills`): precision 0.950, recall 0.884, F1 0.916 on 20 ads. Errors are soft skills: missed variants ("attention to details", "cleansing") and "collaboration" in company blurbs counted as Teamwork.
 - Not yet fixed (would change the tuned results and needs a new test set): strip URLs before tagging; better evidence-sentence selection for the audit sheet.
+
+## 2026-10-23 — Held-out generation run, v4 evaluation and two QA fixes
+
+- **Held-out test, prompt v2** (selected on dev; run once, `results/generation_test.csv`): 15/15 answerable questions answered with valid citations, 6/6 unanswerable refused, grounding gate passed 14/15. The one failure (Q03) is the placeholder "N of the retrieved documents", the problem prompt v4 targets.
+- **Prompt v4 on dev** (`results/generation_dev_v4.csv`): 0 placeholders and 6/6 refusals, but citations in 20/27 answers versus 22/27 for v2. Removing placeholders lowered the citation rate; v4 stays the default for counts, and citation formatting is the next change to test on a fresh test set.
+- Faithfulness/correctness for these two runs are not judged yet (columns left empty).
+- **QA-01 fixed:** `BM25`, `DenseRetriever` and `HybridRetriever` reject a negative `k`; `run_eval.py --k -1` exits with an error. The strict-xfail test is now a normal passing test.
+- **QA-04 fixed:** `answer_decision()` in `skillgap/generation.py` drives the app's trace row; a withheld draft is reported as "Withheld (failed grounding check)" / FAIL, never Answered/PASS. New regression test.
+- `pytest -q`: 31 passed.
