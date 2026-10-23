@@ -3,7 +3,7 @@ from pathlib import Path
 import streamlit as st
 from skillgap.core import (load_documents,build_retriever,gaps_for_role,is_overview_question,role_overview,role_overview_answer,
                            parse_user_skills,LEVELS,EARLY_CAREER)
-from skillgap.generation import answer_with_ollama,check_answer,claim_evidence_rows,best_evidence_excerpt,PROMPTS,DEFAULT_PROMPT
+from skillgap.generation import answer_with_ollama,check_answer,answer_decision,claim_evidence_rows,best_evidence_excerpt,PROMPTS,DEFAULT_PROMPT
 
 st.set_page_config(page_title='SkillGap',page_icon='🎯',layout='wide')
 st.title('SkillGap — Evidence-grounded career navigator')
@@ -143,13 +143,13 @@ if st.button('Analyse',type='primary'):
 
     # Mentor-facing visible evaluation trace: show the steps, not only the generated answer.
     st.subheader('Evaluation trace')
+    decision,decision_status=answer_decision(hits,result,checks)
     trace=[
         {'Step':'1. Scope filter','Result':f'{len(role_docs)} selected {role} ads','Status':'PASS' if role_docs else 'FAIL'},
         {'Step':'2. Retriever validation','Result':('Saved configuration evaluated on full corpus' if config_validated else 'Current filtered/subset configuration has not been separately validated'),
          'Status':('PASS' if config_validated else 'NOT VALIDATED')},
         {'Step':'3. Retrieval','Result':f'{len(hits)} evidence document(s) returned using {mode}','Status':'PASS' if hits else 'ABSTAIN'},
-        {'Step':'4. Answer/refusal decision','Result':('Refused/abstained' if (checks and checks['abstained']) else ('Answered' if result else 'No generated answer')),
-         'Status':('PASS' if (not hits and not result) or (checks and (checks['abstained'] or result)) else 'CHECK')},
+        {'Step':'4. Answer/refusal decision','Result':decision,'Status':decision_status},
         {'Step':'5. Citation presence','Result':('Yes' if checks and checks['has_citation'] else 'No'),
          'Status':('PASS' if checks and (checks['abstained'] or checks['has_citation']) else ('N/A' if not checks else 'FAIL'))},
         {'Step':'6. Citation ID validity','Result':('All cited IDs are in supplied evidence' if checks and checks['citations_valid'] else ('Not applicable' if checks and checks['abstained'] else 'Failed/not available')),

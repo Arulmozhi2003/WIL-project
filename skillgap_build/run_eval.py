@@ -9,6 +9,7 @@ p.add_argument('--config',help='results/best_config.json from run_experiments.py
 p.add_argument('--k',type=int,default=3)
 p.add_argument('--output',default='results/retrieval_eval.json')
 a=p.parse_args()
+if a.k<0: p.error('--k must be >= 0')
 mode,k,params=a.method,a.k,{}
 if a.config:
     cfg=json.loads(Path(a.config).read_text(encoding='utf-8')); mode,k,params=cfg['mode'],cfg['k'],cfg['params']

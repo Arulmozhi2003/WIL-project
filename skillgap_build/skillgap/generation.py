@@ -84,6 +84,19 @@ def check_answer(answer: str, hits, extra_ids=()) -> dict:
             'invalid_citations': invalid, 'citations_valid': citations_valid,
             'placeholder_count': placeholder, 'grounding_pass': grounding_pass}
 
+def answer_decision(hits, result, checks) -> tuple[str, str]:
+    """(result, status) for the app's evaluation-trace row. A draft that failed the grounding gate is
+    withheld from the user, so it must never be reported as 'Answered'/PASS (QA-04)."""
+    if checks and checks['abstained']:
+        return 'Refused/abstained', 'PASS'
+    if result and checks and checks['grounding_pass']:
+        return 'Answered', 'PASS'
+    if result:
+        return 'Withheld (failed grounding check)', 'FAIL'
+    if not hits:
+        return 'No generated answer (no evidence retrieved)', 'PASS'
+    return 'No generated answer', 'CHECK'
+
 
 def _sentences(text: str) -> list[str]:
     """Split evidence into short readable sentences/lines for display only."""

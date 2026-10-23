@@ -8,6 +8,7 @@ import numpy as np
 import pytest
 
 from skillgap.core import BM25, DenseRetriever, load_documents
+from skillgap.generation import ABSTAIN, answer_decision, check_answer
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
@@ -24,14 +25,25 @@ def test_bm25_k_boundaries():
     assert len(retriever.search("SQL", k=10)) == 2
 
 
-@pytest.mark.xfail(strict=True, reason="QA-01: negative k silently applies Python negative slicing instead of rejecting the invalid limit")
 def test_bm25_negative_k_is_rejected():
+    # QA-01 (fixed): a negative limit used to silently apply Python negative slicing.
     docs = [
         {"doc_id": "a", "title": "SQL analyst", "role": "analyst", "text": "SQL", "skills": []},
         {"doc_id": "b", "title": "SQL analyst", "role": "analyst", "text": "SQL", "skills": []},
     ]
     with pytest.raises(ValueError, match="k"):
         BM25(docs).search("SQL", k=-1)
+
+
+def test_trace_never_reports_withheld_draft_as_answered():
+    # QA-04 (fixed): an uncited draft is withheld, so the trace must not show Answered/PASS.
+    hits = ["hit"]
+    draft = "Tableau is desirable at one employer."
+    checks = check_answer(draft, [])
+    assert checks["grounding_pass"] is False
+    assert answer_decision(hits, draft, checks) == ("Withheld (failed grounding check)", "FAIL")
+    assert answer_decision(hits, ABSTAIN, check_answer(ABSTAIN, [])) == ("Refused/abstained", "PASS")
+    assert answer_decision([], None, None) == ("No generated answer (no evidence retrieved)", "PASS")
 
 
 def test_dense_retrieval_uses_encoder_and_role_scope():

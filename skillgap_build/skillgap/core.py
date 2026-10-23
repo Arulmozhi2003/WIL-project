@@ -170,6 +170,11 @@ def load_documents(folder: str | Path) -> list[dict[str, Any]]:
 def doc_text(doc: dict[str,Any]) -> str:
     return doc['title']+' '+doc['role']+' '+doc['text']
 
+def _check_k(k: int) -> int:
+    """A negative limit would silently become a Python negative slice and drop results (QA-01)."""
+    if k < 0: raise ValueError(f'k must be >= 0, got {k}')
+    return k
+
 @dataclass
 class Hit:
     doc: dict[str,Any]
@@ -202,7 +207,7 @@ class BM25:
             if score>0: output.append(Hit(doc,score/ceiling))
         return sorted(output,key=lambda h:(-h.score,h.doc['doc_id']))
     def search(self,query: str,role: str|None=None,k: int=5) -> list[Hit]:
-        return [h for h in self.score_all(query,role) if h.score>=self.min_score][:k]
+        return [h for h in self.score_all(query,role) if h.score>=self.min_score][:_check_k(k)]
 
 class DenseRetriever:
     """Optional dense retriever (exact cosine search). Downloads the embedding model on first use."""
@@ -222,7 +227,7 @@ class DenseRetriever:
         hits=[Hit(d,float(s)) for d,s in zip(self.docs,scores) if not role or d['role']==role]
         return sorted(hits,key=lambda h:(-h.score,h.doc['doc_id']))
     def search(self,query: str,role: str|None=None,k:int=5)->list[Hit]:
-        return [h for h in self.score_all(query,role) if h.score>=self.min_score][:k]
+        return [h for h in self.score_all(query,role) if h.score>=self.min_score][:_check_k(k)]
 
 class HybridRetriever:
     """Reciprocal Rank Fusion of BM25 and dense results that each pass their own threshold."""
@@ -234,7 +239,7 @@ class HybridRetriever:
             for rank,hit in enumerate(retriever.search(query,role,k=len(retriever.docs))):
                 fused[hit.doc['doc_id']]=fused.get(hit.doc['doc_id'],0)+1/(self.rrf_k+rank+1)
                 docs[hit.doc['doc_id']]=hit.doc
-        ranked=sorted(fused.items(),key=lambda pair:(-pair[1],pair[0]))[:k]
+        ranked=sorted(fused.items(),key=lambda pair:(-pair[1],pair[0]))[:_check_k(k)]
         return [Hit(docs[doc_id],score) for doc_id,score in ranked]
 
 def build_retriever(docs,mode='bm25',encoder=None,**params):
